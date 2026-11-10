@@ -862,7 +862,7 @@ if (STANDALONE) (() => {
 })();
 const ADMIN_URL = "";
 const PAGE_URL = "https://manitosmagicas.pages.dev/";
-const OPEN = {1:["08:00","22:00"],2:["08:00","22:00"],3:["08:00","22:00"],4:["08:00","22:00"],5:["08:00","22:00"],6:["08:00","22:00"]}; // 0=dom ... 6=sáb (volante: L, M, M, J, V, S · 08:00–22:00)
+const OPEN = {0:["14:00","22:00"],1:["09:00","22:00"],2:["09:00","22:00"],3:["09:00","22:00"],4:["09:00","22:00"],5:["09:00","22:00"],6:["09:00","22:00"]}; // 0=dom ... 6=sáb · lun–sáb 9–22, dom 14–22 (confirmado por Carim)
 const CLOSED_DATES = ["2026-12-25","2026-12-26","2027-01-01"];
 const STEP = 30, DAYS_AHEAD = 30, MIN_NOTICE = 120;
 const MAPS = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("Via Fratelli Bandiera, Sesto San Giovanni, Milano");
@@ -922,17 +922,17 @@ const ZONES_EXF = [ ["Rostro","Viso",30], ["Espalda","Schiena",40], ["Piernas","
 const ZONES_BLAN = [ ["Axilas","Ascelle",30], ["Glúteos","Glutei",35] ];
 let SERVICES = [
   /* ---------- promociones ---------- */
-  { id:"psem", cat:"quiro", ic:"🔥", price:50, before:70, min:60, promo:true, fotos:F("p08","n02"), care:"dolor",
-    es:{ short:"Quiropraxia + fisioterapia", name:"Masaje quiropraxia, fisioterapia y descontracturante", desc:"Promo de la semana · alivia el dolor de espalda y cuello, mejora la postura y reduce el estrés" },
-    it:{ short:"Chiropratica + fisioterapia", name:"Massaggio chiropratico, fisioterapia e decontratturante", desc:"Promo della settimana · allevia il dolore a schiena e collo, migliora la postura e riduce lo stress" } },
-  { id:"paq", cat:"fisio", ic:"✨", price:70, before:80, min:90, promo:true, fotos:F(), care:"dolor",
-    es:{ short:"Paquete completo", name:"Paquete completo Salud y Belleza", desc:"Quiropraxia + fisioterapia + ventosas + electrodos + frotación. Por separado, 30 € cada uno." },
-    it:{ short:"Pacchetto completo", name:"Pacchetto completo Salute e Bellezza", desc:"Chiropratica + fisioterapia + coppettazione + elettrodi + frizione. Separati, 30 € l'uno." } },
+  { id:"psem", cat:"quiro", ic:"🔥", price:50, from:true, wk:[1,2,3,4], wkPrice:70, min:60, promo:true, fotos:F("p08","n02"), care:"dolor",
+    es:{ short:"Quiropraxia + fisioterapia", name:"Masaje quiropraxia, fisioterapia y descontracturante", desc:"De lunes a jueves 50 € · de viernes a domingo 70 € · alivia el dolor de espalda y cuello, mejora la postura y reduce el estrés" },
+    it:{ short:"Chiropratica + fisioterapia", name:"Massaggio chiropratico, fisioterapia e decontratturante", desc:"Da lunedì a giovedì 50 € · da venerdì a domenica 70 € · allevia il dolore a schiena e collo, migliora la postura e riduce lo stress" } },
+  { id:"paq", cat:"fisio", ic:"✨", price:60, before:70, min:60, promo:true, fotos:F(), care:"dolor",
+    es:{ short:"Paquete completo", name:"Paquete completo Salud y Belleza", desc:"Quiropraxia + fisioterapia + ventosas + electrodos + frotación, todo en 1 hora · promo 60 € (por separado, 30 € cada uno)" },
+    it:{ short:"Pacchetto completo", name:"Pacchetto completo Salute e Bellezza", desc:"Chiropratica + fisioterapia + coppettazione + elettrodi + frizione, tutto in 1 ora · promo 60 € (separati, 30 € l'uno)" } },
   /* ---------- quiropraxia y dolor ---------- */
-  { id:"tcomp", cat:"fisio", ic:"⚡", price:70, before:100, min:90, fotos:F("m01","n08"), care:"dolor",
+  { id:"tcomp", cat:"fisio", ic:"⚡", price:70, before:100, min:60, fotos:F("m01","n08"), care:"dolor",
     es:{ name:"Terapia completa para el dolor", desc:"Quiropraxia, fisioterapia, ventosas, infrarrojo y ondas rusas" },
     it:{ name:"Terapia completa per il dolore", desc:"Chiropratica, fisioterapia, coppettazione, infrarossi e onde russe" } },
-  { id:"quiro", cat:"quiro", ic:"🦴", price:50, before:60, min:45, fotos:F("p08","n07"), care:"dolor",
+  { id:"quiro", cat:"quiro", ic:"🦴", price:50, before:60, min:20, fotos:F("p08","n07"), care:"dolor",
     es:{ name:"Quiropraxia", desc:"Ajuste y regulación de las vértebras" },
     it:{ name:"Chiropratica", desc:"Aggiustamento e regolazione delle vertebre" } },
   { id:"qfd", cat:"quiro", ic:"💆", price:60, before:70, min:60, fotos:F("p08","p09","p10"), care:"dolor",
@@ -950,24 +950,24 @@ let SERVICES = [
   { id:"tvent", cat:"vento", ic:"🫧", price:60, before:80, min:60, fotos:F("m04","m19","p20"), care:"vent",
     es:{ name:"Terapia con ventosas, quiropraxia y fisioterapia", desc:"Para el dolor de todo el cuerpo" },
     it:{ name:"Terapia con coppette, chiropratica e fisioterapia", desc:"Per il dolore di tutto il corpo" } },
-  { id:"elec", cat:"electro", ic:"🔌", price:50, before:70, min:45, fotos:F("n09","n10","n11","n12","m06","m07"), care:"dolor",
+  { id:"elec", cat:"electro", ic:"🔌", price:50, before:70, min:20, fotos:F("n09","n10","n11","n12","m06","m07"), care:"dolor",
     es:{ name:"Electrodos para la tendinitis", desc:"Para quien sufre de tendinitis: reduce la inflamación y las contracturas en brazos, manos y cuello" },
     it:{ name:"Elettrodi per la tendinite", desc:"Per chi soffre di tendinite: riduce l'infiammazione e le contratture di braccia, mani e collo" } },
-  { id:"refl", cat:"fisio", ic:"🦶", price:40, before:50, min:45, fotos:F("p15","p16","p13","p14","p17","p18"), care:"dolor",
+  { id:"refl", cat:"fisio", ic:"🦶", price:40, before:50, min:20, fotos:F("p15","p16","p13","p14","p17","p18"), care:"dolor",
     es:{ name:"Reflexología · espolón calcáneo", desc:"Tratamiento del espolón y dolor del pie" },
     it:{ name:"Riflessologia · spina calcaneare", desc:"Trattamento della spina calcaneare e del dolore al piede" } },
   /* ---------- masajes ---------- */
-  { id:"suel", cat:"fisio", ic:"✋", price:30, min:30, fotos:F("n02","m01"), care:"dolor",
+  { id:"suel", cat:"fisio", ic:"✋", price:30, min:20, fotos:F("n02","m01"), care:"dolor",
     opts:[{es:"Quiropraxia",it:"Chiropratica",price:30},{es:"Fisioterapia",it:"Fisioterapia",price:30},{es:"Ventosas",it:"Coppettazione",price:30},{es:"Electrodos",it:"Elettrodi",price:30},{es:"Frotación",it:"Frizione",price:30}],
     es:{ name:"Servicio individual a 30 €", desc:"Elige uno: quiropraxia, fisioterapia, ventosas, electrodos o frotación · 30 € cada uno" },
     it:{ name:"Servizio singolo a 30 €", desc:"Scegline uno: chiropratica, fisioterapia, coppettazione, elettrodi o frizione · 30 € l'uno" } },
-  { id:"frot", cat:"fisio", ic:"🧴", price:30, min:45, fotos:F("m16","p18"), care:"dolor",
+  { id:"frot", cat:"fisio", ic:"🧴", price:30, min:20, fotos:F("m16","p18"), care:"dolor",
     es:{ name:"Frotación y envoltura", desc:"Frotación con cremas y envoltura de la zona para aliviar el dolor y la inflamación" },
     it:{ name:"Frizione e bendaggio", desc:"Frizione con creme e bendaggio della zona per alleviare dolore e infiammazione" } },
   { id:"olis", cat:"fisio", ic:"🌿", price:70, before:100, min:60, fotos:F("p08"), care:"masaje",
     es:{ name:"Masaje holístico y descontracturante", desc:"Todo el cuerpo, con crema o talco" },
     it:{ name:"Massaggio olistico e decontratturante", desc:"Tutto il corpo, con crema o talco" } },
-  { id:"vent", cat:"copet", ic:"🫙", price:60, before:70, min:45, fotos:F("m12","m13","m03","m04"), care:"vent",
+  { id:"vent", cat:"copet", ic:"🫙", price:60, before:70, min:20, fotos:F("m12","m13","m03","m04"), care:"vent",
     es:{ name:"Ventosas descontracturantes", desc:"Descontracturante, drenante y desinflamante" },
     it:{ name:"Coppettazione decontratturante", desc:"Decontratturante, drenante e antinfiammatoria" } },
   /* ---------- reductores ---------- */
@@ -1125,7 +1125,7 @@ const promoOn = (s) => !s.until || s.until >= todayKey();
 const minOpt = (s) => (s.opts && s.opts.length ? Math.min(...s.opts.map((o) => o.price)) : s.price);
 const priceTxt = (s) => { const p = minOpt(s); if (p == null) return t("consult"); return ((s.opts && s.opts.length > 1) || s.from ? t("from") + " " : "") + euro(p); };
 const selOpts = (s) => (s && s.opts ? (state.opts[s.id] || []).map((i) => s.opts[i]).filter(Boolean) : []);
-const priceOf = (s) => { if (!s) return null; const o = selOpts(s); if (o.length) return o.reduce((a, x) => a + x.price, 0); return s.opts && s.opts.length === 1 ? s.opts[0].price : s.price; };
+const priceOf = (s) => { if (!s) return null; if (s.wk && state.date && !s.wk.includes(dateOf(state.date).getDay())) return s.wkPrice; const o = selOpts(s); if (o.length) return o.reduce((a, x) => a + x.price, 0); return s.opts && s.opts.length === 1 ? s.opts[0].price : s.price; };
 const optNames = (s, lg) => selOpts(s).map((o) => o[lg || lang] || o.es).join(", ");
 const optMsg = (s, lg) => selOpts(s).map((o) => (o.msg ? o.msg[lg || lang] || o.msg.es : o[lg || lang] || o.es)).join(", ");
 const coverOf = (s) => (COVER[s.id] != null && GAL[COVER[s.id]] ? GAL[COVER[s.id]].src : (s.fotos && s.fotos.length && GAL[s.fotos[0]] ? GAL[s.fotos[0]].src : "fotos/n02.jpg"));
@@ -1441,7 +1441,7 @@ function validStep(s) {
 function message() {
   const s = svcOf(state.service), ph = normPhone(state.phone), n = state.notes.trim(), r = state.ref.trim();
   if (s && s.online) { const it = lang === "it"; return (it ? "Ciao Carim, vorrei iscrivermi:\n" : "Hola Carim, quiero inscribirme:\n") + nm(s) + "\n" + euro(priceOf(s)) + (it ? "\nA nome di " : "\nA nombre de ") + state.name.trim() + (n ? (it ? "\nNota: " : "\nNota: ") + n : "") + `\n\nRef: CA·${s.id}·${todayKey()}·00:00·€${priceOf(s) || 0}${ph ? "·" + ph : ""}${state.src ? "·S:" + state.src : ""}`; }
-  const on = optMsg(s); return t("msg", { s: nm(s) + (on ? " (" + on + ")" : ""), d: (longDate(state.date) || "").replace(/^./, (c) => c.toUpperCase()), t: hhmm(state.time), p: (s.from && !selOpts(s).length ? t("from") + " " : "") + euro(priceOf(s)) }) + t("msgName", { n: state.name.trim() }) + (n ? t("msgNote", { n }) : "") + (r ? t("msgRef", { r }) : "") +
+  const on = optMsg(s); return t("msg", { s: nm(s) + (on ? " (" + on + ")" : ""), d: (longDate(state.date) || "").replace(/^./, (c) => c.toUpperCase()), t: hhmm(state.time), p: (s.from && !selOpts(s).length && !(s.wk && state.date) ? t("from") + " " : "") + euro(priceOf(s)) }) + t("msgName", { n: state.name.trim() }) + (n ? t("msgNote", { n }) : "") + (r ? t("msgRef", { r }) : "") +
     `\n\nRef: CA·${s.id}·${state.date}·${hhmm(state.time)}·€${priceOf(s) == null ? 0 : priceOf(s)}${ph ? "·" + ph : ""}${optNames(s, "es") ? "·O:" + optMsg(s, "es").replace(/·/g, "-") : ""}${state.src ? "·S:" + state.src : ""}${r ? "·R:" + r.replace(/[·\n]/g, " ").slice(0, 30) : ""}`;
 }
 function renderSummary() {
@@ -1480,7 +1480,7 @@ function goStep(s) {
 }
 function renderDock() {
   const s = svcOf(state.service), btn = $("dock-btn");
-  $("dock-total").textContent = s ? (s.opts && s.opts.length > 1 && !selOpts(s).length ? priceTxt(s) : priceOf(s) == null ? t("consult") : (s.from && !selOpts(s).length ? t("from") + " " : "") + euro(priceOf(s))) : "—";
+  $("dock-total").textContent = s ? (s.opts && s.opts.length > 1 && !selOpts(s).length ? priceTxt(s) : priceOf(s) == null ? t("consult") : (s.from && !selOpts(s).length && !(s.wk && state.date) ? t("from") + " " : "") + euro(priceOf(s))) : "—";
   $("dock-sub").textContent = s ? nm(s) + (state.date && state.time != null ? " · " + showDate(state.date) + " " + hhmm(state.time) : "") : t("pickSvc");
   $("dock-back").style.visibility = FLOW.indexOf(step) > 0 || (step === "service" && (svcOpen || scat !== "home")) || (step === "service" && svcOpen) ? "visible" : "hidden";
   if (step === "confirm") { btn.textContent = t("send"); btn.href = validStep("confirm") ? waLink(WA_NUMBER, message()) : "#"; btn.target = "_blank"; btn.rel = "noopener"; }
