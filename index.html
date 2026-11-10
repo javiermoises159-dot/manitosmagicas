@@ -910,6 +910,7 @@ let GAL = [
   {c:"limp",es:"Mascarilla facial",it:"Maschera viso",src:"fotos/lf2.jpg",svc:"limp"},
   {c:"limp",es:"Mascarilla durante la limpieza",it:"Maschera durante la pulizia",src:"fotos/lf3.jpg",svc:"limp"},
   {c:"limp",es:"Piel antes de la limpieza",it:"Pelle prima della pulizia",src:"fotos/lf1.jpg",svc:"limp"},
+  {c:"reduc",es:"Electrodos en el abdomen · tratamiento reductor",it:"Elettrodi sull'addome · trattamento riducente",src:"fotos/rd1.jpg",svc:"red"},
   {c:"lipo",es:"Tratamiento reductor en el abdomen",it:"Trattamento riducente sull'addome",src:"fotos/p07.jpg",svc:"coct"}
 ];
 const F = (...n) => n.map((x) => GAL.findIndex((g) => g.src === "fotos/" + x + ".jpg")).filter((i) => i >= 0);
@@ -925,6 +926,9 @@ let SERVICES = [
   { id:"paq", cat:"fisio", ic:"✨", price:70, before:80, min:90, promo:true, fotos:F(), care:"dolor",
     es:{ short:"Paquete completo", name:"Paquete completo Salud y Belleza", desc:"Quiropraxia + fisioterapia + ventosas + electrodos + frotación. Por separado, 30 € cada uno." },
     it:{ short:"Pacchetto completo", name:"Pacchetto completo Salute e Bellezza", desc:"Chiropratica + fisioterapia + coppettazione + elettrodi + frizione. Separati, 30 € l'uno." } },
+  { id:"curso", cat:"promo", ic:"🎓", price:35, before:39, min:30, promo:true, online:true, fotos:F("n01","n03","m12","m03"), care:"vent",
+    es:{ short:"Curso online de Copetación", name:"Formación online de Copetación", desc:"Aprende la técnica de ventosas con Carim · pago único · te paso el acceso por WhatsApp" },
+    it:{ short:"Corso online di Coppettazione", name:"Formazione online di Coppettazione", desc:"Impara la tecnica della coppettazione con Carim · pagamento unico · ti invio l'accesso su WhatsApp" } },
   /* ---------- quiropraxia y dolor ---------- */
   { id:"tcomp", cat:"fisio", ic:"⚡", price:70, before:100, min:90, fotos:F("m01","n08"), care:"dolor",
     es:{ name:"Terapia completa para el dolor", desc:"Quiropraxia, fisioterapia, ventosas, infrarrojo y ondas rusas" },
@@ -971,7 +975,7 @@ let SERVICES = [
     es:{ name:"Ventosas descontracturantes", desc:"Descontracturante, drenante y desinflamante" },
     it:{ name:"Coppettazione decontratturante", desc:"Decontratturante, drenante e antinfiammatoria" } },
   /* ---------- reductores ---------- */
-  { id:"red", cat:"reduc", ic:"💪", price:50, before:70, min:60, opts:[{es:"1 persona",it:"1 persona",price:50},{es:"2 personas (vienen juntas)",it:"2 persone (insieme)",price:80}], fotos:F(), care:"reduc",
+  { id:"red", cat:"reduc", ic:"💪", price:50, before:70, min:60, opts:[{es:"1 persona",it:"1 persona",price:50},{es:"2 personas (vienen juntas)",it:"2 persone (insieme)",price:80}], fotos:F("rd1"), care:"reduc",
     es:{ name:"Masaje reductor", desc:"Reduce la grasa localizada, modela la figura y activa la circulación · 2 personas por 80 €" },
     it:{ name:"Massaggio riducente", desc:"Riduce il grasso localizzato, modella la figura e attiva la circolazione · 2 persone a 80 €" } },
   { id:"lipo", cat:"lipo", ic:"🎯", price:70, before:100, min:60, fotos:F("p07"), care:"reduc",
@@ -988,15 +992,15 @@ let SERVICES = [
     es:{ name:"Levantamiento de glúteos", desc:"Tonifica y levanta" }, it:{ name:"Lifting glutei", desc:"Tonifica e solleva" } },
   { id:"bust", cat:"reduc", ic:"🌸", price:50, min:60, fotos:[], care:"reduc",
     es:{ name:"Levantamiento de busto", desc:"Tonifica y reafirma" }, it:{ name:"Lifting del seno", desc:"Tonifica e rassoda" } },
-  { id:"carb", cat:"reduc", ic:"🫧", price:30, min:45, fotos:[], care:"piel",
+  { id:"carb", cat:"reduc", ic:"🫧", price:30, min:45, fotos:F("rd1"), care:"piel",
     es:{ name:"Carboxiterapia facial y corporal", desc:"Obesidad localizada, flacidez, estrías, microvárices, pre y post lipoescultura · sin cirugía" },
     it:{ name:"Carbossiterapia viso e corpo", desc:"Grasso localizzato, flaccidità, smagliature, microvarici, pre e post liposcultura · senza chirurgia" } },
   /* ---------- estética ---------- */
   { id:"exf", cat:"limp", ic:"🧴", price:null, min:45, fotos:F(), care:"piel", multi:true, opts:zopts(ZONES_EXF),
     es:{ name:"Exfoliación", desc:"Elige una o varias zonas" }, it:{ name:"Esfoliazione", desc:"Scegli una o più zone" } },
   { id:"limp", cat:"limp", ic:"🧖‍♀️", price:30, from:true, min:60, fotos:F("lf2","lf3","lf1"), care:"piel",
-    es:{ name:"Limpieza facial 1, 2, 3, 4 o 5", desc:"Cinco tipos de limpieza facial, de 30 € a 60 € según el tipo · cuéntale a Carim cuál quieres en el comentario" },
-    it:{ name:"Pulizia viso 1, 2, 3, 4 o 5", desc:"Cinque tipi di pulizia viso, da 30 € a 60 € secondo il tipo · indica a Carim quale vuoi nel commento" } },
+    es:{ name:"Limpieza facial 1, 2, 3, 4 o 5", desc:"De 30 € a 60 € según el tipo · 1: limpieza y exfoliación · 2: + mascarillas de manzanilla y de naranja · 3: exfoliante de café, mascarilla blanqueadora, retiro de impurezas con paleta y mascarilla de ácido hialurónico · 5: la más completa, con mascarilla de miel, bañado de manzanilla, mascarilla blanqueadora y de ácido hialurónico · escribe en el comentario cuál quieres" },
+    it:{ name:"Pulizia viso 1, 2, 3, 4 o 5", desc:"Da 30 € a 60 € secondo il tipo · 1: pulizia ed esfoliazione · 2: + maschere alla camomilla e all'arancia · 3: scrub al caffè, maschera schiarente, rimozione impurità con spatola e maschera all'acido ialuronico · 5: la più completa, con maschera al miele, bagno di camomilla, maschera schiarente e all'acido ialuronico · scrivi nel commento quale vuoi" } },
   { id:"limpe", cat:"limp", ic:"🧼", price:50, min:60, fotos:[], care:"piel",
     es:{ name:"Limpieza profunda de espalda", desc:"Limpieza profunda de la piel de la espalda" }, it:{ name:"Pulizia profonda della schiena", desc:"Pulizia profonda della pelle della schiena" } },
   { id:"blan", cat:"limp", ic:"🤍", price:null, min:45, fotos:F(), care:"piel", multi:true, opts:zopts(ZONES_BLAN),
@@ -1047,7 +1051,7 @@ SERVICES.forEach((s) => { const pr = s.promoRef && SERVICES.find((x) => x.id ===
 const GCATS = CATS;
 /* Antes y después deslizable: misma persona, misma posición (vacío hasta tener fotos) */
 const BA = [];
-const COVER = {}; [["qfdv","n03"],["elec","n09"],["psem","p08"],["qfd","p08"],["qfdvc","p12"],["tper","m01"],["refl","p15"],["olis","p08"],["vent","m12"],["coct","p07"],["lipo","p07"],["limp","lf2"],["tvent","m04"],["quiro","p08"],["tcomp","m01"]].forEach(([k, n]) => { const i = F(n)[0]; if (i != null) COVER[k] = i; });
+const COVER = {}; [["qfdv","n03"],["elec","n09"],["psem","p08"],["qfd","p08"],["qfdvc","p12"],["tper","m01"],["refl","p15"],["olis","p08"],["vent","m12"],["coct","p07"],["lipo","p07"],["limp","lf2"],["red","rd1"],["carb","rd1"],["tvent","m04"],["quiro","p08"],["tcomp","m01"]].forEach(([k, n]) => { const i = F(n)[0]; if (i != null) COVER[k] = i; });
 const FLOW_IDS = ["qfdv", "qfdvc", "elec", "qfd", "vent", "refl", "tper"];
 
 const TXT = {
@@ -1429,20 +1433,21 @@ $("ref-toggle").onclick = () => { $("ref-box").hidden = false; $("ref-toggle").h
 
 function validStep(s) {
   if (s === "service") { const v = svcOf(state.service); return !!v && (!v.opts || v.opts.length < 2 || selOpts(v).length > 0); }
-  if (s === "when") return !!state.date && state.time != null;
+  if (s === "when") { const v = svcOf(state.service); if (v && v.online) return true; return !!state.date && state.time != null; }
   if (s === "you") return state.name.trim().length >= 2 && !!normPhone(state.phone);
   if (s === "confirm") return FLOW.slice(0, 3).every(validStep);
   return true;
 }
 function message() {
   const s = svcOf(state.service), ph = normPhone(state.phone), n = state.notes.trim(), r = state.ref.trim();
+  if (s && s.online) { const it = lang === "it"; return (it ? "Ciao Carim, vorrei iscrivermi:\n" : "Hola Carim, quiero inscribirme:\n") + nm(s) + "\n" + euro(priceOf(s)) + (it ? "\nA nome di " : "\nA nombre de ") + state.name.trim() + (n ? (it ? "\nNota: " : "\nNota: ") + n : "") + `\n\nRef: CA·${s.id}·${todayKey()}·00:00·€${priceOf(s) || 0}${ph ? "·" + ph : ""}${state.src ? "·S:" + state.src : ""}`; }
   const on = optMsg(s); return t("msg", { s: nm(s) + (on ? " (" + on + ")" : ""), d: (longDate(state.date) || "").replace(/^./, (c) => c.toUpperCase()), t: hhmm(state.time), p: (s.from && !selOpts(s).length ? t("from") + " " : "") + euro(priceOf(s)) }) + t("msgName", { n: state.name.trim() }) + (n ? t("msgNote", { n }) : "") + (r ? t("msgRef", { r }) : "") +
     `\n\nRef: CA·${s.id}·${state.date}·${hhmm(state.time)}·€${priceOf(s) == null ? 0 : priceOf(s)}${ph ? "·" + ph : ""}${optNames(s, "es") ? "·O:" + optMsg(s, "es").replace(/·/g, "-") : ""}${state.src ? "·S:" + state.src : ""}${r ? "·R:" + r.replace(/[·\n]/g, " ").slice(0, 30) : ""}`;
 }
 function renderSummary() {
   const s = svcOf(state.service); if (!s) return;
   $("s-svc").textContent = nm(s);
-  $("s-when").textContent = state.date && state.time != null ? longDate(state.date) + " · " + hhmm(state.time) : "—";
+  $("s-when").textContent = s.online ? (lang === "it" ? "Online · accesso su WhatsApp" : "Online · acceso por WhatsApp") : state.date && state.time != null ? longDate(state.date) + " · " + hhmm(state.time) : "—";
   $("s-dur").textContent = durTxt(s); $("s-name").textContent = state.name.trim() || "—";
   $("s-phone").textContent = normPhone(state.phone) ? "+" + normPhone(state.phone) : "—"; $("s-price").textContent = euro(priceOf(s));
   $("s-svc").textContent = nm(s) + (optNames(s) ? " · " + optNames(s) : "");
@@ -1455,10 +1460,11 @@ function careHtml(s) {
 function doneCard() {
   const sv = svcOf(state.service); if (!sv) return "";
   const img = sv.fotos && sv.fotos.length ? (GAL[sv.fotos[0]] || {}).src : null;
-  const when = state.date && state.time != null ? new Intl.DateTimeFormat(loc(), { weekday: "short", day: "numeric", month: "short" }).format(dateOf(state.date)) + " · " + hhmm(state.time) : "";
+  const when = sv.online ? "Online" : state.date && state.time != null ? new Intl.DateTimeFormat(loc(), { weekday: "short", day: "numeric", month: "short" }).format(dateOf(state.date)) + " · " + hhmm(state.time) : "";
   return `${img ? `<img src="${img}" alt="">` : `<span class="dn-ph">${sv.ic || "♛"}</span>`}<div class="dn-t"><b>${esc(nm(sv))}${optNames(sv) ? " · " + esc(optNames(sv)) : ""}</b><small>${when}</small></div><strong>${euro(priceOf(sv))}</strong>`;
 }
 function goStep(s) {
+  { const v = svcOf(state.service); if (s === "when" && v && v.online) s = step === "you" ? "service" : "you"; }
   if (s !== "done") { const i = FLOW.indexOf(s); for (let j = 0; j < i; j++) if (!validStep(FLOW[j])) { s = FLOW[j]; break; } }
   step = s;
   document.querySelectorAll(".step").forEach((el) => el.hidden = el.dataset.step !== s);
