@@ -907,6 +907,9 @@ let GAL = [
   {c:"electro",es:"Electrodos en el brazo",it:"Elettrodi sul braccio",src:"fotos/n10.jpg",svc:"elec"},
   {c:"electro",es:"Electrodos y ventosas",it:"Elettrodi e coppette",src:"fotos/n11.jpg",svc:"elec"},
   {c:"electro",es:"Electrodos en la pierna",it:"Elettrodi sulla gamba",src:"fotos/n12.jpg",svc:"elec"},
+  {c:"limp",es:"Mascarilla facial",it:"Maschera viso",src:"fotos/lf2.jpg",svc:"limp"},
+  {c:"limp",es:"Mascarilla durante la limpieza",it:"Maschera durante la pulizia",src:"fotos/lf3.jpg",svc:"limp"},
+  {c:"limp",es:"Piel antes de la limpieza",it:"Pelle prima della pulizia",src:"fotos/lf1.jpg",svc:"limp"},
   {c:"lipo",es:"Tratamiento reductor en el abdomen",it:"Trattamento riducente sull'addome",src:"fotos/p07.jpg",svc:"coct"}
 ];
 const F = (...n) => n.map((x) => GAL.findIndex((g) => g.src === "fotos/" + x + ".jpg")).filter((i) => i >= 0);
@@ -991,8 +994,11 @@ let SERVICES = [
   /* ---------- estética ---------- */
   { id:"exf", cat:"limp", ic:"🧴", price:null, min:45, fotos:F(), care:"piel", multi:true, opts:zopts(ZONES_EXF),
     es:{ name:"Exfoliación", desc:"Elige una o varias zonas" }, it:{ name:"Esfoliazione", desc:"Scegli una o più zone" } },
-  { id:"limp", cat:"limp", ic:"🧼", price:50, min:60, fotos:F(), care:"piel",
-    es:{ name:"Limpieza facial o de espalda", desc:"Limpieza profunda de la piel" }, it:{ name:"Pulizia viso o schiena", desc:"Pulizia profonda della pelle" } },
+  { id:"limp", cat:"limp", ic:"🧖‍♀️", price:30, from:true, min:60, fotos:F("lf2","lf3","lf1"), care:"piel",
+    es:{ name:"Limpieza facial 1, 2, 3, 4 o 5", desc:"Cinco tipos de limpieza facial, de 30 € a 60 € según el tipo · cuéntale a Carim cuál quieres en el comentario" },
+    it:{ name:"Pulizia viso 1, 2, 3, 4 o 5", desc:"Cinque tipi di pulizia viso, da 30 € a 60 € secondo il tipo · indica a Carim quale vuoi nel commento" } },
+  { id:"limpe", cat:"limp", ic:"🧼", price:50, min:60, fotos:[], care:"piel",
+    es:{ name:"Limpieza profunda de espalda", desc:"Limpieza profunda de la piel de la espalda" }, it:{ name:"Pulizia profonda della schiena", desc:"Pulizia profonda della pelle della schiena" } },
   { id:"blan", cat:"limp", ic:"🤍", price:null, min:45, fotos:F(), care:"piel", multi:true, opts:zopts(ZONES_BLAN),
     es:{ name:"Blanqueamiento", desc:"Axilas o glúteos" }, it:{ name:"Sbiancamento", desc:"Ascelle o glutei" } }
 ];
@@ -1041,7 +1047,7 @@ SERVICES.forEach((s) => { const pr = s.promoRef && SERVICES.find((x) => x.id ===
 const GCATS = CATS;
 /* Antes y después deslizable: misma persona, misma posición (vacío hasta tener fotos) */
 const BA = [];
-const COVER = {}; [["qfdv","n03"],["elec","n09"],["psem","p08"],["qfd","p08"],["qfdvc","p12"],["tper","m01"],["refl","p15"],["olis","p08"],["vent","m12"],["coct","p07"],["lipo","p07"],["tvent","m04"],["quiro","p08"],["tcomp","m01"]].forEach(([k, n]) => { const i = F(n)[0]; if (i != null) COVER[k] = i; });
+const COVER = {}; [["qfdv","n03"],["elec","n09"],["psem","p08"],["qfd","p08"],["qfdvc","p12"],["tper","m01"],["refl","p15"],["olis","p08"],["vent","m12"],["coct","p07"],["lipo","p07"],["limp","lf2"],["tvent","m04"],["quiro","p08"],["tcomp","m01"]].forEach(([k, n]) => { const i = F(n)[0]; if (i != null) COVER[k] = i; });
 const FLOW_IDS = ["qfdv", "qfdvc", "elec", "qfd", "vent", "refl", "tper"];
 
 const TXT = {
