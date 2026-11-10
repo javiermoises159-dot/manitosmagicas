@@ -1485,7 +1485,8 @@ $("again-out").onclick = () => { me = null; try { localStorage.removeItem("carim
 /* ---------- info ---------- */
 function renderInfo() {
   let h = "", last = "";
-  allServices().forEach((s) => { if (s.cat !== last) { h += `<div class="cat">${esc(catName(s.cat)).toUpperCase()}</div>`; last = s.cat; } h += `<div><span>${esc(nm(s))}</span><b>${s.opts && s.opts.length ? "" : priceTxt(s)}</b></div>`; if (s.opts) s.opts.forEach((o) => { h += `<div style="padding-left:14px;font-size:13px;color:var(--muted)"><span>· ${esc(L(o))}</span><b>${euro(o.price)}</b></div>`; }); });
+  const ORD2 = [...GROUPS.salud.cats, ...GROUPS.belleza.cats], oi = (c) => { const i = ORD2.indexOf(c); return i < 0 ? -1 : i; };
+  allServices().slice().sort((p, q) => oi(p.cat) - oi(q.cat)).forEach((s) => { if (s.cat !== last) { h += `<div class="cat">${esc(catName(s.cat)).toUpperCase()}</div>`; last = s.cat; } h += `<div><span>${esc(nm(s))}</span><b>${s.opts && s.opts.length ? "" : priceTxt(s)}</b></div>`; if (s.opts) s.opts.forEach((o) => { h += `<div style="padding-left:14px;font-size:13px;color:var(--muted)"><span>· ${esc(L(o))}</span><b>${euro(o.price)}</b></div>`; }); });
   $("plist").innerHTML = h;
   $("faq").innerHTML = L(FAQ).map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join("");
   $("care-all").innerHTML = Object.keys(CARE).map((k) => `<details><summary>${esc(L(CARE_NAMES[k]))}</summary><p>${L(CARE[k]).map(esc).join("<br>• ").replace(/^/, "• ")}</p></details>`).join("");
