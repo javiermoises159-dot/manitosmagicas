@@ -922,6 +922,8 @@ let GAL = [
   {c:"reduc",es:"Abdomen con estrías antes del tratamiento",it:"Addome con smagliature prima del trattamento",src:"fotos/cb3.jpg",svc:"carb"},
   {c:"glut",es:"Masaje de glúteos con maderoterapia",it:"Massaggio glutei con maderoterapia",src:"fotos/gl1.jpg",svc:"glut"},
   {c:"glut",es:"Medición antes del levante de glúteos",it:"Misurazione prima del lifting glutei",src:"fotos/gl2.jpg",svc:"glut"},
+  {c:"limp",es:"Exfoliación corporal · imagen ilustrativa",it:"Esfoliazione corpo · immagine illustrativa",src:"fotos/ex1.jpg",svc:"exf",ilus:true},
+  {c:"limp",es:"Blanqueamiento · imagen ilustrativa",it:"Sbiancamento · immagine illustrativa",src:"fotos/bl1.jpg",svc:"blan",ilus:true},
   {c:"lipo",es:"Tratamiento reductor en el abdomen",it:"Trattamento riducente sull'addome",src:"fotos/p07.jpg",svc:"coct"}
 ];
 const F = (...n) => n.map((x) => GAL.findIndex((g) => g.src === "fotos/" + x + ".jpg")).filter((i) => i >= 0);
@@ -1004,7 +1006,7 @@ let SERVICES = [
     es:{ name:"Carboxiterapia facial y corporal", desc:"Obesidad localizada, flacidez, estrías, microvárices, pre y post lipoescultura · sin cirugía" },
     it:{ name:"Carbossiterapia viso e corpo", desc:"Grasso localizzato, flaccidità, smagliature, microvarici, pre e post liposcultura · senza chirurgia" } },
   /* ---------- estética ---------- */
-  { id:"exf", cat:"limp", ic:"🧴", price:null, min:45, fotos:F(), care:"piel", multi:true, opts:zopts(ZONES_EXF),
+  { id:"exf", cat:"limp", ic:"🧴", price:null, min:45, fotos:F("ex1"), care:"piel", multi:true, opts:zopts(ZONES_EXF),
     es:{ name:"Exfoliación", desc:"Elige una o varias zonas" }, it:{ name:"Esfoliazione", desc:"Scegli una o più zone" } },
   { id:"limp", cat:"limp", ic:"🧖‍♀️", price:30, min:60, fotos:F("lf2","lf3","lf1"), care:"piel",
     opts:[{es:"Limpieza 1 · limpieza y exfoliación",it:"Pulizia 1 · pulizia ed esfoliazione",price:30},
@@ -1015,7 +1017,7 @@ let SERVICES = [
     it:{ name:"Pulizia viso 1, 2, 3 o 4", desc:"Quattro tipi di pulizia viso, da 30 € a 60 € · scegli quella che vuoi" } },
   { id:"limpe", cat:"limp", ic:"🧼", price:50, min:60, fotos:[], care:"piel",
     es:{ name:"Limpieza profunda de espalda", desc:"Limpieza profunda de la piel de la espalda" }, it:{ name:"Pulizia profonda della schiena", desc:"Pulizia profonda della pelle della schiena" } },
-  { id:"blan", cat:"limp", ic:"🤍", price:null, min:45, fotos:F(), care:"piel", multi:true, opts:zopts(ZONES_BLAN),
+  { id:"blan", cat:"limp", ic:"🤍", price:null, min:45, fotos:F("bl1"), care:"piel", multi:true, opts:zopts(ZONES_BLAN),
     es:{ name:"Blanqueamiento", desc:"Axilas o glúteos" }, it:{ name:"Sbiancamento", desc:"Ascelle o glutei" } }
 ];
 const CATS = { quiro:{es:"Quiropráctica",it:"Chiropratica"}, fisio:{es:"Fisioterapia",it:"Fisioterapia"}, vento:{es:"Ventosaterapia",it:"Ventosaterapia"},
@@ -1063,7 +1065,7 @@ SERVICES.forEach((s) => { const pr = s.promoRef && SERVICES.find((x) => x.id ===
 const GCATS = CATS;
 /* Antes y después deslizable: misma persona, misma posición (vacío hasta tener fotos) */
 const BA = [];
-const COVER = {}; [["qfdv","n03"],["elec","n09"],["psem","p08"],["qfd","p08"],["qfdvc","p12"],["tper","m01"],["refl","p15"],["olis","p08"],["vent","m12"],["coct","p07"],["lipo","p07"],["limp","lf2"],["pro","pr1"],["glut","gl1"],["red","rd2"],["carb","cb1"],["tvent","m04"],["quiro","p08"],["tcomp","m01"]].forEach(([k, n]) => { const i = F(n)[0]; if (i != null) COVER[k] = i; });
+const COVER = {}; [["qfdv","n03"],["elec","n09"],["psem","p08"],["qfd","p08"],["qfdvc","p12"],["tper","m01"],["refl","p15"],["olis","p08"],["vent","m12"],["coct","p07"],["lipo","p07"],["limp","lf2"],["exf","ex1"],["blan","bl1"],["pro","pr1"],["glut","gl1"],["red","rd2"],["carb","cb1"],["tvent","m04"],["quiro","p08"],["tcomp","m01"]].forEach(([k, n]) => { const i = F(n)[0]; if (i != null) COVER[k] = i; });
 const FLOW_IDS = ["pro", "qfdv", "qfdvc", "elec", "qfd", "vent", "refl", "tper"];
 
 const TXT = {
@@ -1309,7 +1311,7 @@ const gview = () => GAL.filter((g) => gcat === "all" || g.c === gcat);
 const vista = () => lbList || gview();
 function galItems() {
   const seen = new Set(), out = [];
-  SERVICES.filter((x) => !x.hidden && x.fotos && x.fotos.length).forEach((x) => x.fotos.forEach((gi) => { if (!seen.has(gi) && GAL[gi]) { seen.add(gi); out.push({ gi, sv: x }); } }));
+  SERVICES.filter((x) => !x.hidden && x.fotos && x.fotos.length).forEach((x) => x.fotos.forEach((gi) => { if (!seen.has(gi) && GAL[gi] && !GAL[gi].ilus) { seen.add(gi); out.push({ gi, sv: x }); } }));
   return out;
 }
 function renderGal() {
@@ -1321,7 +1323,7 @@ function renderGal() {
     return `<button class="mi" type="button" data-gi="${gi}" data-row="${sv.id}">` + (g.video ? `<video src="${g.video}#t=0.5" muted playsinline preload="metadata"></video><span class="play">▶</span>` : `<img src="${g.src}" alt="${esc(L(g))}" loading="lazy">`) +
       `<span class="cap">${esc(L(g) || nm(sv))}</span></button>`; }).join("");
 }
-function openWorks(id) { const sv = svcOf(id); gcat = sv ? sv.cat : "all"; showTab("works"); renderGal(); }
+function openWorks(id) { const sv = svcOf(id); if (sv && sv.fotos && sv.fotos.length && sv.fotos.every((i) => GAL[i] && GAL[i].ilus)) { lbList = sv.fotos.map((i) => GAL[i]); lbSvc = sv.id; openLb(0); return; } gcat = sv ? sv.cat : "all"; showTab("works"); renderGal(); }
 $("gtabs").addEventListener("click", (e) => { const b = e.target.closest("[data-c]"); if (b) { gcat = b.dataset.c; renderGal(); } });
 $("grid").addEventListener("click", (e) => { stripClick(e); });
 function openLb(i) {
