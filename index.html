@@ -487,6 +487,8 @@ body{color:var(--ink)}
 .top-r{gap:8px}
 .nhero:after{background:linear-gradient(180deg,rgba(91,20,83,.42) 0%,rgba(91,20,83,0) 18%,rgba(255,255,255,0) 52%,rgba(253,238,248,.9) 80%,#fff 100%)!important}
 .nhero img{object-position:45% 25%!important}
+.opt b{white-space:nowrap;flex:0 0 auto;margin-left:10px}
+.opt span{flex:1;min-width:0}
 </style>
 </head>
 <body>
@@ -995,9 +997,13 @@ let SERVICES = [
   /* ---------- estética ---------- */
   { id:"exf", cat:"limp", ic:"🧴", price:null, min:45, fotos:F(), care:"piel", multi:true, opts:zopts(ZONES_EXF),
     es:{ name:"Exfoliación", desc:"Elige una o varias zonas" }, it:{ name:"Esfoliazione", desc:"Scegli una o più zone" } },
-  { id:"limp", cat:"limp", ic:"🧖‍♀️", price:30, from:true, min:60, fotos:F("lf2","lf3","lf1"), care:"piel",
-    es:{ name:"Limpieza facial 1, 2, 3, 4 o 5", desc:"De 30 € a 60 € según el tipo · 1: limpieza y exfoliación · 2: + mascarillas de manzanilla y de naranja · 3: exfoliante de café, mascarilla blanqueadora, retiro de impurezas con paleta y mascarilla de ácido hialurónico · 5: la más completa, con mascarilla de miel, bañado de manzanilla, mascarilla blanqueadora y de ácido hialurónico · escribe en el comentario cuál quieres" },
-    it:{ name:"Pulizia viso 1, 2, 3, 4 o 5", desc:"Da 30 € a 60 € secondo il tipo · 1: pulizia ed esfoliazione · 2: + maschere alla camomilla e all'arancia · 3: scrub al caffè, maschera schiarente, rimozione impurità con spatola e maschera all'acido ialuronico · 5: la più completa, con maschera al miele, bagno di camomilla, maschera schiarente e all'acido ialuronico · scrivi nel commento quale vuoi" } },
+  { id:"limp", cat:"limp", ic:"🧖‍♀️", price:30, min:60, fotos:F("lf2","lf3","lf1"), care:"piel",
+    opts:[{es:"Limpieza 1 · limpieza y exfoliación",it:"Pulizia 1 · pulizia ed esfoliazione",price:30},
+      {es:"Limpieza 2 · limpieza, exfoliante, mascarilla de manzanilla y mascarilla de naranja",it:"Pulizia 2 · pulizia, scrub, maschera alla camomilla e maschera all'arancia",price:40},
+      {es:"Limpieza 3 · limpieza, exfoliante de café, mascarilla blanqueadora, retiro de impurezas con paleta y mascarilla de ácido hialurónico",it:"Pulizia 3 · pulizia, scrub al caffè, maschera schiarente, rimozione impurità con spatola e maschera all'acido ialuronico",price:50},
+      {es:"Limpieza 4 · limpieza, exfoliante, mascarilla de miel, retiro de impurezas, mascarilla blanqueadora, bañado de manzanilla, mascarilla de ácido hialurónico y más",it:"Pulizia 4 · pulizia, scrub, maschera al miele, rimozione impurità, maschera schiarente, bagno di camomilla, maschera all'acido ialuronico e altro",price:60}],
+    es:{ name:"Limpieza facial 1, 2, 3 o 4", desc:"Cuatro tipos de limpieza facial, de 30 € a 60 € · elige la que quieres" },
+    it:{ name:"Pulizia viso 1, 2, 3 o 4", desc:"Quattro tipi di pulizia viso, da 30 € a 60 € · scegli quella che vuoi" } },
   { id:"limpe", cat:"limp", ic:"🧼", price:50, min:60, fotos:[], care:"piel",
     es:{ name:"Limpieza profunda de espalda", desc:"Limpieza profunda de la piel de la espalda" }, it:{ name:"Pulizia profonda della schiena", desc:"Pulizia profonda della pelle della schiena" } },
   { id:"blan", cat:"limp", ic:"🤍", price:null, min:45, fotos:F(), care:"piel", multi:true, opts:zopts(ZONES_BLAN),
