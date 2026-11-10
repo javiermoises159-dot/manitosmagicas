@@ -1,6 +1,6 @@
 # Carim · Manitos Mágicas
 
-Página de reservas en Cloudflare Pages (carimmanitosmagicas.pages.dev).
+Página de reservas en Cloudflare Pages (manitosmagicas.pages.dev).
 
 - `index.html` y `fotos/`: la página (sin build).
 - `functions/`: guardado del panel de Carim (agenda, clientes, servicios, fotos).
