@@ -1,0 +1,7 @@
+name = "manitosmagicas"
+compatibility_date = "2026-11-01"
+pages_build_output_dir = "."
+
+[[kv_namespaces]]
+binding = "DB"
+id = "4ac2c15ec5584276b02e26ebf3b7cd42"
