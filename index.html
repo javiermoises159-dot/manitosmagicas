@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta data-own charset="UTF-8">
+<meta data-own name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Quiropráctica, fisioterapia, ventosas, masajes y reductores en Sesto San Giovanni. Elige servicio, día y hora: Carim te confirma por WhatsApp." data-own>
+<meta property="og:type" content="website" data-own>
+<meta property="og:url" content="https://carimmanitosmagicas.pages.dev/" data-own>
+<meta property="og:site_name" content="Carim · Manitos Mágicas" data-own>
+<meta property="og:title" content="Carim · Manitos Mágicas · Reserva tu cita" data-own>
+<meta property="og:description" content="Salud y belleza en Sesto San Giovanni. Elige servicio, día y hora: te confirmo por WhatsApp." data-own>
+<meta property="og:image" content="https://carimmanitosmagicas.pages.dev/fotos/og.jpg" data-own>
+<meta property="og:image:width" content="1200" data-own>
+<meta property="og:image:height" content="630" data-own>
+<meta name="twitter:card" content="summary_large_image" data-own>
+<title data-own>Reservas Carim · Manitos Mágicas</title>
+<link data-own href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Copia del sistema de CARIM · Manitos Mágicas adaptada a Carim · Manitos Mágicas (quiropraxia, fisioterapia, masajes). Clientes: Inicio, Mis trabajos, Reservar, Info (ES/IT). Carim (editora) ve además su panel. -->
+<style data-own>
+
+:root{
+  --ink:#3d1838;--muted:#8d6487;--line:#f4d3e7;--soft:#fdebf5;--blush:#fff4fa;
+  --lila:#d6247f;--osc:#a3175f;--deep:#5b1453;--morado:#6a2a8f;--oro:#c99a2e;--oro2:#f0cf72;--oro-cl:#fbefcf;
+  --gloss:linear-gradient(135deg,#fbb6dc 0%,#ec5aa5 45%,#c81a6c 100%);
+  --gloss-strong:linear-gradient(135deg,#f45fae 0%,#d81b7a 50%,#8c1158 100%);
+  --gold:linear-gradient(135deg,#fde7a3 0%,#dcab3e 55%,#a8791f 100%);
+  --shadow:0 10px 28px -12px rgba(200,26,108,.42);--shadow-soft:0 4px 16px rgba(200,26,108,.08);
+  --ok:#2f8f5b;--err:#b3261e;--r:22px;--ease:cubic-bezier(.2,.7,.2,1)
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{background:#fff}
+body{font-family:Poppins,system-ui,sans-serif;color:var(--ink);font-size:15px;-webkit-font-smoothing:antialiased;background:radial-gradient(120% 60% at 50% 100%,#f6e3fb 0%,#fff 60%)}
+button,input,textarea,select{font:inherit;color:inherit}
+button{cursor:pointer}
+button:active{transform:scale(.97)}
+[hidden]{display:none!important}
+.app{max-width:540px;margin:0 auto;min-height:100vh;padding-bottom:130px}
+.view{padding:0 18px}
+h1,h2,h3{font-family:'Playfair Display',serif;color:var(--deep);font-weight:700;letter-spacing:-.01em}
+h1{font-size:30px;line-height:1.1}
+h2{font-size:21px}
+.scr{font-family:'Great Vibes',cursive;font-weight:400;color:var(--lila)}
+.small{font-size:13px;color:var(--muted);line-height:1.55}
+.hint{font-size:13px;color:var(--muted)}
+.empty{font-size:13px;color:var(--muted);text-align:center;padding:20px;border:1.5px dashed var(--line);border-radius:16px;background:#fff}
+.status{font-size:13px;margin-top:8px;color:var(--ok);min-height:1em}
+.status.err{color:var(--err)}
+.kicker{font-size:11px;letter-spacing:.24em;color:var(--oro);font-weight:600;text-transform:uppercase}
+header.top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:22px 0 6px}
+.page-h{padding:22px 0 4px}
+.page-h h1{margin-top:6px}
+.page-h p{margin-top:6px}
+.back{border:none;background:none;color:var(--lila);font-size:14px;font-weight:600}
+.panel{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-top:14px;box-shadow:var(--shadow-soft)}
+.panel h2{margin-bottom:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:none;border-radius:16px;padding:14px 18px;font-weight:600;font-size:14px;background:var(--gloss-strong);color:#fff;text-decoration:none;width:100%;margin-top:10px;box-shadow:var(--shadow)}
+.btn.ghost{background:var(--soft);color:var(--osc);box-shadow:none}
+.btn.line{background:#fff;color:var(--lila);border:1.5px solid var(--lila);box-shadow:none}
+.btn.wa{background:#25d366;box-shadow:0 10px 22px -12px rgba(37,211,102,.8)}
+.btn.sm{width:auto;padding:8px 12px;font-size:13px;margin-top:0;border-radius:12px;box-shadow:none}
+.linkbtn{border:none;background:none;color:var(--lila);font-size:13px;text-decoration:underline;margin-top:8px}
+input,textarea,select{width:100%;border:1.5px solid var(--line);border-radius:14px;padding:13px 14px;background:#fff;font-size:15px;margin-top:6px}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--lila);box-shadow:0 0 0 4px rgba(214,36,127,.12)}
+textarea{resize:vertical}
+label.l{display:block;font-size:12px;color:var(--muted);margin-top:14px;font-weight:500}
+.row{display:flex;gap:8px}
+.row>*{flex:1}
+.sec{margin-top:30px}
+.sec-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
+.sec-h button{border:none;background:none;color:var(--lila);font-size:13px;font-weight:600}
+
+/* ---------- inicio ---------- */
+.nhero{position:relative;height:470px;margin:0 -18px;overflow:hidden}
+.nhero img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block;animation:kb 1.8s var(--ease) both}
+.nhero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(91,20,83,.5) 0%,rgba(91,20,83,0) 28%,rgba(255,255,255,0) 50%,rgba(253,238,248,.9) 80%,#fff 100%)}
+.nhero-top{position:absolute;z-index:2;top:18px;left:18px;right:18px;display:flex;justify-content:space-between;align-items:center}
+.wm{display:flex;align-items:center;gap:8px;color:#fff;text-shadow:0 2px 12px rgba(91,20,83,.5)}
+.wm b{font-family:'Playfair Display',serif;font-size:22px;letter-spacing:.18em}
+.wm i{font-style:normal;color:var(--oro2);font-size:20px}
+.ig{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.6);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:#fff}
+.ig svg{width:19px;height:19px}
+.nintro .kicker{text-shadow:0 1px 8px #fff,0 0 2px #fff}
+.nintro{position:relative;z-index:2;margin-top:-170px;display:flex;flex-direction:column;gap:10px;animation:up .8s var(--ease) .15s both}
+.nintro h1{font-size:40px;line-height:1.02}
+.nintro h1 .scr{display:block;font-size:50px;line-height:1.1;margin-top:2px}
+.nintro p{color:var(--muted);font-size:14.5px;line-height:1.55}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;background:#fff;border:1px solid var(--line);color:var(--osc);padding:7px 12px;border-radius:999px;box-shadow:var(--shadow-soft)}
+.ncta{position:relative;overflow:hidden;isolation:isolate;min-height:58px;width:100%;display:flex;align-items:center;justify-content:space-between;padding:0 26px;border:0;border-radius:999px;background:var(--gloss-strong);color:#fff;font:600 15px Poppins,sans-serif;letter-spacing:.04em;box-shadow:var(--shadow);margin-top:6px}
+.ncta:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.45) 48%,transparent 62%);transform:translateX(-120%);animation:shine 3.6s var(--ease) 1.4s infinite}
+.ncta span:last-child{font-size:20px}
+.me-card{background:#fff;border:1.5px solid var(--oro-cl);border-radius:var(--r);padding:18px;margin-top:18px;box-shadow:var(--shadow-soft)}
+.me-hi{font-family:'Playfair Display',serif;font-size:20px;color:var(--deep);font-weight:700}
+.actions{display:flex;gap:8px}
+.actions .btn{flex:1}
+
+/* coverflow de servicios */
+.cflow{position:relative;height:380px;margin:0 -18px;perspective:1100px;overflow:hidden;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.cf-card{position:absolute;top:10px;left:50%;width:min(64%,252px);height:350px;padding:0;border:0;border-radius:26px;overflow:hidden;background:var(--soft);transition:transform .6s var(--ease),opacity .4s,filter .4s;box-shadow:0 18px 34px -18px rgba(91,20,83,.6)}
+.cf-card img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;display:block;pointer-events:none}
+.cf-card:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(91,20,83,.6) 0%,rgba(91,20,83,0) 34%,rgba(91,20,83,0) 60%,rgba(91,20,83,.3) 100%)}
+.cf-card:not(.on){filter:saturate(.8) brightness(.88)}
+.cf-name{position:absolute;z-index:2;top:16px;left:16px;right:16px;text-align:left;color:#fff;font:700 21px/1.12 'Playfair Display',serif;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+.cf-name small{display:block;font:500 11px Poppins,sans-serif;letter-spacing:.2em;color:var(--oro2);margin-bottom:6px;text-transform:uppercase}
+.cf-bar{position:absolute;z-index:2;left:10px;right:10px;bottom:10px;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.96);border-radius:18px;padding:10px 10px 10px 14px;text-align:left}
+.cf-bar b{color:var(--osc);font-size:15px;white-space:nowrap}
+.cf-bar small{flex:1;color:var(--muted);font-size:12px;white-space:nowrap}
+.cf-go{font:600 12px Poppins,sans-serif;background:var(--gloss-strong);color:#fff;border-radius:999px;padding:8px 12px;white-space:nowrap}
+.cf-card:not(.on) .cf-go{display:none}
+.cf-ctrl{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:4px}
+.cf-arr{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--line);background:#fff;color:var(--deep);font-size:22px;display:grid;place-items:center;box-shadow:var(--shadow-soft)}
+.cf-dots{display:flex;gap:6px;align-items:center}
+.cf-dots button{width:8px;height:8px;padding:0;border:0;border-radius:999px;background:var(--line);transition:width .3s var(--ease),background .3s}
+.cf-dots button.on{width:26px;background:var(--lila)}
+
+/* promos */
+.feats{display:flex;gap:12px;overflow-x:auto;margin:0 -18px;padding:4px 18px 10px;scroll-snap-type:x mandatory;scrollbar-width:none}
+.feats::-webkit-scrollbar{display:none}
+.feat{position:relative;flex:0 0 80%;scroll-snap-align:center;border:1px solid var(--line);background:#fff;border-radius:22px;overflow:hidden;padding:0;text-align:left;box-shadow:var(--shadow-soft);display:flex;flex-direction:column}
+.feat img{width:100%;height:140px;object-fit:cover;display:block}
+.feat-badge{position:absolute;top:10px;left:10px;background:var(--gold);color:#3a2808;font:700 11px Poppins,sans-serif;letter-spacing:.08em;border-radius:999px;padding:6px 12px}
+.feat-body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:3px;flex:1}
+.feat-body b{font-size:15px;color:var(--deep)}
+.feat-body small{color:var(--muted);font-size:12.5px;line-height:1.4}
+.feat-foot{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:8px}
+.feat-foot s{font-size:12px;color:var(--muted)}
+.feat-foot strong{font-size:20px;color:var(--osc)}
+
+/* ---------- servicios (estilo Zoe) ---------- */
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tile{position:relative;aspect-ratio:3/4;border:0;padding:0;border-radius:20px;overflow:hidden;background:var(--soft);text-align:left;box-shadow:var(--shadow-soft)}
+.tile img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;display:block}
+.tile:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(91,20,83,0) 40%,rgba(91,20,83,.85) 100%)}
+.tile-n{position:absolute;z-index:2;top:10px;left:10px;background:rgba(255,255,255,.92);color:var(--osc);font-size:11px;font-weight:600;border-radius:999px;padding:4px 9px}
+.tile-ov{position:absolute;z-index:2;left:12px;right:12px;bottom:12px;color:#fff}
+.tile-ov b{display:block;font-size:14px;line-height:1.25}
+.tile-ov small{font-size:12px;color:#f8d9ec}
+.tile.on{outline:3px solid var(--lila);outline-offset:2px}
+.mcheck{position:absolute;z-index:3;top:10px;right:10px;width:26px;height:26px;border-radius:50%;background:var(--lila);color:#fff;display:grid;place-items:center;font-size:14px;font-weight:700}
+.svc-cat{margin:20px 0 8px;font:600 11px Poppins,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--oro)}
+.orow{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;border:1.5px solid var(--line);background:#fff;border-radius:16px;padding:13px 14px;margin-bottom:8px;text-align:left}
+.orow .ic{width:38px;height:38px;border-radius:50%;background:var(--soft);display:grid;place-items:center;font-size:18px;flex-shrink:0}
+.orow .t{flex:1;min-width:0}
+.orow b{font-size:14px;font-weight:600;display:block}
+.orow small{font-size:12px;color:var(--muted);display:block;margin-top:2px;line-height:1.4}
+.orow .p{font-size:14px;font-weight:600;color:var(--osc);white-space:nowrap}
+.orow .p.c{color:var(--oro);font-size:12px}
+.orow.on{border-color:var(--lila);background:var(--soft)}
+.back-all{border:none;background:none;color:var(--lila);font-weight:600;font-size:14px;margin-bottom:12px}
+.detail{background:#fff;border:1.5px solid var(--lila);border-radius:var(--r);padding:16px;box-shadow:var(--shadow)}
+.detail-h{display:flex;gap:12px;align-items:flex-start}
+.detail-h .ic{width:46px;height:46px;border-radius:50%;background:var(--soft);display:grid;place-items:center;font-size:22px;flex-shrink:0}
+.detail-h h2{font-size:20px}
+.detail-h p{font-size:13px;color:var(--muted);margin-top:4px;line-height:1.5}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.meta span{font-size:12px;background:var(--soft);color:var(--osc);padding:6px 11px;border-radius:999px;font-weight:500}
+.meta span.gold{background:var(--oro-cl);color:#7a5a1a}
+.sg-row{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:14px 0 6px;scrollbar-width:none}
+.sg-row::-webkit-scrollbar{display:none}
+.sg-it{flex:0 0 70%;scroll-snap-align:center;border:none;padding:0;background:none;text-align:left}
+.sg-it .ph{position:relative;aspect-ratio:4/5;border-radius:18px;overflow:hidden;background:var(--soft)}
+.sg-it img,.sg-it video{width:100%;height:100%;object-fit:cover;display:block}
+.sg-it .n{position:absolute;top:10px;left:10px;background:rgba(91,20,83,.75);color:#fff;font-size:11px;font-weight:600;padding:4px 10px;border-radius:999px}
+.sg-it .play{position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:34px;text-shadow:0 2px 10px rgba(0,0,0,.6)}
+.sg-it p{font-size:12.5px;color:var(--osc);margin-top:7px;font-weight:500}
+.sg-dots{display:flex;justify-content:center;gap:5px;margin-top:4px}
+.sg-dots i{width:6px;height:6px;border-radius:999px;background:var(--line);transition:width .3s}
+.sg-dots i.on{background:var(--lila);width:18px}
+.nofoto{margin-top:14px;font-size:12.5px;color:var(--muted);background:var(--soft);border-radius:14px;padding:14px;text-align:center}
+
+/* servicios (página) */
+.wk{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-top:12px;box-shadow:var(--shadow-soft)}
+.wk .detail-h h2{font-size:18px}
+
+/* ---------- mis trabajos ---------- */
+.tabs{display:flex;gap:6px;overflow-x:auto;padding:6px 0 10px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{white-space:nowrap;border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 15px;font-size:13px;color:var(--osc);font-weight:500}
+.tab.on{background:var(--gloss-strong);color:#fff;border-color:transparent}
+.masonry{columns:2;column-gap:10px}
+.masonry .it{display:block;width:100%;margin-bottom:10px;break-inside:avoid;border:none;padding:0;border-radius:18px;overflow:hidden;position:relative;background:var(--soft);box-shadow:var(--shadow-soft)}
+.masonry img,.masonry video{width:100%;display:block}
+.masonry .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 10px 8px;font-size:11.5px;color:#fff;text-align:left;background:linear-gradient(180deg,transparent,rgba(91,20,83,.8))}
+.masonry .play{position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:30px;text-shadow:0 2px 10px rgba(0,0,0,.6)}
+.lb{position:fixed;inset:0;background:rgba(27,13,40,.96);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:60;padding:20px}
+.lb img,.lb video{max-width:100%;max-height:66vh;border-radius:18px}
+.lb p{color:#fff;margin-top:12px;font-size:14px;text-align:center}
+.lb .x{position:absolute;top:14px;right:16px;background:rgba(255,255,255,.12);border:none;color:#fff;font-size:26px;width:42px;height:42px;border-radius:50%}
+.lb .nav{position:absolute;top:45%;background:rgba(255,255,255,.14);border:none;color:#fff;width:44px;height:44px;border-radius:50%;font-size:22px}
+.lb .ant{left:8px}.lb .sig{right:8px}
+.lb .btn{max-width:300px}
+
+/* ---------- reservar ---------- */
+.prog{display:flex;gap:6px;margin:6px 0 18px}
+.prog i{flex:1;height:5px;border-radius:5px;background:var(--line);transition:background .3s}
+.prog i.on{background:var(--gloss-strong)}
+.step>h1{margin-bottom:14px}
+.days{display:flex;gap:8px;overflow-x:auto;margin:0 -18px;padding:2px 18px 8px;scrollbar-width:none}
+.days::-webkit-scrollbar{display:none}
+.day{flex:0 0 64px;border:1.5px solid var(--line);background:#fff;border-radius:18px;padding:10px 0;text-align:center}
+.day small{display:block;font-size:11px;color:var(--muted);text-transform:capitalize}
+.day b{font-size:20px;display:block;margin:2px 0}
+.day.on{background:var(--gloss-strong);border-color:transparent;color:#fff;box-shadow:var(--shadow)}
+.day.on small{color:#f8d9ec}
+.times{margin-top:6px}
+.tgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.tlabel{font-size:12px;font-weight:600;color:var(--muted);margin:16px 0 8px}
+.time{border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:11px 0;font-size:13.5px;font-weight:500}
+.time.on{background:var(--gloss-strong);color:#fff;border-color:transparent}
+.summary dl{display:grid;grid-template-columns:auto 1fr;gap:10px 16px;font-size:14px}
+.summary dt{color:var(--muted)}
+.summary dd{font-weight:600}
+details.rules{margin-top:14px;font-size:13px;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 14px}
+details.rules summary{color:var(--osc);font-weight:600;cursor:pointer}
+details.rules ul{margin:8px 0 0 18px;line-height:1.7}
+.done-ico{width:72px;height:72px;border-radius:50%;background:var(--gloss-strong);color:#fff;font-size:34px;display:grid;place-items:center;margin:30px auto 14px;box-shadow:var(--shadow);animation:pop .6s var(--ease)}
+.step[data-step="done"]{text-align:center}
+.step[data-step="done"] .me-card{text-align:left}
+
+/* barras flotantes (como Zoe) */
+.bnav,.onav,.dock{position:fixed;left:12px;right:12px;bottom:10px;z-index:30;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:26px;box-shadow:0 14px 34px -14px rgba(91,20,83,.35);max-width:516px;margin:0 auto}
+.bnav,.onav{display:flex;justify-content:space-around;align-items:flex-end;padding:6px}
+.bnav button,.onav button{flex:1;max-width:110px;border:none;background:none;padding:7px 0;font-size:10.5px;font-weight:600;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:3px;border-radius:18px}
+.bnav svg,.onav svg{width:23px;height:23px}
+.bnav button.on,.onav button.on{color:var(--osc);background:var(--soft)}
+.bnav .fab{flex:0 0 84px;max-width:84px;background:none!important;margin-top:-30px;color:var(--muted)}
+.bnav .fab.on{color:var(--osc)}
+.fab-ic{width:62px;height:62px;border-radius:50%;background:var(--gloss-strong);color:#fff;display:grid;place-items:center;box-shadow:0 0 0 5px #fff,0 14px 24px -10px rgba(200,26,108,.8);animation:float 3.4s ease-in-out infinite}
+.fab-ic svg{width:28px!important;height:28px!important}
+.bnav .fab.on .fab-ic{box-shadow:0 0 0 5px #fff,0 0 0 8px rgba(201,161,74,.45),0 14px 24px -10px rgba(200,26,108,.8)}
+.dock{padding:10px 10px 10px 12px}
+.dock .in{display:flex;gap:10px;align-items:center}
+.dock .sum{flex:1;min-width:0}
+.dock .sum b{display:block;font-size:16px;color:var(--deep);white-space:nowrap}
+.dock .sum span{font-size:12px;color:var(--muted);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dock .go{border:none;background:var(--gloss-strong);color:#fff;font-weight:600;padding:14px 18px;border-radius:18px;font-size:14px;text-decoration:none;white-space:nowrap;box-shadow:var(--shadow)}
+.dock .go[aria-disabled="true"]{background:#ecd2e4;box-shadow:none;pointer-events:none}
+.dock .bk{border:none;background:var(--soft);color:var(--osc);width:46px;height:46px;border-radius:16px;font-size:20px;flex-shrink:0}
+
+/* ---------- info ---------- */
+.plist div{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.plist div:last-child{border:none}
+.plist b{white-space:nowrap;color:var(--osc)}
+.plist .cat{font-size:11px;letter-spacing:.2em;color:var(--oro);font-weight:600;border:none;padding-top:16px}
+.faq details{border-bottom:1px solid var(--line);padding:12px 0}
+.faq details:last-child{border:none}
+.faq summary{font-weight:600;font-size:14px;cursor:pointer;color:var(--deep)}
+.faq p{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.6}
+
+/* ---------- panel de Carim ---------- */
+.appt{background:#fff;border:1px solid var(--line);border-radius:16px;padding:13px 14px;margin-top:8px;box-shadow:var(--shadow-soft)}
+.appt .h{display:flex;justify-content:space-between;gap:8px}
+.appt .h b{font-size:15px}
+.appt .h span{font-size:13px;color:var(--lila);font-weight:600;white-space:nowrap}
+.appt .s{font-size:13px;color:var(--muted);margin-top:2px}
+.appt .a{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.appt.done{opacity:.55}
+.dayh{font-size:11px;letter-spacing:.15em;color:var(--oro);font-weight:600;margin-top:20px;text-transform:uppercase}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kpi{background:var(--soft);border-radius:16px;padding:14px}
+.kpi small{font-size:12px;color:var(--muted)}
+.kpi b{display:block;font-size:24px;color:var(--deep);font-family:'Playfair Display',serif}
+.bar{display:flex;justify-content:space-between;font-size:13px;margin-top:10px}
+.track{height:8px;border-radius:6px;background:var(--line);margin-top:4px;overflow:hidden}
+.track i{display:block;height:100%;background:linear-gradient(90deg,var(--lila),var(--oro))}
+.card{display:flex;justify-content:space-between;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:13px 14px;margin-top:8px;box-shadow:var(--shadow-soft)}
+.card b{font-size:15px}
+.card .s{font-size:12px;color:var(--muted)}
+.stamps{display:flex;gap:4px;margin-top:6px}
+.stamps i{width:18px;height:18px;border-radius:50%;border:1.5px solid var(--oro);display:inline-block}
+.stamps i.on{background:var(--gold)}
+.owner-link{display:block;margin:26px auto 0;border:none;background:none;color:var(--muted);font-size:12px;text-decoration:underline}
+
+@keyframes kb{from{transform:scale(1.12)}to{transform:scale(1)}}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes shine{0%{transform:translateX(-120%)}40%,100%{transform:translateX(120%)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes pop{0%{transform:scale(.4);opacity:0}70%{transform:scale(1.08)}100%{transform:scale(1);opacity:1}}
+.view{animation:fade .35s var(--ease)}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* --- extras --- */
+.lang{display:flex;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.6);border-radius:999px;padding:3px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.lang button{border:none;background:none;color:#fff;font-size:12px;font-weight:700;padding:6px 11px;border-radius:999px}
+.lang button.on{background:#fff;color:var(--osc)}
+.lang.dark{background:var(--soft);border-color:var(--line)}
+.lang.dark button{color:var(--osc)}
+.lang.dark button.on{background:var(--gloss-strong);color:#fff}
+.top-r{display:flex;gap:8px;align-items:center}
+.pm{position:relative;display:block;width:100%;text-align:left;border:none;border-radius:var(--r);padding:18px;margin-top:18px;background:var(--gold);color:#3a2808;box-shadow:0 14px 28px -14px rgba(167,127,44,.8);overflow:hidden}
+.pm:after{content:"♛";position:absolute;right:-6px;top:-14px;font-size:90px;opacity:.15}
+.pm small{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+.pm b{display:block;font-family:'Playfair Display',serif;font-size:21px;margin:4px 0}
+.pm span{font-size:13px;display:block}
+.pm .pmp{display:flex;align-items:baseline;gap:10px;margin-top:10px}
+.pm .pmp strong{font-size:24px}
+.pm .pmp s{font-size:13px;opacity:.7}
+.pm .pmu{margin-top:8px;font-size:12px;font-weight:600;background:rgba(255,255,255,.45);display:inline-block;padding:5px 10px;border-radius:999px}
+.ba{position:relative;border-radius:20px;overflow:hidden;user-select:none;-webkit-user-select:none;touch-action:pan-y;background:var(--soft);box-shadow:var(--shadow-soft);aspect-ratio:16/9}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.ba .after{clip-path:inset(0 0 0 50%)}
+.ba .hand{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;transform:translateX(-50%);box-shadow:0 0 10px rgba(0,0,0,.3)}
+.ba .hand:after{content:"‹ ›";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;border-radius:50%;background:#fff;color:var(--osc);font-weight:700;display:grid;place-items:center;font-size:14px;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.ba .lbl{position:absolute;top:10px;font-size:11px;font-weight:700;letter-spacing:.12em;background:rgba(91,20,83,.72);color:#fff;padding:5px 10px;border-radius:999px;text-transform:uppercase}
+.ba .lbl.l{left:10px}.ba .lbl.r{right:10px}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;margin:0;cursor:ew-resize}
+.ba-cap{font-size:12.5px;color:var(--muted);margin-top:8px;text-align:center}
+.care{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-top:16px;text-align:left;box-shadow:var(--shadow-soft)}
+.care h3{font-size:17px;margin-bottom:8px}
+.care ul{margin-left:18px;font-size:13.5px;line-height:1.7;color:var(--ink)}
+.care p{font-size:12px;color:var(--muted);margin-top:8px}
+.opts{display:grid;gap:8px}
+.opt{display:flex;justify-content:space-between;align-items:center;border:1.5px solid var(--line);background:#fff;border-radius:14px;padding:12px 14px;font-size:14px;text-align:left}
+.opt b{color:var(--osc)}
+.opt.on{border-color:var(--lila);background:var(--soft);font-weight:600}
+.opt-tot{text-align:right;margin-top:10px;font-size:15px}
+.opt-tot b{color:var(--osc);font-size:18px}
+.orow .dur{color:var(--lila);font-weight:500;margin-top:4px}
+.orow.prow{background:linear-gradient(135deg,#fffaf0,#fdebf5);border-color:var(--oro-cl)}
+.orow.prow .ic{background:var(--gold)}
+.feat.ftxt{flex:0 0 76%;padding-top:42px;background:linear-gradient(135deg,#fffaf0,#fdebf5);border-color:var(--oro-cl)}
+.wk-t{display:flex;gap:12px;align-items:center}
+.wk-t .ic{width:42px;height:42px;border-radius:50%;background:var(--soft);display:grid;place-items:center;font-size:20px;flex-shrink:0}
+.wk-t b{display:block;font-family:'Playfair Display',serif;font-size:18px;color:var(--deep)}
+.wk-t small{font-size:12.5px;color:var(--muted)}
+.tabs.sticky{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);margin:0 -18px 6px;padding:8px 18px 10px}
+.orow{border:none!important;box-shadow:0 2px 12px rgba(200,26,108,.07);padding:14px!important;border-radius:18px!important;margin-bottom:10px!important}
+.orow .t b{font-size:15px}
+.orow .t small{color:var(--lila);font-weight:500}
+.orow .chev{color:var(--line);font-size:24px;margin-left:2px;line-height:1}
+.orow.on{box-shadow:0 0 0 2px var(--lila),0 6px 18px rgba(200,26,108,.12)}
+.plink{display:block;width:100%;margin-top:14px;padding:14px;border:none;border-radius:14px;background:var(--soft);color:var(--osc);font-weight:600;font-size:14px;text-align:center}
+.detail{border:none!important;box-shadow:0 10px 30px -12px rgba(200,26,108,.35)!important}
+details.care{background:#fff;border:none;border-radius:var(--r);padding:16px;margin-top:16px;text-align:left;box-shadow:var(--shadow-soft)}
+details.care summary{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--deep);cursor:pointer}
+details.care ul{margin:10px 0 0 18px;font-size:13.5px;line-height:1.7}
+details.care p{font-size:12px;color:var(--muted);margin-top:8px}
+.panel,.wk,.me-card{border:none!important}
+.bnav button,.bnav a{font-size:10px}
+.bnav a{flex:1;max-width:110px;padding:7px 0;font-weight:600;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:3px;border-radius:18px;text-decoration:none}
+.bnav a svg{width:22px;height:22px}
+.feat.ftxt{flex:0 0 100%!important;padding:18px!important}
+.feat.ftxt .feat-badge{position:static;display:inline-block;align-self:flex-start;margin-bottom:10px}
+.feat.ftxt .feat-body{padding:0}
+.feat.ftxt .feat-body b{font-size:19px;font-family:'Playfair Display',serif}
+.fprices{display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:baseline;margin-top:10px}
+.fprices span{font-size:14px;color:var(--ink)}
+.fprices strong{font-size:20px;color:var(--osc);text-align:right}
+.feat.ftxt small{margin-top:10px}
+.pubbar{position:sticky;top:8px;z-index:6;display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:var(--deep);color:#fff;border-radius:16px;padding:12px 14px;margin-top:14px}
+.pubbar span{flex:1 1 100%;font-size:14px;font-weight:600}
+.pubbar .btn{flex:1}
+.pubbar .btn.ghost{background:rgba(255,255,255,.15);color:#fff}
+.ccard{background:#fff;border-radius:16px;padding:14px;margin-top:8px;box-shadow:var(--shadow-soft)}
+.ccard.off{opacity:.6}
+.ch{display:flex;justify-content:space-between;gap:10px;align-items:center}
+.ch b{font-size:15px}
+.ch .s{font-size:12.5px;color:var(--muted);margin-top:2px}
+.cb{display:flex;gap:6px;flex-shrink:0}
+.cform{margin-top:6px;border-top:1px solid var(--line);padding-top:4px}
+.cform .row>div{flex:1}
+.chk{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;margin-top:14px;line-height:1.4}
+.chk input{width:auto;margin-top:2px}
+.orowe{display:grid;grid-template-columns:1fr 84px 36px;gap:6px;align-items:center}
+.orowe input{margin-top:6px}
+.orowe .x,.phb button{width:34px;height:34px;border-radius:50%;background:var(--soft);color:var(--osc);font-size:18px;margin-top:6px}
+details.it{margin-top:14px;font-size:14px}
+details.it summary{font-weight:600;color:var(--osc);cursor:pointer}
+.phs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+.phe{background:var(--soft);border-radius:14px;padding:6px}
+.phe img,.phe video{width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px;display:block}
+.phe input{font-size:13px;padding:9px;margin-top:6px}
+.phb{display:flex;justify-content:space-between}
+.upl{cursor:pointer}
+.srcs{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.srcb{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font-size:13.5px}
+.srcb.on{background:var(--gloss-strong);color:#fff;border-color:transparent}
+.sbar{display:grid;grid-template-columns:110px 1fr 34px;gap:8px;align-items:center;font-size:13px;margin-top:8px}
+.sbar span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sbar i{height:10px;border-radius:6px;background:linear-gradient(90deg,var(--lila),var(--oro));display:block}
+.sbar b{text-align:right}
+.lnk{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.lnk:last-child{border:none}
+.dn-head{display:flex;gap:14px;align-items:center;padding-top:16px;text-align:left}
+.dn-head h1{font-size:26px;margin:0}
+.dn-ok{width:50px;height:50px;border-radius:50%;background:var(--gloss-strong);display:grid;place-items:center;flex-shrink:0;box-shadow:var(--shadow)}
+.dn-ok svg{width:24px;height:24px}
+.dn-card{display:flex;gap:14px;align-items:center;margin-top:20px;padding:14px;border-radius:20px;background:var(--soft);text-align:left}
+.dn-card img,.dn-card .dn-ph{width:64px;height:64px;border-radius:14px;object-fit:cover;flex-shrink:0;display:grid;place-items:center;background:#fff;font-size:26px}
+.dn-t{flex:1;min-width:0}
+.dn-t b{display:block;font-size:14.5px}
+.dn-t small{display:block;font-size:13px;color:var(--muted);margin-top:2px;text-transform:capitalize}
+.dn-card strong{color:var(--osc);font-size:16px;white-space:nowrap}
+.dn-care{margin-top:22px;text-align:left}
+.dn-care h2{font-size:19px;margin-bottom:12px}
+.dn-ci{display:flex;gap:10px;align-items:flex-start;margin-top:10px}
+.dn-ci span{width:28px;height:28px;border-radius:50%;background:var(--soft);color:var(--osc);display:grid;place-items:center;flex-shrink:0}
+.dn-ci svg{width:15px;height:15px}
+.dn-ci p{font-size:13.5px;line-height:1.45;margin-top:4px}
+.dn-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.dn-btns .btn{margin-top:0}
+.dn-reg{display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:center;font-size:13px;color:var(--muted);margin-top:16px;text-align:center}
+.dn-reg .linkbtn{margin-top:0}
+.dn-home{display:block;margin:10px auto 0}
+.step[data-step="done"]{text-align:left}
+.cal{background:#fff;border-radius:20px;padding:14px;box-shadow:0 6px 22px -12px rgba(91,20,83,.3)}
+.cal-h{display:flex;justify-content:space-between;align-items:center;padding:0 4px 10px}
+.cal-h b{font-family:'Playfair Display',serif;font-size:17px}
+.cal-h span{display:flex;gap:6px}
+.cal-n{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--line);background:#fff;color:var(--osc);font-size:18px}
+.cal-n:disabled{opacity:.3}
+.cal-g{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:2px;text-align:center}
+.cal-g small{font-size:11px;color:var(--muted);padding-bottom:4px;text-transform:uppercase}
+.cd{height:42px;border:none;border-radius:12px;background:none;font-size:14px;color:#d6bccd;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.cd.av{color:var(--ink);font-weight:600}
+.cd.av i{width:4px;height:4px;border-radius:50%;background:var(--oro);margin-top:2px}
+.cd.td{box-shadow:inset 0 0 0 1.5px var(--line)}
+.cd.on{background:var(--gloss-strong);color:#fff;box-shadow:var(--shadow)}
+#t-head{margin-top:18px;text-transform:none}
+#t-head:first-letter{text-transform:uppercase}
+.mason{columns:2;column-gap:10px;margin-top:6px}
+.mi{display:block;width:100%;margin:0 0 10px;break-inside:avoid;border:none;padding:0;border-radius:18px;overflow:hidden;position:relative;background:var(--soft)}
+.mi img,.mi video{width:100%;display:block}
+.mi .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 10px 8px;font-size:12px;color:#fff;text-align:left;background:linear-gradient(180deg,transparent,rgba(91,20,83,.82))}
+.mi .play{position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:30px;text-shadow:0 2px 10px rgba(0,0,0,.6)}
+.pbanner{display:flex;align-items:center;gap:12px;width:100%;text-align:left;border:none;border-radius:20px;padding:16px 18px;margin-bottom:12px;background:var(--gold);color:#3a2808;box-shadow:0 12px 24px -16px rgba(167,127,44,.9)}
+.pbanner span{flex:1;min-width:0}
+.pbanner small{display:block;font-size:12px;font-weight:700}
+.pbanner b{display:block;font-family:'Playfair Display',serif;font-size:20px;margin:2px 0}
+.pbanner em{display:block;font-style:normal;font-size:13.5px}
+.pbanner i{font-style:normal;font-size:26px;line-height:1}
+.ctiles{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ctile{display:flex;flex-direction:column;justify-content:flex-end;gap:6px;min-height:128px;border:none;border-radius:20px;padding:16px;text-align:left;color:var(--deep);transition:transform .15s}
+.ctile:active{transform:scale(.97)}
+.ctile b{font-family:'Playfair Display',serif;font-size:19px;line-height:1.15}
+.ctile .cnames{font-size:12px;line-height:1.4;color:var(--ink);opacity:.7;flex:1;padding-top:2px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.ctile small{font-size:12px;color:var(--muted);font-weight:500}
+.ctile.t1{background:#f8d9ec}.ctile.t2{background:#f7eed6}.ctile.t3{background:#fdebf5}.ctile.t4{background:#f1cfe6}
+.cat-title{font-size:24px;margin:6px 0 10px}
+.crown{border:none;background:none;color:var(--oro2);font-size:22px;padding:4px 6px 4px 0;line-height:1;cursor:pointer}
+.pin{position:fixed;inset:0;z-index:80;background:rgba(60,12,55,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:flex;align-items:flex-end;justify-content:center}
+.pin-box{position:relative;width:100%;max-width:480px;background:#fff;border-radius:28px 28px 0 0;padding:26px 24px calc(22px + env(safe-area-inset-bottom));text-align:center;animation:up .3s var(--ease)}
+.pin-x{position:absolute;top:14px;right:16px;width:38px;height:38px;border-radius:50%;border:none;background:var(--soft);color:var(--osc);font-size:22px}
+.pin-crown{width:52px;height:52px;margin:0 auto 10px;border-radius:50%;background:var(--gold);color:#3a2808;display:grid;place-items:center;font-size:24px}
+.pin-box h2{font-size:22px}
+.pin-dots{display:flex;justify-content:center;gap:12px;margin:18px 0 6px}
+.pin-dots i{width:14px;height:14px;border-radius:50%;box-shadow:inset 0 0 0 2px var(--lila);transition:background .15s}
+.pin-dots i.on{background:var(--lila)}
+.pin-dots.shake{animation:shake .35s}
+@keyframes shake{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+#pin-in{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
+.pin-pad{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
+.pin-pad button{height:58px;border:none;border-radius:16px;background:var(--soft);font-size:22px;font-weight:500;color:var(--deep)}
+.pin-pad button:active{background:var(--line)}
+.refer{display:grid;grid-template-columns:1fr auto;align-items:center;gap:4px 12px;padding:16px 18px!important}
+.refer b{font-size:17px!important}
+.refer p{grid-column:1;margin-top:0!important}
+.refer .btn{grid-column:2;grid-row:1/3;width:auto;margin:0;padding:11px 18px}
+.refer{background:linear-gradient(135deg,#fde6f2,#fbefff);border:1.5px solid var(--oro-cl);border-radius:var(--r);padding:18px;margin-top:16px;text-align:left}
+.refer b{font-family:'Playfair Display',serif;font-size:19px;color:var(--deep);display:block}
+.refer p{font-size:13px;color:var(--muted);margin-top:4px;line-height:1.5}
+.qr{display:grid;place-items:center;padding:16px;background:#fff;border-radius:16px;margin-top:10px}
+.qr img,.qr canvas{width:220px!important;height:220px!important}
+.gcards{display:grid;gap:16px}
+.gcard{background:#fff;border-radius:24px;padding:8px 8px 10px;box-shadow:var(--shadow-soft)}
+.gc-head{display:flex;align-items:center;gap:12px;width:100%;border:none;border-radius:18px;padding:16px 18px;background:var(--gloss-strong);color:#fff;text-align:left;box-shadow:var(--shadow)}
+.gc-head i{font-style:normal;font-size:24px}
+.gc-head b{flex:1;font:700 24px 'Playfair Display',serif;letter-spacing:.06em;text-transform:uppercase}
+.gc-head span{font-size:26px;line-height:1}
+.gc-row{display:flex;align-items:center;gap:12px;width:100%;border:none;background:var(--soft);border-radius:16px;padding:10px 14px;margin-top:8px;font:600 15px Poppins,sans-serif;color:var(--deep);text-align:left}
+.gc-row i{font-style:normal;width:36px;height:36px;flex:0 0 36px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:18px;box-shadow:var(--shadow-soft)}
+.gc-row:after{content:"›";margin-left:auto;font-size:20px;color:var(--muted)}
+.gc-row:active,.gc-head:active{transform:scale(.98)}
+.subchips{display:flex;gap:8px;overflow-x:auto;padding:6px 2px 10px;margin:0 -2px;position:sticky;top:0;z-index:6;background:linear-gradient(#fff 80%,rgba(255,255,255,0));scrollbar-width:none}
+.subchips::-webkit-scrollbar{display:none}
+.sub-h{display:flex;align-items:center;gap:10px;font:600 17px Poppins,sans-serif;color:var(--deep);margin:20px 0 10px;scroll-margin-top:70px}
+.sub-h i{font-style:normal;width:34px;height:34px;border-radius:50%;background:var(--soft);display:grid;place-items:center;font-size:17px}
+.orow b,.gc-row,.sub-h{color:var(--morado)}
+.gc-head b{text-shadow:0 2px 0 rgba(140,17,88,.35)}
+.gc-row i{box-shadow:0 0 0 2px var(--oro2)}
+.cat-title{color:var(--deep)}
+.top-r{gap:8px}
+</style>
+</head>
+<body>
+<div class="app" data-own>
+
+  <!-- ============ INICIO ============ -->
+  <div class="view" id="view-home">
+    <section class="nhero">
+      <img src="fotos/hero.jpg" alt="">
+      <div class="nhero-top">
+        <span class="wm"><button type="button" class="crown" id="crown" aria-label="Acceso de Carim">♛</button><b>CARIM</b></span>
+        <div class="top-r">
+          <div class="lang" role="group" aria-label="Idioma / Lingua"><button type="button" data-lang="es">ES</button><button type="button" data-lang="it">IT</button></div>
+          <a class="ig" href="https://www.instagram.com/carim_manitos_magicas/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a><a class="ig" href="https://www.tiktok.com/search/user?q=Carim%20Manitos%20Magicas" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.1v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.7a5.7 5.7 0 1 0 4.9 5.7V9.1a7.3 7.3 0 0 0 4.3 1.4V7.4a4.3 4.3 0 0 1-3.2-1.6z"/></svg></a>
+        </div>
+      </div>
+    </section>
+    <section class="nintro">
+      <span class="kicker">Sesto San Giovanni · Milano</span>
+      <h1><span data-i="hTitle"></span><span class="scr">Manitos Mágicas</span></h1>
+      <p data-i="hSub"></p>
+      <div class="chips"><span class="chip" id="hours"></span></div>
+      <button class="ncta" type="button" data-tab="book"><span data-i="hCta"></span><span aria-hidden="true">→</span></button>
+    </section>
+
+    <section class="me-card" id="again" hidden>
+      <p class="me-hi" id="again-t"></p>
+      <p class="small" id="again-last"></p>
+      <div class="actions">
+        <button class="btn" id="again-btn" type="button" data-i="againBtn"></button>
+        <button class="btn ghost" id="again-new" type="button" data-i="againNew"></button>
+      </div>
+      <button class="linkbtn" id="again-out" type="button" data-i="notMe"></button>
+    </section>
+
+    <div id="pm-home"></div>
+
+    <section class="sec">
+      <div class="sec-h"><h2 data-i="ourSvcs"></h2><button type="button" data-tab="book" data-i="seeAll"></button></div>
+      <div class="cflow" id="cflow"></div>
+      <div class="cf-ctrl">
+        <button class="cf-arr" type="button" id="cf-prev" aria-label="‹">‹</button>
+        <div class="cf-dots" id="cf-dots"></div>
+        <button class="cf-arr" type="button" id="cf-next" aria-label="›">›</button>
+      </div>
+    </section>
+
+
+    <section class="sec">
+      <div class="sec-h"><h2 data-i="promos"></h2></div>
+      <div class="feats" id="promos"></div>
+    </section>
+
+    <div class="refer"><b data-i="refTitle"></b><p id="ref-sub"></p><a class="btn wa" id="ref-btn" target="_blank" rel="noopener" data-i="refBtn"></a></div>
+
+    <span id="owner-btn" hidden></span>
+  </div>
+
+  <!-- ============ SERVICIOS ============ -->
+  <div class="view" id="view-services" hidden>
+    <div class="page-h"><span class="kicker" data-i="svcKick"></span><h1 data-i="svcTitle"></h1><p class="small" data-i="svcSub"></p></div>
+    <div class="tabs" id="wtabs"></div>
+    <div id="services-list"></div>
+  </div>
+
+  <!-- ============ MIS TRABAJOS ============ -->
+  <div class="view" id="view-works" hidden>
+    <div class="page-h"><span class="kicker" data-i="wKick"></span><h1><span data-i="wTitle1"></span> <span class="scr" style="font-size:44px" data-i="wTitle2"></span></h1></div>
+    <div class="tabs" id="gtabs"></div>
+    <div class="mason" id="grid"></div>
+    <div id="ba-works" hidden></div>
+  </div>
+
+  <!-- ============ RESERVAR ============ -->
+  <div class="view" id="view-book" hidden>
+    <header class="top"><button class="back" type="button" data-tab="home" data-i="backHome"></button><span class="small" id="step-n"></span></header>
+    <div class="prog" id="prog"></div>
+
+    <section class="step" data-step="service">
+      <h1 data-i="stService"></h1>
+      <div class="tabs sticky" id="stabs"></div>
+      <div id="services"></div>
+    </section>
+
+    <section class="step" data-step="when" hidden>
+      <h1 data-i="stWhen"></h1>
+      <div class="cal" id="days"></div>
+      <p class="tlabel" id="t-head"></p>
+      <div class="times" id="times"></div>
+      <p class="small" style="margin-top:14px" data-i="whenNote"></p>
+    </section>
+
+    <section class="step" data-step="you" hidden>
+      <h1 data-i="stYou"></h1>
+      <label class="l" for="name" data-i="lName"></label>
+      <input id="name" autocomplete="name" data-ph="phName">
+      <label class="l" for="phone">WhatsApp</label>
+      <input id="phone" type="tel" inputmode="tel" autocomplete="tel" data-ph="phPhone">
+      <button class="plink" type="button" id="ref-toggle" data-i="refToggle"></button>
+      <div id="ref-box" hidden><label class="l" for="ref" data-i="lRef"></label><input id="ref" autocomplete="off" data-ph="phRef"></div>
+      <label class="l" data-i="lSrc"></label>
+      <div class="srcs" id="srcs"></div>
+      <label class="l" for="notes" data-i="lNotes"></label>
+      <textarea id="notes" rows="3" data-ph="phNotes"></textarea>
+    </section>
+
+    <section class="step" data-step="confirm" hidden>
+      <h1 data-i="stConfirm"></h1>
+      <div class="panel summary"><dl>
+        <dt data-i="dSvc"></dt><dd id="s-svc"></dd>
+        <dt data-i="dWhen"></dt><dd id="s-when"></dd>
+        <dt data-i="dDur"></dt><dd id="s-dur"></dd>
+        <dt data-i="dName"></dt><dd id="s-name"></dd>
+        <dt>WhatsApp</dt><dd id="s-phone"></dd>
+        <dt data-i="dPrice"></dt><dd id="s-price"></dd>
+      </dl></div>
+      <details class="rules"><summary data-i="rulesT"></summary><ul id="rules"></ul></details>
+      <p class="small" style="margin-top:14px" data-i="confNote"></p>
+    </section>
+
+    <section class="step" data-step="done" hidden>
+      <div class="dn-head"><div class="dn-ok"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+        <div><h1 data-i="doneT"></h1><p class="small" data-i="doneSub"></p></div></div>
+      <div class="dn-card" id="dn-card"></div>
+      <div id="done-care"></div>
+      <div class="dn-btns">
+        <a class="btn wa" id="done-wa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg><span data-i="doneWaShort"></span></a>
+        <a class="btn ghost" id="ref-btn2" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M5 13v6h14v-6"/></svg><span data-i="recommend"></span></a>
+      </div>
+      <span id="ref-sub2" hidden></span>
+      <section class="dn-reg" id="reg"><span data-i="regSub"></span><button class="linkbtn" id="reg-go" type="button" data-i="regBtn"></button></section>
+      <p class="dn-reg" id="reg-ok" hidden data-i="regOk"></p>
+      <button class="linkbtn dn-home" type="button" data-tab="home" data-i="doneHome"></button>
+    </section>
+  </div>
+
+  <!-- ============ INFO ============ -->
+  <div class="view" id="view-info" hidden>
+    <div class="page-h" style="display:flex;justify-content:space-between;align-items:flex-end"><div><span class="kicker" data-i="infoKick"></span><h1>Info</h1></div>
+      <div class="lang dark"><button type="button" data-lang="es">ES</button><button type="button" data-lang="it">IT</button></div></div>
+    <section class="panel"><h2 data-i="prices"></h2><div class="plist" id="plist"></div></section>
+    <section class="panel"><h2 data-i="careTitle"></h2><p class="small" data-i="careInfo" style="margin-bottom:6px"></p><div class="faq" id="care-all"></div></section>
+    <section class="panel faq"><h2 data-i="faqT"></h2><div id="faq"></div></section>
+    <section class="panel">
+      <h2 data-i="whereT"></h2>
+      <p>Via Fratelli Bandiera<br>Sesto San Giovanni (Milano)</p>
+      <p class="small" id="hours2" style="margin-top:6px"></p>
+      <p class="small" style="margin-top:4px" data-i="callTxt"></p>
+      <a class="btn" id="maps" target="_blank" rel="noopener" data-i="howGet"></a>
+      <a class="btn wa" id="wa-info" target="_blank" rel="noopener" data-i="writeWa"></a>
+      <a class="btn line" id="review-btn" target="_blank" rel="noopener" hidden data-i="review"></a>
+      <a class="btn ghost" href="https://www.instagram.com/carim_manitos_magicas/" target="_blank" rel="noopener">Instagram @carim_manitos_magicas</a>
+      <a class="btn ghost" href="https://www.tiktok.com/search/user?q=Carim%20Manitos%20Magicas" target="_blank" rel="noopener">TikTok · Carim Manitos Mágicas</a>
+    </section>
+  </div>
+
+  <!-- ============ PANEL: HOY ============ -->
+  <div class="view" id="view-today" hidden>
+    <header class="top"><button class="back" type="button" data-tab="home">‹ Ver la página</button><span class="chip" id="t-date"></span></header>
+    <h1>Hoy</h1>
+    <section class="panel">
+      <h2>Pegar reserva</h2>
+      <p class="small">Copia el mensaje de WhatsApp de el cliente (el que termina con «Ref: CA·…») y pégalo aquí: la cita se crea sola en tu agenda.</p>
+      <textarea id="paste-in" rows="3" placeholder="Pega aquí el mensaje de el cliente"></textarea>
+      <button class="btn" type="button" id="paste-go">Crear cita</button>
+      <p class="status" id="paste-status"></p>
+    </section>
+    <h2 style="margin-top:22px">Citas de hoy y mañana</h2>
+    <div id="t-list"><div class="empty">Cargando…</div></div>
+    <section class="panel"><h2>Recordatorios</h2><div id="t-rem"></div></section>
+    <section class="panel"><h2>Pedir reseña</h2><p class="small">Clientes que vinieron ayer u hoy. Un mensaje y te dejan su opinión.</p><div id="t-rev"></div></section>
+    <section class="panel"><h2>Cumpleaños esta semana</h2><div id="t-bday"></div></section>
+    <section class="panel"><h2>Hace tiempo que no vienen</h2><div id="t-away"></div></section>
+    <section class="panel">
+      <h2>Promo del mes</h2>
+      <p class="small">Aparece arriba en la página con la fecha de fin. Se esconde sola cuando termina.</p>
+      <input id="pm-name" placeholder="Nombre (ej. Labios + cejas)">
+      <input id="pm-desc" placeholder="Qué incluye">
+      <div class="row"><input id="pm-price" type="number" inputmode="decimal" placeholder="Precio €"><input id="pm-before" type="number" inputmode="decimal" placeholder="Antes €"></div>
+      <label class="l">Válida hasta</label><input id="pm-until" type="date">
+      <div class="row"><button class="btn" id="pm-save" type="button">Publicar promo</button><button class="btn ghost" id="pm-del" type="button">Quitar</button></div>
+      <p class="status" id="pm-status"></p>
+    </section>
+    <section class="panel">
+      <h2>Código QR de la página</h2>
+      <p class="small">Para imprimir y pegar en el local o en tu volante. Haz una captura de pantalla del código.</p>
+      <div class="qr" id="qr" hidden></div>
+      <button class="btn" id="qr-go" type="button">Mostrar código QR</button>
+      <p class="status" id="qr-status"></p>
+    </section>
+  </div>
+
+  <!-- ============ PANEL: AGENDA ============ -->
+  <div class="view" id="view-agenda" hidden>
+    <header class="top"><button class="back" type="button" data-tab="home">‹ Ver la página</button></header>
+    <h1>Agenda</h1>
+    <section class="panel">
+      <h2>Nueva cita</h2>
+      <input id="a-name" placeholder="Nombre de el cliente">
+      <input id="a-phone" type="tel" inputmode="tel" placeholder="WhatsApp (opcional)">
+      <select id="a-svc"></select>
+      <div class="row"><input id="a-date" type="date"><input id="a-time" type="time" step="900"></div>
+      <input id="a-price" type="number" inputmode="decimal" placeholder="Precio €">
+      <button class="btn" id="a-add" type="button">Guardar cita</button>
+      <p class="status" id="a-status"></p>
+    </section>
+    <section class="panel">
+      <h2>Bloquear horas</h2>
+      <p class="small">Para un día libre, un turno fuera de la página o un descanso. Así lo tienes anotado en tu agenda.</p>
+      <div class="row"><input id="b-date" type="date"><input id="b-from" type="time" step="900" value="09:30"><input id="b-to" type="time" step="900" value="19:00"></div>
+      <button class="btn ghost" id="b-add" type="button">Bloquear</button>
+      <p class="status" id="b-status"></p>
+      <div id="blocks"></div>
+    </section>
+    <div class="tabs" style="margin-top:14px"><button class="tab on" data-ag="next" type="button">Próximas</button><button class="tab" data-ag="past" type="button">Pasadas</button></div>
+    <div id="appts"><div class="empty">Cargando…</div></div>
+  </div>
+
+  <!-- ============ PANEL: CLIENTAS ============ -->
+  <div class="view" id="view-cards" hidden>
+    <header class="top"><button class="back" type="button" data-tab="home">‹ Ver la página</button></header>
+    <h1>Clientes</h1>
+    <p class="small" style="margin-top:6px">Cada cita que marcas como hecha suma una visita. Cada <b id="goal-n"></b> visitas, el cliente tiene un regalo.</p>
+    <input id="search" placeholder="Buscar por nombre o teléfono" style="margin-top:12px">
+    <div id="cards"><div class="empty">Cargando…</div></div>
+    <section class="panel">
+      <h2>Agregar cliente</h2>
+      <input id="c-name" placeholder="Nombre">
+      <input id="c-phone" type="tel" inputmode="tel" placeholder="WhatsApp">
+      <input id="c-bday" placeholder="Cumpleaños (día/mes, ej. 14/3)">
+      <button class="btn" id="c-add" type="button">Guardar cliente</button>
+      <p class="status" id="c-status"></p>
+    </section>
+  </div>
+
+  <!-- ============ PANEL: MIS SERVICIOS ============ -->
+  <div class="view" id="view-catalog" hidden>
+    <header class="top"><button class="back" type="button" data-tab="home">‹ Ver la página</button></header>
+    <h1>Mis servicios</h1>
+    <p class="small" style="margin-top:6px">Cambia precios, textos y fotos, o agrega servicios nuevos. Cuando termines, toca «Publicar cambios» y tus clientes lo ven al momento.</p>
+    <div class="pubbar" id="cat-bar" hidden><span>Tienes cambios sin publicar</span><button class="btn sm" id="cat-pub" type="button">Publicar cambios</button><button class="btn ghost sm" id="cat-undo" type="button">Descartar</button></div>
+    <p class="status" id="cat-status"></p>
+    <button class="btn ghost" id="cat-new" type="button">+ Agregar servicio</button>
+    <div id="cat-list"></div>
+  </div>
+
+  <!-- ============ PANEL: MI MES ============ -->
+  <div class="view" id="view-month" hidden>
+    <header class="top"><button class="back" type="button" data-tab="home">‹ Ver la página</button>
+      <div class="row" style="flex:0 0 auto;gap:6px"><button class="btn ghost sm" id="m-prev" type="button">‹</button><button class="btn ghost sm" id="m-next" type="button">›</button></div></header>
+    <h1 id="m-title" style="text-transform:capitalize"></h1>
+    <section class="panel"><div class="kpis">
+      <div class="kpi"><small>Ingresos</small><b id="m-rev">0 €</b></div>
+      <div class="kpi"><small>Citas hechas</small><b id="m-cnt">0</b></div>
+      <div class="kpi"><small>Ticket medio</small><b id="m-avg">0 €</b></div>
+      <div class="kpi"><small>Clientes nuevos</small><b id="m-new">0</b></div>
+    </div></section>
+    <section class="panel">
+      <h2>Objetivo del mes</h2>
+      <div class="row"><input id="m-goal" type="number" inputmode="decimal" placeholder="Ej. 2000"><button class="btn sm" id="m-goal-save" type="button" style="flex:0 0 auto;margin-top:6px">Guardar</button></div>
+      <div id="m-goalbar"></div>
+      <p class="status" id="m-status"></p>
+    </section>
+    <section class="panel"><h2>Servicios del mes</h2><div id="m-by"></div></section>
+    <section class="panel"><h2>Vienen recomendados por…</h2><div id="m-ref"></div></section>
+    <h2 style="margin-top:28px">Estadísticas</h2>
+    <p class="small">Salen de las reservas que pegas o guardas en la agenda (todas, no solo este mes).</p>
+    <section class="panel"><h2>Cómo te encuentran</h2><div id="st-src"></div></section>
+    <section class="panel"><h2>Servicios más pedidos</h2><div id="st-svc"></div></section>
+    <section class="panel"><h2>Días más pedidos</h2><div id="st-day"></div></section>
+    <section class="panel"><h2>Horas más pedidas</h2><div id="st-hour"></div></section>
+    <section class="panel"><h2>Clientes</h2><div id="st-cl"></div></section>
+    <section class="panel"><h2>Enlaces para saber de dónde vienen</h2>
+      <p class="small">Usa un enlace distinto en cada sitio. Cuando un cliente entra por ahí y reserva, sabrás de dónde vino.</p><div id="st-links"></div></section>
+  </div>
+</div>
+
+<div class="dock" id="dock" hidden data-own><div class="in">
+  <button class="bk" id="dock-back" type="button" aria-label="‹">‹</button>
+  <div class="sum"><b id="dock-total">—</b><span id="dock-sub"></span></div>
+  <a class="go" id="dock-btn" href="#" aria-disabled="true"></a>
+</div></div>
+
+<nav class="bnav" id="bnav" data-own>
+  <button type="button" data-tab="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span data-i="nHome"></span></button>
+  <button type="button" data-tab="works"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg><span data-i="nWorks"></span></button>
+  <button type="button" data-tab="book" class="fab"><span class="fab-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><span data-i="nBook"></span></button>
+  <a id="nav-wa" target="_blank" rel="noopener" href="https://wa.me/393924940925"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg><span>WhatsApp</span></a>
+  <button type="button" data-tab="info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>Info</button>
+</nav>
+
+<nav class="onav" id="onav" hidden data-own>
+  <button type="button" data-tab="today"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>Hoy</button>
+  <button type="button" data-tab="agenda"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Agenda</button>
+  <button type="button" data-tab="cards"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>Clientes</button>
+  <button type="button" data-tab="catalog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12l-8 8-9-9V3h8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>Servicios</button>
+  <button type="button" data-tab="month"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Mi mes</button>
+  <button type="button" data-tab="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>Página</button>
+</nav>
+
+<div class="pin" id="pin" hidden data-own>
+  <div class="pin-box" role="dialog" aria-modal="true" aria-labelledby="pin-t">
+    <button type="button" class="pin-x" id="pin-x" aria-label="Cerrar">×</button>
+    <div class="pin-crown">♛</div>
+    <h2 id="pin-t">Acceso de Carim</h2>
+    <p class="small">Escribe tu código de 6 números.</p>
+    <div class="pin-dots" id="pin-dots"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <input id="pin-in" type="password" inputmode="numeric" autocomplete="one-time-code" maxlength="6" aria-label="Código de 6 números">
+    <p class="status" id="pin-st"></p>
+    <div class="pin-pad" id="pin-pad"></div>
+  </div>
+</div>
+<div class="lb" id="lb" hidden data-own>
+  <button class="x" id="lb-x" type="button" aria-label="×">×</button>
+  <button class="nav ant" id="lb-p" type="button" aria-label="‹">‹</button>
+  <div id="lb-c"></div><p id="lb-t"></p>
+  <button class="btn" id="lb-book" type="button"></button>
+  <button class="nav sig" id="lb-n" type="button" aria-label="›">›</button>
+</div>
+
+<script type="application/json" id="catalog-data">null</script>
+<script id="main-js" data-own>
+/* copia de la página tal como se cargó: sirve para volver a publicarla cuando Carim cambia sus servicios */
+const SRC_HEAD = [...document.head.children].filter((e) => e.hasAttribute("data-own")).map((e) => e.outerHTML);
+const SRC_BODY = [...document.body.children].filter((e) => e.hasAttribute("data-own") && e.id !== "main-js").map((e) => e.outerHTML);
+const SRC_MAIN = document.getElementById("main-js").outerHTML;
+/* ================== CONFIGURACIÓN (editar aquí) ================== */
+const WA_NUMBER = "393924940925";
+const STANDALONE = true; // copia de Cloudflare (carimmanitosmagicas.pages.dev)
+/* En la copia de Cloudflare, el guardado va a /api (funciones de Cloudflare). Misma forma que el de Claude. */
+if (STANDALONE) (() => {
+  const TK = "carim-token";
+  const tok = () => { try { const t = localStorage.getItem(TK) || ""; const exp = +t.split(".")[0] || 0; return exp > Date.now() / 1000 ? t : ""; } catch (e) { return ""; } };
+  const api = async (path, opt = {}) => {
+    const h = Object.assign({}, opt.headers || {}); const t = tok(); if (t) h.Authorization = "Bearer " + t;
+    if (opt.json !== undefined) { h["Content-Type"] = "application/json"; opt.body = JSON.stringify(opt.json); }
+    const r = await fetch("/api/" + path, { method: opt.method || "GET", headers: h, body: opt.body });
+    let j = null; try { j = await r.json(); } catch (e) {}
+    if (!r.ok) { const e = new Error((j && j.error) || "Error " + r.status); e.status = r.status; throw e; }
+    return j;
+  };
+  const subs = {}; // clave -> [fn]
+  const snapOf = (rows) => ({ docs: rows.map((x) => ({ id: x.id, data: () => x.v })) });
+  async function pull(key) {
+    const fns = subs[key] || []; if (!fns.length) return;
+    try {
+      if (key.startsWith("c:")) { const rows = await api("c/" + key.slice(2)); fns.forEach((f) => f.ok(snapOf(rows))); }
+      else { const v = await api("d/" + key.slice(2)); fns.forEach((f) => f.ok({ id: key, data: () => v })); }
+    } catch (e) { fns.forEach((f) => f.err && f.err(e)); }
+  }
+  const touch = (key) => setTimeout(() => pull(key), 50);
+  setInterval(() => { if (!document.hidden) Object.keys(subs).forEach(pull); }, 60000);
+  const listen = (key, ok, err) => { (subs[key] = subs[key] || []).push({ ok, err }); pull(key); return () => {}; };
+  const docRef = (col, id) => ({ id,
+    set: async (v) => { await api(`c/${col}/${id}`, { method: "PUT", json: v }); touch("c:" + col); },
+    update: async (v) => { await api(`c/${col}/${id}`, { method: "PATCH", json: v }); touch("c:" + col); },
+    delete: async () => { await api(`c/${col}/${id}`, { method: "DELETE" }); touch("c:" + col); } });
+  const db = {
+    collection: (col) => ({ onSnapshot: (ok, err) => listen("c:" + col, ok, err), doc: (id) => docRef(col, id),
+      add: async (v) => { const r = await api("c/" + col, { method: "POST", json: v }); touch("c:" + col); return { id: r.id }; } }),
+    doc: (path) => ({ onSnapshot: (ok, err) => listen("d:" + path, ok, err),
+      set: async (v) => { await api("d/" + path, { method: "PUT", json: v }); touch("d:" + path); },
+      delete: async () => { await api("d/" + path, { method: "DELETE" }); touch("d:" + path); } }) };
+  const assets = { upload: async (file) => { const r = await api("upload", { method: "POST", body: file, headers: { "Content-Type": file.type || "application/octet-stream" } }); return { url: r.url }; } };
+  const artifact = { publish: async (html) => {
+    const cat = window.__carimCatalog; if (!cat) throw new Error("No encontré el catálogo");
+    await api("catalog", { method: "PUT", body: cat, headers: { "Content-Type": "application/json" } }); setTimeout(() => location.reload(), 900); } };
+  const user = { canEdit: async () => { if (!tok()) return false; try { await api("me"); return true; } catch (e) { return false; } } };
+  window.CARIM_API = { api, setToken: (t) => { try { localStorage.setItem(TK, t); } catch (e) {} }, clear: () => { try { localStorage.removeItem(TK); } catch (e) {} } };
+  window.claude = { use: async (ns) => ({ db, assets, artifact, user })[ns] || null };
+})();
+const ADMIN_URL = "";
+const PAGE_URL = "https://carimmanitosmagicas.pages.dev/";
+const OPEN = {1:["08:00","22:00"],2:["08:00","22:00"],3:["08:00","22:00"],4:["08:00","22:00"],5:["08:00","22:00"],6:["08:00","22:00"]}; // 0=dom ... 6=sáb (volante: L, M, M, J, V, S · 08:00–22:00)
+const CLOSED_DATES = ["2026-12-25","2026-12-26","2027-01-01"];
+const STEP = 30, DAYS_AHEAD = 30, MIN_NOTICE = 120;
+const MAPS = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("Via Fratelli Bandiera, Sesto San Giovanni, Milano");
+const GOAL = 6;            // su tarjeta de fidelidad tiene 6 sellos (premio A CONFIRMAR)
+const INACTIVE_DAYS = 60;
+const REFER = null;        // € de descuento al recomendar (A CONFIRMAR). null = sin descuento.
+const REVIEW_URL = "";     // enlace para dejar reseña en Google
+
+/* fotos de Carim: solo fotos reales de su trabajo */
+let GAL = [
+  {c:"quiro",es:"Carim en plena sesión",it:"Carim durante la seduta",src:"fotos/p08.jpg",svc:"qfd"},
+  {c:"quiro",es:"Ventosas y ajuste",it:"Coppette e aggiustamento",src:"fotos/p09.jpg",svc:"qfd"},
+  {c:"quiro",es:"Sesión completa",it:"Seduta completa",src:"fotos/p10.jpg",svc:"qfd"},
+  {c:"quiro",es:"Carim con ventosas",it:"Carim con le coppette",src:"fotos/p12.jpg",svc:"qfdvc"},
+  {c:"quiro",es:"Columna vertebral",it:"Colonna vertebrale",src:"fotos/n07.jpg",svc:"quiro"},
+  {c:"fisio",es:"Dislocación de tobillo y tendinitis",it:"Lussazione della caviglia e tendinite",src:"fotos/m15.jpg",svc:"qfdvc"},
+  {c:"fisio",es:"Envoltura en el pie",it:"Bendaggio del piede",src:"fotos/m16.jpg",svc:"qfdvc"},
+  {c:"fisio",es:"Electrodos en el tobillo",it:"Elettrodi sulla caviglia",src:"fotos/m18.jpg",svc:"qfdvc"},
+  {c:"fisio",es:"Ventosa en el pie",it:"Coppetta sul piede",src:"fotos/p13.jpg",svc:"refl"},
+  {c:"fisio",es:"Tratamiento del pie",it:"Trattamento del piede",src:"fotos/p14.jpg",svc:"refl"},
+  {c:"fisio",es:"Reflexología",it:"Riflessologia",src:"fotos/p15.jpg",svc:"refl"},
+  {c:"fisio",es:"Reflexología",it:"Riflessologia",src:"fotos/p16.jpg",svc:"refl"},
+  {c:"fisio",es:"Tratamiento con crema",it:"Trattamento con crema",src:"fotos/p17.jpg",svc:"refl"},
+  {c:"fisio",es:"Envoltura en los pies",it:"Bendaggio dei piedi",src:"fotos/p18.jpg",svc:"refl"},
+  {c:"fisio",es:"Tratamiento en el abdomen",it:"Trattamento sull'addome",src:"fotos/n08.jpg",svc:"tcomp"},
+  {c:"vento",es:"Ventosas en toda la espalda",it:"Coppette su tutta la schiena",src:"fotos/n01.jpg",svc:"qfdv"},
+  {c:"vento",es:"Carim en plena sesión",it:"Carim durante la seduta",src:"fotos/n02.jpg",svc:"qfdv"},
+  {c:"vento",es:"Marcas de las ventosas: se van en unos días",it:"Segni delle coppette: spariscono in pochi giorni",src:"fotos/n03.jpg",svc:"qfdv"},
+  {c:"vento",es:"Cuello y hombros",it:"Collo e spalle",src:"fotos/n04.jpg",svc:"qfdv"},
+  {c:"vento",es:"Después de la sesión",it:"Dopo la seduta",src:"fotos/n05.jpg",svc:"qfdv"},
+  {c:"vento",es:"Ventosas en la espalda",it:"Coppette sulla schiena",src:"fotos/p20.jpg",svc:"qfdv"},
+  {c:"vento",es:"Ventosas en toda la espalda",it:"Coppette su tutta la schiena",src:"fotos/m19.jpg",svc:"qfdvc"},
+  {c:"copet",es:"Carim con ventosas",it:"Carim con le coppette",src:"fotos/m03.jpg",svc:"vent"},
+  {c:"copet",es:"Ventosas en la espalda",it:"Coppette sulla schiena",src:"fotos/m04.jpg",svc:"vent"},
+  {c:"copet",es:"Ventosas descontracturantes",it:"Coppettazione decontratturante",src:"fotos/m12.jpg",svc:"vent"},
+  {c:"copet",es:"Ventosas en el cuello",it:"Coppette sul collo",src:"fotos/m13.jpg",svc:"vent"},
+  {c:"electro",es:"Electrodos y ventosas en la espalda",it:"Elettrodi e coppette sulla schiena",src:"fotos/m01.jpg",svc:"tper"},
+  {c:"electro",es:"Electroterapia en la espalda",it:"Elettroterapia sulla schiena",src:"fotos/m02.jpg",svc:"tper"},
+  {c:"electro",es:"Electrodos en la espalda",it:"Elettrodi sulla schiena",src:"fotos/m17.jpg",svc:"tper"},
+  {c:"electro",es:"Electrodos en la zona lumbar",it:"Elettrodi nella zona lombare",src:"fotos/n06.jpg",svc:"elec"},
+  {c:"electro",es:"Electroterapia en la pierna",it:"Elettroterapia sulla gamba",src:"fotos/m06.jpg",svc:"elec"},
+  {c:"electro",es:"Electroterapia en la pierna",it:"Elettroterapia sulla gamba",src:"fotos/m07.jpg",svc:"elec"},
+  {c:"electro",es:"Electrodos en el hombro",it:"Elettrodi sulla spalla",src:"fotos/n09.jpg",svc:"elec"},
+  {c:"electro",es:"Electrodos en el brazo",it:"Elettrodi sul braccio",src:"fotos/n10.jpg",svc:"elec"},
+  {c:"electro",es:"Electrodos y ventosas",it:"Elettrodi e coppette",src:"fotos/n11.jpg",svc:"elec"},
+  {c:"electro",es:"Electrodos en la pierna",it:"Elettrodi sulla gamba",src:"fotos/n12.jpg",svc:"elec"},
+  {c:"lipo",es:"Tratamiento reductor en el abdomen",it:"Trattamento riducente sull'addome",src:"fotos/p07.jpg",svc:"coct"}
+];
+const F = (...n) => n.map((x) => GAL.findIndex((g) => g.src === "fotos/" + x + ".jpg")).filter((i) => i >= 0);
+/* price = precio · before = precio anterior · opts = opciones (multi: se pueden elegir varias y se suman) · until = fin de la promo · min = duración (A CONFIRMAR) */
+const zopts = (z) => z.map(([es, it, price]) => ({ es, it, price }));
+const ZONES_EXF = [ ["Rostro","Viso",30], ["Espalda","Schiena",40], ["Piernas","Gambe",40], ["Brazos","Braccia",30], ["Todo el cuerpo","Tutto il corpo",70] ];
+const ZONES_BLAN = [ ["Axilas","Ascelle",30], ["Glúteos","Glutei",35] ];
+let SERVICES = [
+  /* ---------- promociones ---------- */
+  { id:"psem", cat:"quiro", ic:"🔥", price:50, before:70, min:60, promo:true, fotos:F("p08","n02"), care:"dolor",
+    es:{ short:"Quiropraxia + fisioterapia", name:"Masaje quiropraxia, fisioterapia y descontracturante", desc:"Promo de la semana · alivia el dolor de espalda y cuello, mejora la postura y reduce el estrés" },
+    it:{ short:"Chiropratica + fisioterapia", name:"Massaggio chiropratico, fisioterapia e decontratturante", desc:"Promo della settimana · allevia il dolore a schiena e collo, migliora la postura e riduce lo stress" } },
+  { id:"paq", cat:"fisio", ic:"✨", price:70, before:80, min:90, promo:true, fotos:F(), care:"dolor",
+    es:{ short:"Paquete completo", name:"Paquete completo Salud y Belleza", desc:"Quiropraxia + fisioterapia + ventosas + electrodos + frotación. Por separado, 30 € cada uno." },
+    it:{ short:"Pacchetto completo", name:"Pacchetto completo Salute e Bellezza", desc:"Chiropratica + fisioterapia + coppettazione + elettrodi + frizione. Separati, 30 € l'uno." } },
+  /* ---------- quiropraxia y dolor ---------- */
+  { id:"tcomp", cat:"fisio", ic:"⚡", price:70, before:100, min:90, fotos:F("m01","n08"), care:"dolor",
+    es:{ name:"Terapia completa para el dolor", desc:"Quiropraxia, fisioterapia, ventosas, infrarrojo y ondas rusas" },
+    it:{ name:"Terapia completa per il dolore", desc:"Chiropratica, fisioterapia, coppettazione, infrarossi e onde russe" } },
+  { id:"quiro", cat:"quiro", ic:"🦴", price:50, before:60, min:45, fotos:F("p08","n07"), care:"dolor",
+    es:{ name:"Quiropraxia", desc:"Ajuste y regulación de las vértebras" },
+    it:{ name:"Chiropratica", desc:"Aggiustamento e regolazione delle vertebre" } },
+  { id:"qfd", cat:"quiro", ic:"💆", price:60, before:70, min:60, fotos:F("p08","p09","p10"), care:"dolor",
+    es:{ name:"Quiropraxia, fisioterapia y descontracturante", desc:"Ajuste de vértebras y nivelación del cuerpo · nervio ciático, lumbar, cervical y dorsal" },
+    it:{ name:"Chiropratica, fisioterapia e decontratturante", desc:"Aggiustamento delle vertebre e livellamento del corpo · nervo sciatico, lombare, cervicale e dorsale" } },
+  { id:"qfdv", cat:"vento", ic:"🫙", price:50, before:70, min:60, fotos:F("n01","n02","n03","n04","n05","n06","n07","n08","p20"), care:"vent",
+    es:{ name:"Quiropraxia, fisioterapia, descontracturante y ventosas", desc:"Para contracturas y dolor muscular" },
+    it:{ name:"Chiropratica, fisioterapia, decontratturante e coppettazione", desc:"Per contratture e dolore muscolare" } },
+  { id:"qfdvc", cat:"quiro", ic:"🔥", price:60, before:70, min:60, fotos:F("p12","m19","m15","m16","m17","m18","p13","p14","p17","p18"), care:"vent",
+    es:{ name:"Quiropraxia, ventosas calientes, infrarrojo y reflexología", desc:"Fisioterapia, descontracturante, frotación y ajuste de vértebras · también tobillo y tendinitis" },
+    it:{ name:"Chiropratica, coppette calde, infrarossi e riflessologia", desc:"Fisioterapia, decontratturante, frizione e aggiustamento delle vertebre · anche caviglia e tendinite" } },
+  { id:"tper", cat:"fisio", ic:"🩺", price:70, before:80, min:60, fotos:F("m01","m02","m03","m04","m06","m07"), care:"dolor",
+    es:{ name:"Terapia personalizada", desc:"Electroterapia, ventosas y masaje según lo que necesites · cuéntale a Carim qué te duele" },
+    it:{ name:"Terapia personalizzata", desc:"Elettroterapia, coppette e massaggio secondo le tue esigenze · di' a Carim dove ti fa male" } },
+  { id:"tvent", cat:"vento", ic:"🫧", price:60, before:80, min:60, fotos:F("m04","m19","p20"), care:"vent",
+    es:{ name:"Terapia con ventosas, quiropraxia y fisioterapia", desc:"Para el dolor de todo el cuerpo" },
+    it:{ name:"Terapia con coppette, chiropratica e fisioterapia", desc:"Per il dolore di tutto il corpo" } },
+  { id:"elec", cat:"electro", ic:"🔌", price:50, before:70, min:45, fotos:F("n09","n10","n11","n12","m06","m07"), care:"dolor",
+    es:{ name:"Electrodos para la tendinitis", desc:"Para quien sufre de tendinitis: reduce la inflamación y las contracturas en brazos, manos y cuello" },
+    it:{ name:"Elettrodi per la tendinite", desc:"Per chi soffre di tendinite: riduce l'infiammazione e le contratture di braccia, mani e collo" } },
+  { id:"refl", cat:"fisio", ic:"🦶", price:40, before:50, min:45, fotos:F("p15","p16","p13","p14","p17","p18"), care:"dolor",
+    es:{ name:"Reflexología · espolón calcáneo", desc:"Tratamiento del espolón y dolor del pie" },
+    it:{ name:"Riflessologia · spina calcaneare", desc:"Trattamento della spina calcaneare e del dolore al piede" } },
+  /* ---------- masajes ---------- */
+  { id:"olis", cat:"fisio", ic:"🌿", price:70, before:100, min:60, fotos:F("p08"), care:"masaje",
+    es:{ name:"Masaje holístico y descontracturante", desc:"Todo el cuerpo, con crema o talco" },
+    it:{ name:"Massaggio olistico e decontratturante", desc:"Tutto il corpo, con crema o talco" } },
+  { id:"vent", cat:"copet", ic:"🫙", price:60, before:70, min:45, fotos:F("m12","m13","m03","m04"), care:"vent",
+    es:{ name:"Ventosas descontracturantes", desc:"Descontracturante, drenante y desinflamante" },
+    it:{ name:"Coppettazione decontratturante", desc:"Decontratturante, drenante e antinfiammatoria" } },
+  /* ---------- reductores ---------- */
+  { id:"red", cat:"reduc", ic:"💪", price:50, before:70, min:60, opts:[{es:"1 persona",it:"1 persona",price:50},{es:"2 personas (vienen juntas)",it:"2 persone (insieme)",price:80}], fotos:F(), care:"reduc",
+    es:{ name:"Masaje reductor", desc:"Reduce la grasa localizada, modela la figura y activa la circulación · 2 personas por 80 €" },
+    it:{ name:"Massaggio riducente", desc:"Riduce il grasso localizzato, modella la figura e attiva la circolazione · 2 persone a 80 €" } },
+  { id:"lipo", cat:"lipo", ic:"🎯", price:70, before:100, min:60, fotos:F("p07"), care:"reduc",
+    es:{ name:"Masaje lipo reductor", desc:"Abdomen, espalda, brazos y piernas" },
+    it:{ name:"Massaggio lipo riducente", desc:"Addome, schiena, braccia e gambe" } },
+  { id:"coct", cat:"lipo", ic:"🍹", price:70, before:100, min:60, opts:[{es:"1 sesión",it:"1 seduta",price:70},{es:"Paquete 5 sesiones",it:"Pacchetto 5 sedute",price:250},{es:"Paquete 8 sesiones",it:"Pacchetto 8 sedute",price:400},{es:"Paquete 15 sesiones",it:"Pacchetto 15 sedute",price:550}], fotos:F("p07"), care:"reduc",
+    es:{ name:"Masaje + cóctel lipo reductor", desc:"Reductor de medidas · 70 € la sesión o en paquetes de 5, 8 y 15" },
+    it:{ name:"Massaggio + cocktail lipo riducente", desc:"Riduce i centimetri · 70 € a seduta o pacchetti da 5, 8 e 15" } },
+  { id:"dren", cat:"dren", ic:"💧", price:50, min:60, fotos:[], care:"reduc",
+    es:{ name:"Drenaje linfático", desc:"Elimina líquidos y toxinas" }, it:{ name:"Linfodrenaggio", desc:"Elimina liquidi e tossine" } },
+  { id:"papa", cat:"reduc", ic:"✨", price:50, min:45, fotos:F(), care:"reduc",
+    es:{ name:"Reducción de papada", desc:"Define el contorno del rostro" }, it:{ name:"Riduzione del doppio mento", desc:"Definisce il contorno del viso" } },
+  { id:"glut", cat:"glut", ic:"🍑", price:50, min:60, fotos:[], care:"reduc",
+    es:{ name:"Levantamiento de glúteos", desc:"Tonifica y levanta" }, it:{ name:"Lifting glutei", desc:"Tonifica e solleva" } },
+  { id:"bust", cat:"reduc", ic:"🌸", price:50, min:60, fotos:[], care:"reduc",
+    es:{ name:"Levantamiento de busto", desc:"Tonifica y reafirma" }, it:{ name:"Lifting del seno", desc:"Tonifica e rassoda" } },
+  { id:"carb", cat:"reduc", ic:"🫧", price:30, min:45, fotos:[], care:"piel",
+    es:{ name:"Carboxiterapia facial y corporal", desc:"Obesidad localizada, flacidez, estrías, microvárices, pre y post lipoescultura · sin cirugía" },
+    it:{ name:"Carbossiterapia viso e corpo", desc:"Grasso localizzato, flaccidità, smagliature, microvarici, pre e post liposcultura · senza chirurgia" } },
+  /* ---------- estética ---------- */
+  { id:"exf", cat:"limp", ic:"🧴", price:null, min:45, fotos:F(), care:"piel", multi:true, opts:zopts(ZONES_EXF),
+    es:{ name:"Exfoliación", desc:"Elige una o varias zonas" }, it:{ name:"Esfoliazione", desc:"Scegli una o più zone" } },
+  { id:"limp", cat:"limp", ic:"🧼", price:50, min:60, fotos:F(), care:"piel",
+    es:{ name:"Limpieza facial o de espalda", desc:"Limpieza profunda de la piel" }, it:{ name:"Pulizia viso o schiena", desc:"Pulizia profonda della pelle" } },
+  { id:"blan", cat:"limp", ic:"🤍", price:null, min:45, fotos:F(), care:"piel", multi:true, opts:zopts(ZONES_BLAN),
+    es:{ name:"Blanqueamiento", desc:"Axilas o glúteos" }, it:{ name:"Sbiancamento", desc:"Ascelle o glutei" } }
+];
+const CATS = { quiro:{es:"Quiropráctica",it:"Chiropratica"}, fisio:{es:"Fisioterapia",it:"Fisioterapia"}, vento:{es:"Ventosaterapia",it:"Ventosaterapia"},
+  copet:{es:"Copetación",it:"Coppettazione"}, electro:{es:"Electroterapia",it:"Elettroterapia"},
+  reduc:{es:"Reductores",it:"Riducenti"}, lipo:{es:"Lipo reductor",it:"Lipo riducente"}, dren:{es:"Drenaje linfático",it:"Linfodrenaggio"},
+  glut:{es:"Levante de glúteo",it:"Lifting glutei"}, limp:{es:"Limpieza facial",it:"Pulizia viso"}, promo:{es:"Promociones",it:"Promozioni"} };
+const CAT_IC = { quiro:"🦴", fisio:"💆", vento:"🫙", copet:"⭕", electro:"⚡", reduc:"✨", lipo:"🎯", dren:"💧", glut:"🍑", limp:"🧖‍♀️" };
+/* como en su volante: SALUD y BELLEZA */
+const GROUPS = { salud:{ es:"Salud", it:"Salute", ic:"🩺", cats:["quiro","fisio","vento","copet","electro"] },
+  belleza:{ es:"Belleza", it:"Bellezza", ic:"🌸", cats:["reduc","lipo","dren","glut","limp"] } };
+const groupOf = (c) => Object.keys(GROUPS).find((k) => GROUPS[k].cats.includes(c)) || "salud";
+/* Cuidados generales después de cada tipo de tratamiento (Carim puede cambiarlos) */
+const CARE = {
+  dolor:{ es:["Bebe mucha agua después de la sesión.","Evita cargar peso y hacer esfuerzos fuertes ese día.","Descansa y abrígate la zona tratada.","Si el dolor sigue, cuéntaselo a Carim antes de la próxima sesión."],
+          it:["Bevi molta acqua dopo la seduta.","Evita di sollevare pesi e sforzi intensi quel giorno.","Riposa e tieni al caldo la zona trattata.","Se il dolore continua, dillo a Carim prima della prossima seduta."] },
+  vent:{ es:["Las marcas de las ventosas son normales y se van en unos días.","Evita el frío y las corrientes de aire en la zona.","No te duches con agua fría justo después.","Bebe mucha agua."],
+         it:["I segni delle coppette sono normali e spariscono in pochi giorni.","Evita freddo e correnti d'aria sulla zona.","Non fare la doccia fredda subito dopo.","Bevi molta acqua."] },
+  masaje:{ es:["Bebe mucha agua después del masaje.","Evita comidas pesadas justo después.","Si puedes, descansa el resto del día."], it:["Bevi molta acqua dopo il massaggio.","Evita pasti pesanti subito dopo.","Se puoi, riposa il resto della giornata."] },
+  reduc:{ es:["Bebe mucha agua después de la sesión.","Para mejores resultados, acompaña con ejercicio y comida sana.","Sé constante con las sesiones."], it:["Bevi molta acqua dopo la seduta.","Per risultati migliori, abbina movimento e alimentazione sana.","Sii costante con le sedute."] },
+  piel:{ es:["Evita el sol directo 24 horas.","Hidrata la piel cada día.","Usa protector solar."], it:["Evita il sole diretto per 24 ore.","Idrata la pelle ogni giorno.","Usa la protezione solare."] }
+};
+const CARE_NAMES = { dolor:{es:"Quiropraxia y fisioterapia",it:"Chiropratica e fisioterapia"}, vent:{es:"Ventosas",it:"Coppettazione"}, masaje:{es:"Masajes",it:"Massaggi"},
+  reduc:{es:"Reductores",it:"Rimodellanti"}, piel:{es:"Exfoliación y blanqueamiento",it:"Esfoliazione e sbiancamento"} };
+const FAQ = {
+  es:[["¿Qué es la quiropraxia?","Es el ajuste de las vértebras para aliviar el dolor de espalda y cuello y mejorar la postura."],
+      ["¿Las ventosas dejan marcas?","Sí, es normal. Son marcas redondas que desaparecen en unos días."],
+      ["¿Qué incluye el paquete completo?","Quiropraxia, fisioterapia, ventosas, electrodos y frotación en la misma sesión."],
+      ["¿Qué zonas se pueden tratar con el masaje lipo reductor?","Abdomen, espalda, brazos y piernas."],
+      ["¿Atienden a hombres y mujeres?","Sí, Carim atiende a todos."],
+      ["¿Puedo cambiar o cancelar mi cita?","Sí, avisa por WhatsApp con al menos 24 horas."],
+      ["¿La cita queda confirmada al reservar?","Queda confirmada cuando Carim te responde por WhatsApp."]],
+  it:[["Cos'è la chiropratica?","È l'aggiustamento delle vertebre per alleviare il dolore a schiena e collo e migliorare la postura."],
+      ["Le coppette lasciano segni?","Sì, è normale. Sono segni rotondi che spariscono in pochi giorni."],
+      ["Cosa include il pacchetto completo?","Chiropratica, fisioterapia, coppettazione, elettrodi e frizione nella stessa seduta."],
+      ["Quali zone si trattano con il massaggio lipo riducente?","Addome, schiena, braccia e gambe."],
+      ["Ricevete uomini e donne?","Sì, Carim riceve tutti."],
+      ["Posso spostare o annullare l'appuntamento?","Sì, avvisa su WhatsApp almeno 24 ore prima."],
+      ["L'appuntamento è confermato quando prenoto?","È confermato quando Carim ti risponde su WhatsApp."]]
+};
+/* catálogo guardado por Carim desde su panel (si existe, reemplaza el de arriba) */
+let CATALOG_RAW = null; try { CATALOG_RAW = JSON.parse(document.getElementById("catalog-data").textContent); } catch (e) {}
+if (CATALOG_RAW && Array.isArray(CATALOG_RAW.services)) { SERVICES = CATALOG_RAW.services; if (Array.isArray(CATALOG_RAW.gal)) GAL = CATALOG_RAW.gal; }
+const BASE_SERVICES = JSON.parse(JSON.stringify(SERVICES)), BASE_GAL = JSON.parse(JSON.stringify(GAL));
+SERVICES.forEach((s) => { const pr = s.promoRef && SERVICES.find((x) => x.id === s.promoRef); if (pr && pr.until >= new Date().toISOString().slice(0, 10)) { s.opts = pr.opts; s.before = s.price; s.until = undefined; s.promoTill = pr.until; } });
+const GCATS = CATS;
+/* Antes y después deslizable: misma persona, misma posición (vacío hasta tener fotos) */
+const BA = [];
+const COVER = {}; [["qfdv","n03"],["elec","n09"],["psem","p08"],["qfd","p08"],["qfdvc","p12"],["tper","m01"],["refl","p15"],["olis","p08"],["vent","m12"],["coct","p07"],["lipo","p07"],["tvent","m04"],["quiro","p08"],["tcomp","m01"]].forEach(([k, n]) => { const i = F(n)[0]; if (i != null) COVER[k] = i; });
+const FLOW_IDS = ["qfdv", "qfdvc", "elec", "qfd", "vent", "refl", "tper"];
+
+const TXT = {
+  es:{ hTitle:"Salud y belleza", hSub:"Quiropraxia, fisioterapia, ventosas, masajes y reductores. No dejes que el dolor te acompañe: reserva tu cita en 1 minuto.", hCta:"Reservar mi cita",
+    againBtn:"Repetir servicio", againNew:"Otro servicio", notMe:"No soy yo", hi:"¡Hola, {n}! 🙌", lastTime:"La última vez reservaste: {s}", whatToday:"¿Qué te hacemos hoy?",
+    ourSvcs:"Nuestros servicios", seeAll:"Reservar ›", baTitle:"Antes y después", baHint:"Desliza para comparar", promos:"Promociones", seeWorks:"✦ Ver mis trabajos",
+    refTitle:"Recomienda a alguien", refSub:"Los dos tienen {d} de descuento.", refSubNo:"Manda la página por WhatsApp a quien lo necesite.", refBtn:"Compartir",
+    refMsg:"¡Mira! Yo me hago {s}con Carim · Manitos Mágicas en Sesto San Giovanni 🙌 Reserva aquí: {u}", refMsgD:" Di que vas de parte de {n} y los dos tenemos {d} de descuento.",
+    svcKick:"Lo que hace Carim", svcTitle:"Servicios", svcSub:"Todo lo que hace Carim, con precio y duración. Las fotos están en Mis trabajos.",
+    wKick:"Fotos reales", wTitle1:"Mis", wTitle2:"trabajos", all:"Todos", noPhoto:"📷 Pronto subiremos fotos de este servicio. Pregúntale a Carim por WhatsApp.", photos:"fotos",
+    bookThis:"Reservar este servicio", wantThis:"Quiero este servicio", pickTime:"Elegir día y hora →", allCats:"Salud / Belleza", svcWord:"servicios", svcWord1:"servicio", promoUntil:"Promo hasta el {d}", lSrc:"¿Cómo nos conociste? (opcional)", untilShort:"hasta el {d}", normally:"Precio normal {p} cada uno", morning:"Mañana", afternoon:"Tarde", refToggle:"+ Alguien me recomendó", seePhotos:"Ver fotos de este servicio", allSvcs:"‹ Todos los servicios", withPhotos:"Con fotos de mis trabajos", book:"Reservar →",
+    consult:"Consultar", aConsult:"A consultar", from:"desde", optPick:"Elige una opción", optMulti:"Elige una o varias zonas", total:"Total", backHome:"‹ Inicio", stepN:"Paso {i} de {n}", stService:"¿Qué necesitas?", stWhen:"¿Cuándo te viene bien?",
+    whenNote:"Solo ves las horas libres. Carim te confirma por WhatsApp.", freeOn:"{d} · horas libres", noDays:"No hay horas libres en los próximos días. Escríbele a Carim por WhatsApp.", stYou:"Tus datos", lName:"Nombre y apellido", phName:"Ej. María López",
+    phPhone:"Ej. +39 333 123 4567", lRef:"¿Te recomendó alguien? (opcional)", phRef:"Nombre de quien te recomendó", lNotes:"Comentario (opcional)", phNotes:"Dónde te duele, desde cuándo, zonas a tratar, si estás embarazada o tienes alguna operación reciente…",
+    stConfirm:"Revisa tu reserva", dSvc:"Servicio", dWhen:"Cuándo", dDur:"Duración", dName:"Nombre", dPrice:"Precio", rulesT:"Antes de venir",
+    rules:["La cita queda confirmada cuando Carim te responde por WhatsApp.","Si necesitas cambiar o cancelar, avisa con al menos 24 h.","Llega 5 minutos antes.","Ven con ropa cómoda."],
+    confNote:"Al tocar «Enviar por WhatsApp» se abre el chat con Carim con el mensaje ya escrito. Solo tienes que enviarlo.",
+    doneT:"Reserva enviada", doneSub:"Te confirmamos por WhatsApp.", doneWaShort:"WhatsApp", recommend:"Recomendar", careShort:"Para que te quede perfecto", doneWa:"Abrir WhatsApp otra vez", doneHome:"Volver al inicio",
+    regT:"¿La próxima vez más rápido?", regSub:"Guarda tu nombre en este teléfono y la próxima vez reservas en dos toques.", regBtn:"Guardar mis datos", regOk:"¡Guardado! Te esperamos 🙌",
+    next:"Siguiente", send:"Enviar por WhatsApp", pickSvc:"Elige un servicio", careTitle:"Cuidados después del tratamiento", careNote:"Indicaciones generales. Sigue siempre lo que te diga Carim.",
+    careInfo:"Indicaciones generales para cada tipo de tratamiento. Sigue siempre lo que te diga Carim.", infoKick:"Todo lo que necesitas saber", prices:"Precios", faqT:"Preguntas frecuentes", whereT:"Dónde estamos",
+    callTxt:"WhatsApp y llamadas: 392 494 0925", howGet:"📍 Cómo llegar", writeWa:"💬 Escribir por WhatsApp", review:"⭐ Dejar una reseña", hours:"Horario", validUntil:"Válida hasta el {d}", pmKick:"Promo del mes",
+    nHome:"Inicio", nSvc:"Servicios", nWorks:"Mis trabajos", nBook:"Reservar", before:"Antes", after:"Después",
+    msg:"Hola Carim, quiero reservar:\n{s}\n{d} a las {t}\n{p}", msgNote:"\nNota: {n}", msgRef:"\nMe recomendó: {r}", msgName:"\nA nombre de {n}", msgPhone:"", msgEnd:"" },
+  it:{ hTitle:"Salute e bellezza", hSub:"Chiropratica, fisioterapia, coppettazione, massaggi e trattamenti riducenti. Non lasciare che il dolore ti accompagni: prenota in 1 minuto.", hCta:"Prenota il tuo appuntamento",
+    againBtn:"Ripeti il servizio", againNew:"Altro servizio", notMe:"Non sono io", hi:"Ciao, {n}! 🙌", lastTime:"L'ultima volta hai prenotato: {s}", whatToday:"Cosa facciamo oggi?",
+    ourSvcs:"I nostri servizi", seeAll:"Prenota ›", baTitle:"Prima e dopo", baHint:"Scorri per confrontare", promos:"Promozioni", seeWorks:"✦ Vedi i miei lavori",
+    refTitle:"Consiglia a qualcuno", refSub:"Avete entrambi {d} di sconto.", refSubNo:"Manda la pagina su WhatsApp a chi ne ha bisogno.", refBtn:"Condividi",
+    refMsg:"Guarda! Io faccio {s}da Carim · Manitos Mágicas a Sesto San Giovanni 🙌 Prenota qui: {u}", refMsgD:" Di' che vieni da parte di {n} e abbiamo entrambi {d} di sconto.",
+    svcKick:"Cosa fa Carim", svcTitle:"Servizi", svcSub:"Tutto quello che fa Carim, con prezzo e durata. Le foto sono in I miei lavori.",
+    wKick:"Foto reali", wTitle1:"I miei", wTitle2:"lavori", all:"Tutti", noPhoto:"📷 Presto caricheremo le foto di questo servizio. Chiedi a Carim su WhatsApp.", photos:"foto",
+    bookThis:"Prenota questo servizio", wantThis:"Voglio questo servizio", pickTime:"Scegli giorno e ora →", allCats:"Salute / Bellezza", svcWord:"servizi", svcWord1:"servizio", promoUntil:"Promo fino al {d}", lSrc:"Come ci hai conosciuto? (facoltativo)", untilShort:"fino al {d}", normally:"Prezzo normale {p} l'uno", morning:"Mattina", afternoon:"Pomeriggio", refToggle:"+ Qualcuno mi ha consigliato", seePhotos:"Vedi le foto di questo servizio", allSvcs:"‹ Tutti i servizi", withPhotos:"Con le foto dei miei lavori", book:"Prenota →",
+    consult:"Su richiesta", aConsult:"Su richiesta", from:"da", optPick:"Scegli un'opzione", optMulti:"Scegli una o più zone", total:"Totale", backHome:"‹ Home", stepN:"Passo {i} di {n}", stService:"Di cosa hai bisogno?", stWhen:"Quando ti va bene?",
+    whenNote:"Vedi solo gli orari liberi. Carim ti conferma su WhatsApp.", freeOn:"{d} · orari liberi", noDays:"Non ci sono orari liberi nei prossimi giorni. Scrivi a Carim su WhatsApp.", stYou:"I tuoi dati", lName:"Nome e cognome", phName:"Es. Maria Rossi",
+    phPhone:"Es. +39 333 123 4567", lRef:"Ti ha consigliato qualcuno? (facoltativo)", phRef:"Nome di chi ti ha consigliato", lNotes:"Commento (facoltativo)", phNotes:"Dove ti fa male, da quando, zone da trattare, se sei incinta o hai un'operazione recente…",
+    stConfirm:"Controlla la prenotazione", dSvc:"Servizio", dWhen:"Quando", dDur:"Durata", dName:"Nome", dPrice:"Prezzo", rulesT:"Prima di venire",
+    rules:["L'appuntamento è confermato quando Carim ti risponde su WhatsApp.","Per spostare o annullare, avvisa almeno 24 ore prima.","Arriva 5 minuti prima.","Vieni con abiti comodi."],
+    confNote:"Toccando «Invia su WhatsApp» si apre la chat con Carim con il messaggio già scritto. Devi solo inviarlo.",
+    doneT:"Prenotazione inviata", doneSub:"Ti confermiamo su WhatsApp.", doneWaShort:"WhatsApp", recommend:"Consiglia", careShort:"Per un risultato perfetto", doneWa:"Apri di nuovo WhatsApp", doneHome:"Torna alla home",
+    regT:"La prossima volta più veloce?", regSub:"Salva il tuo nome su questo telefono e la prossima volta prenoti in due tocchi.", regBtn:"Salva i miei dati", regOk:"Salvato! Ti aspettiamo 🙌",
+    next:"Avanti", send:"Invia su WhatsApp", pickSvc:"Scegli un servizio", careTitle:"Cura dopo il trattamento", careNote:"Indicazioni generali. Segui sempre quello che ti dice Carim.",
+    careInfo:"Indicazioni generali per ogni tipo di trattamento. Segui sempre quello che ti dice Carim.", infoKick:"Tutto quello che ti serve sapere", prices:"Prezzi", faqT:"Domande frequenti", whereT:"Dove siamo",
+    callTxt:"WhatsApp e chiamate: 392 494 0925", howGet:"📍 Come arrivare", writeWa:"💬 Scrivi su WhatsApp", review:"⭐ Lascia una recensione", hours:"Orario", validUntil:"Valida fino al {d}", pmKick:"Promo del mese",
+    nHome:"Home", nSvc:"Servizi", nWorks:"I miei lavori", nBook:"Prenota", before:"Prima", after:"Dopo",
+    msg:"Ciao Carim, vorrei prenotare:\n{s}\n{d} alle {t}\n{p}", msgNote:"\nNota: {n}", msgRef:"\nMi ha consigliato: {r}", msgName:"\nA nome di {n}", msgPhone:"", msgEnd:"" }
+};
+/* ================================================================= */
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let lang = "es"; try { lang = localStorage.getItem("carim-lang") || ((navigator.language || "").toLowerCase().startsWith("it") ? "it" : "es"); } catch (e) {}
+const t = (k, v) => { let s = (TXT[lang] && TXT[lang][k]) != null ? TXT[lang][k] : TXT.es[k]; if (v && typeof s === "string") Object.keys(v).forEach((x) => { s = s.split("{" + x + "}").join(v[x]); }); return s; };
+const loc = () => (lang === "it" ? "it-IT" : "es-ES");
+const L = (o) => (o[lang] || o.es);
+const nm = (s) => L(s).name, ds = (s) => L(s).desc, catName = (c) => (CATS[c] ? L(CATS[c]) : c);
+const euro = (n) => (n == null ? t("aConsult") : (Math.round(n * 100) / 100).toLocaleString(loc()) + " €");
+const pad = (n) => String(n).padStart(2, "0");
+const key = (d) => d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate());
+const todayKey = () => key(new Date());
+const dateOf = (k) => { const [y, m, d] = k.split("-").map(Number); return new Date(y, m - 1, d); };
+const tmin = (s) => { const [h, m] = String(s).split(":").map(Number); return h * 60 + (m || 0); };
+const hhmm = (m) => pad(Math.floor(m / 60)) + ":" + pad(m % 60);
+const longDate = (k) => new Intl.DateTimeFormat(loc(), { weekday: "long", day: "numeric", month: "long" }).format(dateOf(k));
+const showDate = (k) => k ? new Intl.DateTimeFormat(loc(), { day: "numeric", month: "short" }).format(dateOf(k)) : "—";
+const normPhone = (v) => { let p = String(v || "").replace(/[^\d+]/g, ""); if (p.startsWith("+")) p = p.slice(1); else if (p.startsWith("00")) p = p.slice(2); else if (/^3\d{8,9}$/.test(p)) p = "39" + p; return p.length >= 8 ? p : ""; };
+let promoMonth = null; // promo del mes (se carga del guardado)
+const allServices = () => (promoMonth ? [promoMonth, ...SERVICES] : SERVICES).filter((x) => promoOn(x) && !x.hidden);
+const svcOf = (id) => allServices().find((s) => s.id === id);
+const durTxt = (s) => (s.known ? s.min + " min" : "~" + (s.min >= 60 ? (s.min / 60).toLocaleString(loc()) + " h" : s.min + " min"));
+const promoOn = (s) => !s.until || s.until >= todayKey();
+const minOpt = (s) => (s.opts && s.opts.length ? Math.min(...s.opts.map((o) => o.price)) : s.price);
+const priceTxt = (s) => { const p = minOpt(s); if (p == null) return t("consult"); return ((s.opts && s.opts.length > 1) || s.from ? t("from") + " " : "") + euro(p); };
+const selOpts = (s) => (s && s.opts ? (state.opts[s.id] || []).map((i) => s.opts[i]).filter(Boolean) : []);
+const priceOf = (s) => { if (!s) return null; const o = selOpts(s); if (o.length) return o.reduce((a, x) => a + x.price, 0); return s.opts && s.opts.length === 1 ? s.opts[0].price : s.price; };
+const optNames = (s, lg) => selOpts(s).map((o) => o[lg || lang] || o.es).join(", ");
+const optMsg = (s, lg) => selOpts(s).map((o) => (o.msg ? o.msg[lg || lang] || o.msg.es : o[lg || lang] || o.es)).join(", ");
+const coverOf = (s) => (COVER[s.id] != null && GAL[COVER[s.id]] ? GAL[COVER[s.id]].src : (s.fotos && s.fotos.length && GAL[s.fotos[0]] ? GAL[s.fotos[0]].src : "fotos/n02.jpg"));
+const waLink = (num, text) => "https://wa.me/" + num + "?text=" + encodeURIComponent(text);
+function setStatus(id, txt, err) { const s = $(id); if (!s) return; s.textContent = txt || ""; s.className = "status" + (err ? " err" : ""); }
+
+/* ---------- idioma ---------- */
+function applyLang() {
+  document.documentElement.lang = lang;
+  $("nav-wa").href = waLink(WA_NUMBER, lang === "it" ? "Ciao Carim! Ho una domanda." : "¡Hola Carim! Tengo una pregunta.");
+  document.querySelectorAll("[data-i]").forEach((el) => { const v = t(el.dataset.i); if (typeof v === "string") el.textContent = v; });
+  document.querySelectorAll("[data-ph]").forEach((el) => { el.placeholder = t(el.dataset.ph); });
+  document.querySelectorAll("[data-lang]").forEach((b) => b.classList.toggle("on", b.dataset.lang === lang));
+  $("hours").textContent = "🕐 " + hoursText(); $("hours2").textContent = t("hours") + ": " + hoursText();
+  $("rules").innerHTML = t("rules").map((r) => `<li>${esc(r)}</li>`).join("");
+  renderAll();
+}
+document.addEventListener("click", (e) => { const b = e.target.closest("[data-lang]"); if (!b) return; lang = b.dataset.lang; try { localStorage.setItem("carim-lang", lang); } catch (x) {} applyLang(); });
+
+/* ---------- horario ---------- */
+function hoursText() {
+  const dn = (d) => new Intl.DateTimeFormat(loc(), { weekday: "short" }).format(new Date(2026, 0, 4 + d)).replace(".", "");
+  const groups = []; [1,2,3,4,5,6,0].forEach((d) => { const h = OPEN[d]; const tt = h ? h.join("–") : null; const g = groups[groups.length - 1];
+    if (g && g.t === tt) g.to = d; else groups.push({ from: d, to: d, t: tt }); });
+  return groups.filter((g) => g.t).map((g) => (g.from === g.to ? dn(g.from) : dn(g.from) + "–" + dn(g.to)) + " " + g.t).join(" · ");
+}
+$("maps").href = MAPS;  $("wa-info").href = "https://wa.me/" + WA_NUMBER;
+if (REVIEW_URL) { $("review-btn").href = REVIEW_URL; $("review-btn").hidden = false; }
+
+/* ---------- navegación ---------- */
+const OWNER_VIEWS = ["today", "agenda", "cards", "catalog", "month"];
+let currentView = "home", isOwner = false;
+function showTab(v) {
+  if (OWNER_VIEWS.includes(v) && !pinOk) v = "home";
+  currentView = v;
+  document.querySelectorAll(".view").forEach((el) => el.hidden = el.id !== "view-" + v);
+  document.querySelectorAll(".bnav button,.onav button").forEach((b) => b.classList.toggle("on", b.dataset.tab === v));
+  if (v === "book") goStep(step === "done" ? "service" : step);
+  if (OWNER_VIEWS.includes(v)) startData();
+  if (v === "today") renderToday();
+  if (v === "catalog") renderCatalog();
+  syncChrome(); window.scrollTo(0, 0);
+}
+function syncChrome() {
+  const owner = OWNER_VIEWS.includes(currentView), inFlow = currentView === "book" && step !== "done";
+  $("bnav").hidden = owner || inFlow; $("onav").hidden = !owner; $("dock").hidden = !inFlow;
+}
+document.addEventListener("click", (e) => { const b = e.target.closest("[data-tab]"); if (b) { e.preventDefault(); showTab(b.dataset.tab); } });
+
+/* ---------- carrusel de fotos numerado ---------- */
+function stripHtml(s) {
+  const f = s.fotos || [];
+  if (!f.length) return `<div class="nofoto">${t("noPhoto")}</div>`;
+  return `<div class="sg-row" data-row="${s.id}">` + f.map((gi, k) => { const g = GAL[gi];
+    return `<button class="sg-it" type="button" data-gi="${gi}" data-row="${s.id}"><div class="ph">` + (g.video ? `<video src="${g.video}#t=0.5" muted playsinline preload="metadata"></video><span class="play">▶</span>` : `<img src="${g.src}" alt="${esc(L(g))}" loading="lazy">`) +
+      `<span class="n">${k + 1} / ${f.length}</span></div><p>${esc(L(g))}</p></button>`; }).join("") +
+    `</div><div class="sg-dots" data-dots="${s.id}">${f.map((_, k) => `<i class="${k ? "" : "on"}"></i>`).join("")}</div>`;
+}
+function bindStrips(root) {
+  root.querySelectorAll(".sg-row").forEach((row) => row.addEventListener("scroll", () => {
+    const it = row.querySelector(".sg-it"); if (!it) return; const k = Math.round(row.scrollLeft / (it.offsetWidth + 10));
+    const d = root.querySelector(`[data-dots="${row.dataset.row}"]`); if (d) d.querySelectorAll("i").forEach((x, j) => x.classList.toggle("on", j === k));
+  }, { passive: true }));
+  bindBA(root);
+}
+function optsHtml(s, live) {
+  if (!s.opts || !s.opts.length) return "";
+  if (!live) return `<div class="plist" style="margin-top:12px">${s.opts.map((o) => `<div><span>${esc(L(o))}</span><b>${euro(o.price)}</b></div>`).join("")}</div>`;
+  const sel = state.opts[s.id] || [], tot = priceOf(s);
+  return `<p class="svc-cat" style="margin:16px 0 8px">${s.multi ? t("optMulti") : t("optPick")}</p><div class="opts">` +
+    s.opts.map((o, i) => `<button type="button" class="opt ${sel.includes(i) ? "on" : ""}" data-opt="${i}"><span>${s.multi ? (sel.includes(i) ? "☑" : "☐") : (sel.includes(i) ? "◉" : "○")} ${esc(L(o))}</span><b>${euro(o.price)}</b></button>`).join("") +
+    `</div>` + (s.multi && sel.length ? `<p class="opt-tot">${t("total")}: <b>${euro(tot)}</b></p>` : "");
+}
+function detailHead(s) {
+  return `<div class="detail-h"><span class="ic">${s.ic || "♛"}</span><div><h2>${esc(nm(s))}</h2><p>${esc(ds(s))}</p></div></div>` +
+    `<div class="meta"><span class="gold">${priceTxt(s)}</span><span>⏱ ${durTxt(s)}</span>${s.until ? `<span>${t("validUntil", { d: showDate(s.until) })}</span>` : ""}${s.promoTill ? `<span class="gold">PROMO · ${t("validUntil", { d: showDate(s.promoTill) })}</span>` : ""}</div>`;
+}
+function stripClick(e) {
+  const ph = e.target.closest("[data-gi]"); if (!ph) return false;
+  const sv = svcOf(ph.dataset.row), list = sv.fotos.map((i) => GAL[i]); lbList = list; lbSvc = sv.id; openLb(list.indexOf(GAL[+ph.dataset.gi])); return true;
+}
+
+/* ---------- antes y después deslizable ---------- */
+function baHtml(b) {
+  return `<div class="ba" data-ba><img src="${b.before}" alt="${t("before")}"><img class="after" src="${b.after}" alt="${t("after")}"><span class="hand"></span>` +
+    `<span class="lbl l">${t("before")}</span><span class="lbl r">${t("after")}</span><input type="range" min="0" max="100" value="50" aria-label="${t("baHint")}"></div>` +
+    `<p class="ba-cap">${esc(L(b))} · ${t("baHint")}</p>`;
+}
+function bindBA(root) {
+  root.querySelectorAll("[data-ba] input").forEach((inp) => { const box = inp.closest("[data-ba]");
+    inp.addEventListener("input", () => { const v = inp.value; box.querySelector(".after").style.clipPath = `inset(0 0 0 ${v}%)`; box.querySelector(".hand").style.left = v + "%"; }); });
+}
+
+/* ---------- inicio ---------- */
+let cfActive = 0, cfTouched = 0, cfDrag = null, cfMoved = false;
+const flowList = () => FLOW_IDS.map(svcOf).filter(Boolean);
+function renderFlow() {
+  $("cflow").innerHTML = flowList().map((s, i) => `<button type="button" class="cf-card" data-k="${i}"><img src="${coverOf(s)}" alt="" draggable="false">` +
+    `<span class="cf-name"><small>${esc(catName(s.cat))}</small>${esc(nm(s))}</span>` +
+    `<span class="cf-bar"><b>${priceTxt(s)}</b><small>⏱ ${durTxt(s)}</small><span class="cf-go">${t("book")}</span></span></button>`).join("");
+  $("cf-dots").innerHTML = flowList().map((_, i) => `<button type="button" data-k="${i}" aria-label="${i + 1}"></button>`).join("");
+  cfLayout();
+}
+function cfLayout() {
+  const cards = [...document.querySelectorAll("#cflow .cf-card")], n = cards.length; if (!n) return;
+  cfActive = ((cfActive % n) + n) % n;
+  cards.forEach((c, i) => { let o = i - cfActive; if (o > n / 2) o -= n; if (o < -n / 2) o += n; const a = Math.abs(o);
+    c.style.transform = `translateX(calc(-50% + ${o * 60}%)) translateZ(${-a * 140}px) rotateY(${-o * 30}deg) scale(${1 - Math.min(a, 3) * 0.06})`;
+    c.style.zIndex = String(10 - a); c.style.opacity = a > 2 ? "0" : "1"; c.classList.toggle("on", o === 0); });
+  document.querySelectorAll("#cf-dots button").forEach((d, i) => d.classList.toggle("on", i === cfActive));
+}
+const cfGo = (k) => { cfActive = k; cfTouched = Date.now(); cfLayout(); };
+$("cf-prev").onclick = () => cfGo(cfActive - 1); $("cf-next").onclick = () => cfGo(cfActive + 1);
+$("cf-dots").addEventListener("click", (e) => { const b = e.target.closest("[data-k]"); if (b) cfGo(+b.dataset.k); });
+$("cflow").addEventListener("pointerdown", (e) => { cfDrag = e.clientX; cfMoved = false; });
+$("cflow").addEventListener("pointermove", (e) => { if (cfDrag !== null && Math.abs(e.clientX - cfDrag) > 10) cfMoved = true; });
+$("cflow").addEventListener("pointerup", (e) => { if (cfDrag === null) return; const dx = e.clientX - cfDrag; cfDrag = null; if (Math.abs(dx) > 40) cfGo(cfActive + (dx < 0 ? 1 : -1)); });
+$("cflow").addEventListener("pointercancel", () => { cfDrag = null; });
+$("cflow").addEventListener("click", (e) => { const c = e.target.closest(".cf-card"); if (!c || cfMoved) return; const k = +c.dataset.k; if (k === cfActive) openService(flowList()[k].id); else cfGo(k); });
+setInterval(() => { if (currentView === "home" && !document.hidden && Date.now() - cfTouched > 6000) { cfActive++; cfLayout(); } }, 3800);
+
+function featHtml(s, attr) {
+  const line = s.opts && s.opts.length ? s.opts.map((o) => `<span>${esc(L(o))}</span><strong>${euro(o.price)}</strong>`).join("") : `<span>${esc(ds(s))}</span><strong>${euro(s.price)}</strong>`;
+  return `<button class="feat ftxt" type="button" ${attr}="${s.id}"><span class="feat-badge">PROMO${s.until ? " · " + t("untilShort", { d: showDate(s.until) }) : ""}</span>
+    <span class="feat-body"><b>${esc(L(s).short || nm(s))}</b><span class="fprices">${line}</span>${s.before ? `<small>${t("normally", { p: euro(s.before) })}</small>` : ""}</span></button>`;
+}
+function renderHome() {
+  renderFlow();
+  $("promos").innerHTML = allServices().filter((s) => s.promo).map((s) => featHtml(s, "data-svc")).join("");
+  $("pm-home").innerHTML = promoMonth ? `<button class="pm" type="button" data-svc="pm"><small>${t("pmKick")}</small><b>${esc(nm(promoMonth))}</b><span>${esc(ds(promoMonth))}</span>` +
+    `<span class="pmp"><strong>${euro(promoMonth.price)}</strong>${promoMonth.before ? `<s>${euro(promoMonth.before)}</s>` : ""}</span><span class="pmu">${t("validUntil", { d: showDate(promoMonth.until) })}</span></button>` : "";
+  
+  renderRefer();
+}
+$("promos").addEventListener("click", (e) => { const b = e.target.closest("[data-svc]"); if (b) bookService(b.dataset.svc); });
+$("pm-home").addEventListener("click", (e) => { if (e.target.closest("[data-svc]")) openService("pm"); });
+
+/* recomienda a una amiga */
+function referLink() {
+  const mine = me && me.name ? me.name.split(" ")[0] : "", s = me && me.service && svcOf(me.service);
+  let msg = t("refMsg", { s: s ? nm(s).toLowerCase() + " " : "", u: PAGE_URL });
+  if (REFER && mine) msg += t("refMsgD", { n: mine, d: euro(REFER) });
+  return "https://wa.me/?text=" + encodeURIComponent(msg);
+}
+function renderRefer() {
+  const sub = REFER ? t("refSub", { d: euro(REFER) }) : t("refSubNo");
+  ["ref-sub", "ref-sub2"].forEach((id) => $(id).textContent = sub);
+  ["ref-btn", "ref-btn2"].forEach((id) => $(id).href = referLink());
+}
+
+/* ---------- página de servicios ---------- */
+let wcat = "all";
+function renderServicesPage() {
+  const cats = ["all", ...new Set(SERVICES.filter((s) => !s.promo).map((s) => s.cat))];
+  $("wtabs").innerHTML = cats.map((c) => `<button class="tab ${c === wcat ? "on" : ""}" type="button" data-c="${c}">${c === "all" ? t("all") : esc(catName(c))}</button>`).join("");
+  let h = "", last = "";
+  SERVICES.filter((s) => !s.promo && (wcat === "all" || s.cat === wcat)).forEach((s) => {
+    if (wcat === "all" && s.cat !== last) { h += `<p class="svc-cat">${esc(catName(s.cat))}</p>`; last = s.cat; }
+    h += `<div class="wk">${detailHead(s)}${optsHtml(s, false)}<button class="btn" type="button" data-book="${s.id}">${t("bookThis")}</button>${photosBtn(s)}</div>`;
+  });
+  $("services-list").innerHTML = h;
+}
+$("wtabs").addEventListener("click", (e) => { const b = e.target.closest("[data-c]"); if (b) { wcat = b.dataset.c; renderServicesPage(); } });
+$("services-list").addEventListener("click", (e) => { const bk = e.target.closest("[data-book]"); if (bk) { bookService(bk.dataset.book); return; } const pb = e.target.closest("[data-photos]"); if (pb) openWorks(pb.dataset.photos); });
+
+/* ---------- mis trabajos ---------- */
+let gcat = "all", gidx = 0, lbList = null, lbSvc = null;
+const gview = () => GAL.filter((g) => gcat === "all" || g.c === gcat);
+const vista = () => lbList || gview();
+function galItems() {
+  const seen = new Set(), out = [];
+  SERVICES.filter((x) => !x.promo && !x.hidden && x.fotos && x.fotos.length).forEach((x) => x.fotos.forEach((gi) => { if (!seen.has(gi) && GAL[gi]) { seen.add(gi); out.push({ gi, sv: x }); } }));
+  return out;
+}
+function renderGal() {
+  const ORD = [...GROUPS.salud.cats, ...GROUPS.belleza.cats], gc = (x) => GAL[x.gi].c || x.sv.cat;
+  const items = galItems().sort((p, q) => ORD.indexOf(gc(p)) - ORD.indexOf(gc(q))), cats = ["all", ...ORD.filter((c) => items.some((x) => gc(x) === c))];
+  if (!cats.includes(gcat)) gcat = "all";
+  $("gtabs").innerHTML = cats.map((c) => `<button class="tab ${c === gcat ? "on" : ""}" type="button" data-c="${c}">${c === "all" ? t("all") : esc(catName(c))}</button>`).join("");
+  $("grid").innerHTML = items.filter((x) => gcat === "all" || gc(x) === gcat).map(({ gi, sv }) => { const g = GAL[gi];
+    return `<button class="mi" type="button" data-gi="${gi}" data-row="${sv.id}">` + (g.video ? `<video src="${g.video}#t=0.5" muted playsinline preload="metadata"></video><span class="play">▶</span>` : `<img src="${g.src}" alt="${esc(L(g))}" loading="lazy">`) +
+      `<span class="cap">${esc(L(g) || nm(sv))}</span></button>`; }).join("");
+}
+function openWorks(id) { const sv = svcOf(id); gcat = sv ? sv.cat : "all"; showTab("works"); renderGal(); }
+$("gtabs").addEventListener("click", (e) => { const b = e.target.closest("[data-c]"); if (b) { gcat = b.dataset.c; renderGal(); } });
+$("grid").addEventListener("click", (e) => { stripClick(e); });
+function openLb(i) {
+  const v = vista(); gidx = (i + v.length) % v.length; const g = v[gidx];
+  $("lb-c").innerHTML = g.video ? `<video src="${g.video}" controls autoplay muted loop playsinline></video>` : `<img src="${g.src}" alt="${esc(L(g))}">`;
+  $("lb-t").textContent = L(g) + (v.length > 1 ? "  ·  " + (gidx + 1) + " / " + v.length : "");
+  $("lb-book").textContent = currentView === "book" ? t("pickTime") : t("wantThis"); $("lb").hidden = false;
+}
+const closeLb = () => { $("lb").hidden = true; $("lb-c").innerHTML = ""; lbList = null; lbSvc = null; };
+$("lb-x").onclick = closeLb; $("lb-p").onclick = () => openLb(gidx - 1); $("lb-n").onclick = () => openLb(gidx + 1);
+$("lb-book").onclick = () => { const g = vista()[gidx], inBook = currentView === "book", sid = lbSvc || g.svc; closeLb(); if (inBook) goStep("when"); else openService(sid); };
+
+/* ---------- reservar ---------- */
+const FLOW = ["service", "when", "you", "confirm"];
+let step = "service", svcOpen = null, busy = [];
+const SOURCES = [ ["Instagram","Instagram"], ["TikTok","TikTok"], ["Facebook","Facebook"], ["Recomendación","Passaparola"], ["Google","Google"], ["Otro","Altro"] ];
+const HASH_SRC = { instagram:"Instagram", ig:"Instagram", tiktok:"TikTok", facebook:"Facebook", fb:"Facebook", google:"Google", qr:"Volante / QR", whatsapp:"WhatsApp", wa:"WhatsApp" };
+const state = { service: null, date: null, time: null, name: "", phone: "", notes: "", ref: "", opts: {}, src: HASH_SRC[(location.hash || "").slice(1).toLowerCase()] || "" };
+function renderSrcs() { $("srcs").innerHTML = SOURCES.map(([es, it]) => `<button type="button" class="srcb ${state.src === es ? "on" : ""}" data-src="${es}">${lang === "it" ? it : es}</button>`).join(""); }
+document.addEventListener("click", (e) => { const b = e.target.closest("[data-src]"); if (!b) return; state.src = state.src === b.dataset.src ? "" : b.dataset.src; renderSrcs(); renderDock(); });
+let me = null; try { me = JSON.parse(localStorage.getItem("carim-me") || "null"); } catch (e) {}
+if (me) { state.name = me.name || ""; state.phone = me.phone ? "+" + me.phone : ""; $("name").value = state.name; $("phone").value = state.phone; }
+
+function tileHtml(s) {
+  const on = state.service === s.id;
+  return `<button type="button" class="tile ${on ? "on" : ""}" data-open="${s.id}"><img src="${coverOf(s)}" alt="" loading="lazy">` +
+    `<span class="tile-n">📷 ${s.fotos.length}</span>${on ? '<span class="mcheck">✓</span>' : ""}` +
+    `<span class="tile-ov"><b>${esc(nm(s))}</b><small>${priceTxt(s)} · ⏱ ${durTxt(s)}</small></span></button>`;
+}
+function orowHtml(s) {
+  return `<button type="button" class="orow ${state.service === s.id ? "on" : ""} ${s.promo ? "prow" : ""}" data-open="${s.id}"><span class="ic">${s.ic || "♛"}</span>` +
+    `<span class="t"><b>${esc(nm(s))}</b><small>⏱ ${durTxt(s)}${s.until ? " · " + t("validUntil", { d: showDate(s.until) }) : ""}</small></span><span class="p ${minOpt(s) == null ? "c" : ""}">${priceTxt(s)}</span><span class="chev">›</span></button>`;
+}
+function photosBtn(sv) {
+  return sv.fotos && sv.fotos.length ? `<button class="plink" type="button" data-photos="${sv.id}">📷 ${t("seePhotos")} (${sv.fotos.length}) ›</button>` : "";
+}
+let scat = "home";
+const TONES = ["t1", "t2", "t3", "t4"];
+function renderServices() {
+  $("stabs").hidden = true;
+  const list = allServices(), open = svcOpen && svcOf(svcOpen);
+  if (open) {
+    $("services").innerHTML = `<button type="button" class="back-all" data-back="cat">‹ ${esc(L(GROUPS[groupOf(open.cat)]))} · ${esc(catName(open.cat))}</button>` +
+      `<div class="detail">${detailHead(open)}${optsHtml(open, true)}${photosBtn(open)}</div>`;
+    return;
+  }
+  const gk = scat.startsWith("g:") ? scat.slice(2) : null;
+  if (gk && GROUPS[gk]) {
+    const G = GROUPS[gk], secs = G.cats.map((c) => [c, list.filter((x) => x.cat === c)]).filter(([, it]) => it.length);
+    $("services").innerHTML = `<button type="button" class="back-all" data-back="home">‹ ${t("allCats")}</button><h2 class="cat-title">${G.ic} ${esc(L(G))}</h2>` +
+      `<div class="subchips">${secs.map(([c]) => `<button type="button" class="tab" data-jump="${c}">${CAT_IC[c] || ""} ${esc(catName(c))}</button>`).join("")}</div>` +
+      secs.map(([c, it]) => `<h3 class="sub-h" id="sub-${c}"><i>${CAT_IC[c] || ""}</i>${esc(catName(c))}</h3>` + it.map(orowHtml).join("")).join("");
+    return;
+  }
+  scat = "home";
+  $("services").innerHTML = `<div class="gcards">${Object.keys(GROUPS).map((k) => { const G = GROUPS[k];
+    return `<div class="gcard"><button type="button" class="gc-head" data-group="${k}"><i>${G.ic}</i><b>${esc(L(G))}</b><span>›</span></button>` +
+      G.cats.filter((c) => list.some((x) => x.cat === c)).map((c) => `<button type="button" class="gc-row" data-group="${k}" data-sub="${c}"><i>${CAT_IC[c] || ""}</i>${esc(catName(c))}</button>`).join("") + `</div>`; }).join("")}</div>`;
+}
+$("services").addEventListener("click", (e) => {
+  const bk = e.target.closest("[data-back]");
+  if (bk) { let sub = null; if (bk.dataset.back === "home") scat = "home"; else { const v = svcOf(svcOpen); scat = v ? "g:" + groupOf(v.cat) : "home"; sub = v && v.cat; } svcOpen = null; renderServices(); renderDock();
+    setTimeout(() => { const el = sub && document.getElementById("sub-" + sub); if (el) el.scrollIntoView({ block: "start" }); else window.scrollTo({ top: 0, behavior: "smooth" }); }, 30); return; }
+  const gp = e.target.closest("[data-group]");
+  if (gp) { scat = "g:" + gp.dataset.group; renderServices(); renderDock(); const sub = gp.dataset.sub;
+    setTimeout(() => { const el = sub && document.getElementById("sub-" + sub); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" }); else window.scrollTo({ top: 0, behavior: "smooth" }); }, 40); return; }
+  const jp = e.target.closest("[data-jump]"); if (jp) { const el = document.getElementById("sub-" + jp.dataset.jump); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" }); return; }
+  const ct = e.target.closest("[data-cat]"); if (ct) { scat = ct.dataset.cat; renderServices(); renderDock(); window.scrollTo({ top: 0, behavior: "smooth" }); return; }
+  const ob = e.target.closest("[data-opt]");
+  if (ob) { const sv = svcOf(svcOpen), i = +ob.dataset.opt, cur = state.opts[sv.id] || [];
+    state.opts[sv.id] = sv.multi ? (cur.includes(i) ? cur.filter((x) => x !== i) : [...cur, i]) : [i]; renderServices(); renderDock(); return; }
+  if (e.target.closest("[data-go]")) { if (validStep("service")) goStep("when"); return; }
+  const pb = e.target.closest("[data-photos]"); if (pb) { openWorks(pb.dataset.photos); return; }
+  const b = e.target.closest("[data-open]"); if (!b) return;
+  state.service = b.dataset.open; svcOpen = b.dataset.open; state.time = null; const v = svcOf(svcOpen); if (v) scat = "g:" + groupOf(v.cat); renderServices(); renderDock(); window.scrollTo({ top: 0, behavior: "smooth" });
+});
+function openService(id) { state.service = id; svcOpen = id; state.time = null; const v = svcOf(id); if (v) scat = "g:" + groupOf(v.cat); showTab("book"); goStep("service"); }
+function bookService(id) { state.service = id; svcOpen = id; state.time = null; showTab("book"); goStep("when"); }
+
+/* horas libres: se tachan las ocupadas (busy) */
+function openDay(d) { return !!OPEN[d.getDay()] && !CLOSED_DATES.includes(key(d)); }
+function isBusy(k, m, dur) { return busy.some((b) => b.date === k && m < tmin(b.time) + (b.min || 60) && tmin(b.time) < m + dur); }
+function slotsFor(k) {
+  const d = dateOf(k), h = OPEN[d.getDay()]; if (!h) return [];
+  const s = svcOf(state.service), dur = s ? s.min : 30, fit = Math.min(dur, 60), out = [];
+  const now = new Date(), isToday = k === todayKey(), nowMin = now.getHours() * 60 + now.getMinutes();
+  for (let m = tmin(h[0]); m + fit <= tmin(h[1]); m += STEP) if ((!isToday || m >= nowMin + MIN_NOTICE) && !isBusy(k, m, Math.min(dur, 120))) out.push(m);
+  return out;
+}
+let calOff = 0;
+function freeDays() { const out = []; for (let i = 0; i < DAYS_AHEAD; i++) { const d = new Date(); d.setHours(0,0,0,0); d.setDate(d.getDate() + i); if (openDay(d) && slotsFor(key(d)).length) out.push(key(d)); } return out; }
+function renderDays() {
+  const free = freeDays();
+  if (!state.date || !free.includes(state.date)) { state.date = free[0] || null; }
+  const base = new Date(); base.setDate(1); base.setHours(0,0,0,0);
+  if (state.date && calOff === 0) { const sd = dateOf(state.date); calOff = (sd.getFullYear() - base.getFullYear()) * 12 + sd.getMonth() - base.getMonth(); }
+  const m0 = new Date(base.getFullYear(), base.getMonth() + calOff, 1), last = free.length ? dateOf(free[free.length - 1]) : m0;
+  const maxOff = (last.getFullYear() - base.getFullYear()) * 12 + last.getMonth() - base.getMonth();
+  const wd = [1,2,3,4,5,6,0].map((d) => new Intl.DateTimeFormat(loc(), { weekday: "narrow" }).format(new Date(2026, 0, 4 + d)));
+  const lead = (m0.getDay() + 6) % 7, nDays = new Date(m0.getFullYear(), m0.getMonth() + 1, 0).getDate(), tk = todayKey();
+  let cells = ""; for (let i = 0; i < lead; i++) cells += "<span></span>";
+  for (let d = 1; d <= nDays; d++) { const k = key(new Date(m0.getFullYear(), m0.getMonth(), d)), av = free.includes(k);
+    cells += `<button type="button" class="cd ${av ? "av" : ""} ${k === state.date ? "on" : ""} ${k === tk ? "td" : ""}" ${av ? `data-d="${k}"` : "disabled"}>${d}${av && k !== state.date ? "<i></i>" : ""}</button>`; }
+  $("days").innerHTML = free.length ? `<div class="cal-h"><b>${(() => { const x = new Intl.DateTimeFormat(loc(), { month: "long" }).format(m0); return x.charAt(0).toUpperCase() + x.slice(1) + " " + m0.getFullYear(); })()}</b><span>
+      <button type="button" class="cal-n" data-cm="-1" ${calOff <= 0 ? "disabled" : ""} aria-label="‹">‹</button><button type="button" class="cal-n" data-cm="1" ${calOff >= maxOff ? "disabled" : ""} aria-label="›">›</button></span></div>
+    <div class="cal-g">${wd.map((x) => `<small>${x}</small>`).join("")}${cells}</div>` : `<div class="empty">${t("noDays")}</div>`;
+  $("t-head").textContent = state.date ? t("freeOn", { d: new Intl.DateTimeFormat(loc(), { weekday: "long", day: "numeric" }).format(dateOf(state.date)) }) : "";
+  renderTimes();
+}
+function renderTimes() {
+  const sl = state.date ? slotsFor(state.date) : [];
+  if (state.time != null && !sl.includes(state.time)) state.time = null;
+  $("times").innerHTML = `<div class="tgrid">${sl.map((m) => `<button class="time ${state.time === m ? "on" : ""}" type="button" data-t="${m}">${hhmm(m)}</button>`).join("")}</div>`;
+}
+document.addEventListener("click", (e) => { const b = e.target.closest("[data-cm]"); if (!b || b.disabled) return; calOff += +b.dataset.cm; const base = new Date(); const m0 = new Date(base.getFullYear(), base.getMonth() + calOff, 1);
+  const f = freeDays().find((k) => { const d = dateOf(k); return d.getMonth() === m0.getMonth() && d.getFullYear() === m0.getFullYear(); }); if (f) { state.date = f; state.time = null; } renderDays(); renderDock(); });
+$("days").addEventListener("click", (e) => { const b = e.target.closest("[data-d]"); if (b) { state.date = b.dataset.d; state.time = null; renderDays(); renderDock(); setTimeout(() => $("t-head").scrollIntoView({ behavior: "smooth", block: "start" }), 30); } });
+$("times").addEventListener("click", (e) => { const b = e.target.closest("[data-t]"); if (b) { state.time = +b.dataset.t; renderTimes(); renderDock(); } });
+$("ref-toggle").onclick = () => { $("ref-box").hidden = false; $("ref-toggle").hidden = true; $("ref").focus(); };
+["name", "phone", "notes", "ref"].forEach((id) => $(id).addEventListener("input", (e) => { state[id] = e.target.value; renderDock(); }));
+
+function validStep(s) {
+  if (s === "service") { const v = svcOf(state.service); return !!v && (!v.opts || v.opts.length < 2 || selOpts(v).length > 0); }
+  if (s === "when") return !!state.date && state.time != null;
+  if (s === "you") return state.name.trim().length >= 2 && !!normPhone(state.phone);
+  if (s === "confirm") return FLOW.slice(0, 3).every(validStep);
+  return true;
+}
+function message() {
+  const s = svcOf(state.service), ph = normPhone(state.phone), n = state.notes.trim(), r = state.ref.trim();
+  const on = optMsg(s); return t("msg", { s: nm(s) + (on ? " (" + on + ")" : ""), d: (longDate(state.date) || "").replace(/^./, (c) => c.toUpperCase()), t: hhmm(state.time), p: (s.from && !selOpts(s).length ? t("from") + " " : "") + euro(priceOf(s)) }) + t("msgName", { n: state.name.trim() }) + (n ? t("msgNote", { n }) : "") + (r ? t("msgRef", { r }) : "") +
+    `\n\nRef: CA·${s.id}·${state.date}·${hhmm(state.time)}·€${priceOf(s) == null ? 0 : priceOf(s)}${ph ? "·" + ph : ""}${optNames(s, "es") ? "·O:" + optMsg(s, "es").replace(/·/g, "-") : ""}${state.src ? "·S:" + state.src : ""}${r ? "·R:" + r.replace(/[·\n]/g, " ").slice(0, 30) : ""}`;
+}
+function renderSummary() {
+  const s = svcOf(state.service); if (!s) return;
+  $("s-svc").textContent = nm(s);
+  $("s-when").textContent = state.date && state.time != null ? longDate(state.date) + " · " + hhmm(state.time) : "—";
+  $("s-dur").textContent = durTxt(s); $("s-name").textContent = state.name.trim() || "—";
+  $("s-phone").textContent = normPhone(state.phone) ? "+" + normPhone(state.phone) : "—"; $("s-price").textContent = euro(priceOf(s));
+  $("s-svc").textContent = nm(s) + (optNames(s) ? " · " + optNames(s) : "");
+}
+const CARE_IC = ['<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>','<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>','<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/>','<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>','<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>'];
+function careHtml(s) {
+  const c = s && CARE[s.care]; if (!c) return "";
+  return `<div class="dn-care"><h2>${t("careShort")}</h2>${L(c).map((x, i) => `<div class="dn-ci"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${CARE_IC[i % CARE_IC.length]}</svg></span><p>${esc(x)}</p></div>`).join("")}<p class="small" style="margin-top:6px">${t("careNote")}</p></div>`;
+}
+function doneCard() {
+  const sv = svcOf(state.service); if (!sv) return "";
+  const img = sv.fotos && sv.fotos.length ? (GAL[sv.fotos[0]] || {}).src : null;
+  const when = state.date && state.time != null ? new Intl.DateTimeFormat(loc(), { weekday: "short", day: "numeric", month: "short" }).format(dateOf(state.date)) + " · " + hhmm(state.time) : "";
+  return `${img ? `<img src="${img}" alt="">` : `<span class="dn-ph">${sv.ic || "♛"}</span>`}<div class="dn-t"><b>${esc(nm(sv))}${optNames(sv) ? " · " + esc(optNames(sv)) : ""}</b><small>${when}</small></div><strong>${euro(priceOf(sv))}</strong>`;
+}
+function goStep(s) {
+  if (s !== "done") { const i = FLOW.indexOf(s); for (let j = 0; j < i; j++) if (!validStep(FLOW[j])) { s = FLOW[j]; break; } }
+  step = s;
+  document.querySelectorAll(".step").forEach((el) => el.hidden = el.dataset.step !== s);
+  const i = FLOW.indexOf(s);
+  $("prog").innerHTML = FLOW.map((_, j) => `<i class="${j <= i || s === "done" ? "on" : ""}"></i>`).join("");
+  $("step-n").textContent = i >= 0 ? t("stepN", { i: i + 1, n: FLOW.length }) : "";
+  if (s === "service") renderServices();
+  if (s === "when") renderDays();
+  if (s === "confirm") renderSummary();
+  if (s === "you") renderSrcs();
+  if (s === "done") { $("done-wa").href = waLink(WA_NUMBER, message()); $("reg").hidden = !!(me && me.phone); $("reg-ok").hidden = true; $("done-care").innerHTML = careHtml(svcOf(state.service)); $("dn-card").innerHTML = doneCard(); renderRefer(); }
+  renderDock(); syncChrome(); window.scrollTo(0, 0);
+}
+function renderDock() {
+  const s = svcOf(state.service), btn = $("dock-btn");
+  $("dock-total").textContent = s ? (s.opts && s.opts.length > 1 && !selOpts(s).length ? priceTxt(s) : priceOf(s) == null ? t("consult") : (s.from && !selOpts(s).length ? t("from") + " " : "") + euro(priceOf(s))) : "—";
+  $("dock-sub").textContent = s ? nm(s) + (state.date && state.time != null ? " · " + showDate(state.date) + " " + hhmm(state.time) : "") : t("pickSvc");
+  $("dock-back").style.visibility = FLOW.indexOf(step) > 0 || (step === "service" && (svcOpen || scat !== "home")) || (step === "service" && svcOpen) ? "visible" : "hidden";
+  if (step === "confirm") { btn.textContent = t("send"); btn.href = validStep("confirm") ? waLink(WA_NUMBER, message()) : "#"; btn.target = "_blank"; btn.rel = "noopener"; }
+  else { btn.textContent = t("next"); btn.href = "#"; btn.removeAttribute("target"); }
+  btn.setAttribute("aria-disabled", String(!validStep(step)));
+}
+$("dock-btn").addEventListener("click", (e) => {
+  if (step !== "confirm") { e.preventDefault(); if (validStep(step)) goStep(FLOW[FLOW.indexOf(step) + 1]); return; }
+  if (!validStep("confirm")) { e.preventDefault(); return; }
+  remember(); setTimeout(() => goStep("done"), 400);
+});
+$("dock-back").addEventListener("click", () => { const i = FLOW.indexOf(step); if (step === "service" && (svcOpen || scat !== "home")) { if (svcOpen) { const v = svcOf(svcOpen); scat = v ? "g:" + groupOf(v.cat) : "home"; svcOpen = null; } else scat = "home"; renderServices(); renderDock(); window.scrollTo({ top: 0, behavior: "smooth" }); return; } if (i > 0) goStep(FLOW[i - 1]); else if (svcOpen) { svcOpen = null; renderServices(); renderDock(); } });
+
+/* reservar de nuevo */
+let pending = null;
+function remember() { if (me && me.phone) { me.service = state.service; save(); } else pending = { service: state.service }; }
+function save() { try { localStorage.setItem("carim-me", JSON.stringify(me)); } catch (e) {} renderAgain(); renderRefer(); }
+$("reg-go").addEventListener("click", () => { me = Object.assign({}, pending || {}, { name: state.name.trim(), phone: normPhone(state.phone) }); save(); $("reg").hidden = true; $("reg-ok").hidden = false; });
+function renderAgain() {
+  const known = !!(me && me.name && me.phone), s = known && svcOf(me.service);
+  $("again").hidden = !known; if (!known) return;
+  $("again-t").textContent = t("hi", { n: me.name.split(" ")[0] });
+  $("again-last").textContent = s ? t("lastTime", { s: nm(s) }) : t("whatToday");
+  $("again-btn").hidden = !s;
+}
+$("again-btn").onclick = () => me && me.service && bookService(me.service);
+$("again-new").onclick = () => { svcOpen = null; scat = "home"; showTab("book"); goStep("service"); };
+$("again-out").onclick = () => { me = null; try { localStorage.removeItem("carim-me"); } catch (e) {} state.name = ""; state.phone = ""; $("name").value = ""; $("phone").value = ""; renderAgain(); renderRefer(); };
+
+/* ---------- info ---------- */
+function renderInfo() {
+  let h = "", last = "";
+  allServices().forEach((s) => { if (s.cat !== last) { h += `<div class="cat">${esc(catName(s.cat)).toUpperCase()}</div>`; last = s.cat; } h += `<div><span>${esc(nm(s))}</span><b>${s.opts && s.opts.length ? "" : priceTxt(s)}</b></div>`; if (s.opts) s.opts.forEach((o) => { h += `<div style="padding-left:14px;font-size:13px;color:var(--muted)"><span>· ${esc(L(o))}</span><b>${euro(o.price)}</b></div>`; }); });
+  $("plist").innerHTML = h;
+  $("faq").innerHTML = L(FAQ).map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join("");
+  $("care-all").innerHTML = Object.keys(CARE).map((k) => `<details><summary>${esc(L(CARE_NAMES[k]))}</summary><p>${L(CARE[k]).map(esc).join("<br>• ").replace(/^/, "• ")}</p></details>`).join("");
+}
+
+function renderAll() {
+  renderHome(); renderServicesPage(); renderGal(); renderInfo(); renderAgain();
+  if (currentView === "book") goStep(step === "done" ? "done" : step);
+}
+
+/* ---------- datos públicos: horas ocupadas y promo del mes ---------- */
+let db = null;
+(async () => {
+  try { const c = window.claude; db = c && c.use ? await c.use("db") : null; } catch (e) { db = null; }
+  if (!db) return;
+  db.collection("busy").onSnapshot((snap) => { const tk = todayKey();
+    busy = snap.docs.map((d) => { const v = d.data() || {}; return { id: d.id, date: String(v.date || ""), time: String(v.time || "00:00"), min: +v.min || 60, kind: String(v.kind || "appt") }; }).filter((b) => b.date >= tk);
+    if (currentView === "book" && step === "when") renderDays(); if (typeof renderBlocks === "function") renderBlocks(); if (typeof syncBusy === "function") syncBusy(); }, () => {});
+  db.doc("public/promo").onSnapshot((d) => { const v = d && d.data ? d.data() : null;
+    promoMonth = v && v.name && String(v.until || "") >= todayKey() ? { id: "pm", cat: "promo", ic: "🔥", promo: true, price: typeof v.price === "number" ? v.price : null, before: typeof v.before === "number" ? v.before : null, min: 60, until: String(v.until), fotos: [], es: { name: String(v.name), desc: String(v.desc || "") }, it: { name: String(v.name), desc: String(v.desc || "") } } : null;
+    if (typeof fillPromoForm === "function") fillPromoForm(v); renderAll(); }, () => {});
+})();
+
+/* ================== PANEL DE CARIM ================== */
+let dataStarted = false, appts = [], cards = [], goals = {}, agMode = "next", mOff = 0, apptsLoaded = false, busyLoaded = false;
+const nmEs = (s) => s.es.name;
+function saveErr(err) { return "No se pudo guardar. " + (err && err.message ? err.message : "Prueba otra vez."); }
+async function startData() {
+  if (dataStarted) return; dataStarted = true;
+  if (!db) { try { const c = window.claude; db = c && c.use ? await c.use("db") : null; } catch (e) {} }
+  if (!db) { const m = '<div class="empty">No se pudo abrir el guardado. Toca la corona y vuelve a entrar con tu código.</div>'; ["t-list","appts","cards"].forEach((id) => $(id).innerHTML = m); return; }
+  const timer = setTimeout(() => setStatus("a-status", "Todavía no se pueden leer los datos. Revisa la conexión.", true), 10000);
+  const fail = () => { clearTimeout(timer); setStatus("a-status", "No se pudieron cargar los datos.", true); };
+  db.collection("appts").onSnapshot((snap) => { clearTimeout(timer); apptsLoaded = true;
+    appts = snap.docs.map((d) => { const v = d.data() || {}; return { id: d.id, name: String(v.name || "Cliente"), serviceId: String(v.serviceId || ""), service: String(v.service || ""), date: String(v.date || todayKey()), time: String(v.time || ""), phone: String(v.phone || ""), price: typeof v.price === "number" ? v.price : null, done: v.done === true, ref: String(v.ref || ""), src: String(v.src || "") }; });
+    renderAppts(); renderToday(); renderMonth(); syncBusy(); }, fail);
+  db.collection("busy").onSnapshot(() => { busyLoaded = true; syncBusy(); }, () => {});
+  db.collection("cards").onSnapshot((snap) => {
+    cards = snap.docs.map((d) => { const v = d.data() || {}; return { id: d.id, name: String(v.name || "Cliente"), phone: normPhone(v.phone), birthday: String(v.birthday || ""), visits: Array.isArray(v.visits) ? v.visits.map(String) : [], first: String(v.first || "") }; });
+    renderCards(); renderToday(); renderMonth(); }, fail);
+  db.doc("settings/goals").onSnapshot((d) => { const v = d && d.data ? d.data() : null; try { goals = v && v.json ? JSON.parse(v.json) : {}; } catch (e) { goals = {}; } renderMonth(); }, () => {});
+}
+/* mantiene "busy" igual a las citas pendientes (sin nombres: solo día, hora y duración) */
+let syncing = false;
+async function syncBusy() {
+  if (!isOwner || !db || !apptsLoaded || !busyLoaded || syncing) return; syncing = true;
+  try {
+    const tk = todayKey(), want = {};
+    appts.filter((a) => !a.done && a.date >= tk && a.time).forEach((a) => { const s = svcOf(a.serviceId); want[a.id] = { date: a.date, time: a.time, min: s ? s.min : 60, kind: "appt" }; });
+    for (const id of Object.keys(want)) { const b = busy.find((x) => x.id === id); if (!b || b.date !== want[id].date || b.time !== want[id].time || b.min !== want[id].min) await db.collection("busy").doc(id).set(want[id]); }
+    for (const b of busy) if (b.kind === "appt" && !want[b.id]) await db.collection("busy").doc(b.id).delete();
+  } catch (e) {} finally { syncing = false; }
+}
+const sameName = (a, b) => a.trim().toLowerCase() === b.trim().toLowerCase();
+const lastVisit = (c) => c.visits.slice().sort().pop() || "";
+const daysSince = (k) => Math.floor((Date.now() - dateOf(k).getTime()) / 86400000);
+const esDate = (k) => new Intl.DateTimeFormat("es-ES", { day: "numeric", month: "short" }).format(dateOf(k));
+const esLong = (k) => new Intl.DateTimeFormat("es-ES", { weekday: "long", day: "numeric", month: "long" }).format(dateOf(k));
+const eur = (n) => (n == null ? "A consultar" : (Math.round(n * 100) / 100).toLocaleString("es-ES") + " €");
+
+function reminderText(a) { return `¡Hola ${a.name.split(" ")[0]}! 🙌 Te recuerdo tu cita de ${a.service} ${a.date === todayKey() ? "hoy" : "mañana"} a las ${a.time} en Via Fratelli Bandiera, Sesto San Giovanni. Si no puedes venir, avísame por aquí. ¡Te espero! Carim`; }
+function reviewText(a) { return `¡Gracias por venir, ${a.name.split(" ")[0]}! 🙌 ¿Te gustó tu ${a.service.toLowerCase()}? Me ayudaría muchísimo tu opinión` + (REVIEW_URL ? `: ${REVIEW_URL}` : ` en Instagram @carim_manitos_magicas (si subes una foto, etiquétame 📸).`) + ` Un abrazo, Carim`; }
+function gcal(a) {
+  const s = svcOf(a.serviceId), st = dateOf(a.date); const [h, m] = (a.time || "10:00").split(":").map(Number); st.setHours(h, m);
+  const en = new Date(st.getTime() + (s ? s.min : 60) * 60000), f = (d) => key(d).replace(/-/g, "") + "T" + pad(d.getHours()) + pad(d.getMinutes()) + "00";
+  return "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" + encodeURIComponent(a.service + " · " + a.name) + "&dates=" + f(st) + "/" + f(en) + "&details=" + encodeURIComponent(a.phone ? "WhatsApp: +" + a.phone : "");
+}
+function apptItem(a) {
+  return `<div class="appt ${a.done ? "done" : ""}" data-id="${a.id}">
+    <div class="h"><b>${esc(a.name)}</b><span>${esDate(a.date)} · ${esc(a.time)}</span></div>
+    <div class="s">${esc(a.service)} · ${eur(a.price)}${a.ref ? " · recomendada por " + esc(a.ref) : ""}</div>
+    <div class="a">${a.done ? '<button class="btn ghost sm" data-act="undo" type="button">Deshacer</button>'
+      : '<button class="btn sm" data-act="done" type="button">✓ Hecha</button>' +
+        (a.phone ? `<a class="btn wa sm" target="_blank" rel="noopener" href="${waLink(a.phone, reminderText(a))}">Recordatorio</a>` : "") +
+        `<a class="btn ghost sm" target="_blank" rel="noopener" href="${gcal(a)}">Calendario</a>` +
+        '<button class="btn ghost sm" data-act="del" type="button">Cancelar</button>'}</div></div>`;
+}
+async function apptClick(e) {
+  const b = e.target.closest("button[data-act]"); if (!b || !db) return;
+  const a = appts.find((x) => x.id === b.closest(".appt").dataset.id); if (!a) return;
+  try {
+    if (b.dataset.act === "del") { if (b.dataset.sure) { await db.collection("appts").doc(a.id).delete(); await db.collection("busy").doc(a.id).delete().catch(() => {}); } else { b.dataset.sure = "1"; b.textContent = "¿Seguro? Toca otra vez"; setTimeout(() => { delete b.dataset.sure; b.textContent = "Cancelar"; }, 4000); } }
+    if (b.dataset.act === "done") { await db.collection("appts").doc(a.id).update({ done: true }); await addVisit(a); }
+    if (b.dataset.act === "undo") { await db.collection("appts").doc(a.id).update({ done: false }); await removeVisit(a); }
+  } catch (err) { setStatus("a-status", saveErr(err), true); }
+}
+["t-list", "appts"].forEach((id) => $(id).addEventListener("click", apptClick));
+function findCard(a) { return cards.find((c) => (a.phone && c.phone === normPhone(a.phone)) || sameName(c.name, a.name)); }
+async function addVisit(a) {
+  const c = findCard(a);
+  if (c) await db.collection("cards").doc(c.id).update({ visits: [...c.visits, a.date] });
+  else await db.collection("cards").add({ name: a.name, phone: normPhone(a.phone), birthday: "", visits: [a.date], first: a.date });
+}
+async function removeVisit(a) { const c = findCard(a); if (!c) return; const v = c.visits.slice(), i = v.lastIndexOf(a.date); if (i >= 0) { v.splice(i, 1); await db.collection("cards").doc(c.id).update({ visits: v }); } }
+
+function renderToday() {
+  const tk = todayKey(), t2 = new Date(); t2.setDate(t2.getDate() + 1); const mk = key(t2), y = new Date(); y.setDate(y.getDate() - 1); const yk = key(y);
+  $("t-date").textContent = esLong(tk);
+  if (!dataStarted || !db) return;
+  const list = appts.filter((a) => !a.done && (a.date === tk || a.date === mk)).sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
+  $("t-list").innerHTML = list.length ? list.map(apptItem).join("") : '<div class="empty">No hay citas para hoy ni mañana.</div>';
+  const rem = [], tmw = appts.filter((a) => !a.done && a.date === mk), late = appts.filter((a) => !a.done && a.date < tk);
+  if (tmw.length) rem.push(`<p>📩 <b>Manda el recordatorio</b> a ${tmw.map((a) => esc(a.name)).join(", ")}: tienen cita mañana.</p>`);
+  if (late.length) rem.push(`<p>⏳ Tienes <b>${late.length}</b> cita(s) pasadas sin marcar como hechas. <button class="linkbtn" type="button" data-tab="agenda">Ver agenda</button></p>`);
+  const ym = tk.slice(0, 7), g = goals[ym]; if (g) { const r = monthRev(ym); rem.push(`<p>🎯 <b>Objetivo:</b> llevas ${eur(r)} de ${eur(g)} (${Math.min(100, Math.round(r / g * 100))}%).</p>`); }
+  const gifts = cards.filter((c) => c.visits.length && c.visits.length % GOAL === 0 && lastVisit(c) >= tk.slice(0, 8) + "01");
+  if (gifts.length) rem.push(`<p>🎁 <b>Regalo de fidelidad</b> para ${gifts.map((c) => esc(c.name)).join(", ")}.</p>`);
+  if (!promoMonth) rem.push(`<p>🔥 No tienes promo del mes activa. Puedes publicar una más abajo.</p>`);
+  $("t-rem").innerHTML = rem.join("") || '<p class="hint">Todo en orden por hoy.</p>';
+  const rv = appts.filter((a) => a.done && (a.date === tk || a.date === yk) && a.phone);
+  $("t-rev").innerHTML = rv.length ? rv.map((a) => `<p><b>${esc(a.name)}</b> · ${esc(a.service)} <a class="linkbtn" target="_blank" rel="noopener" href="${waLink(a.phone, reviewText(a))}">Pedir reseña</a></p>`).join("") : '<p class="hint">Cuando marques citas como hechas, aparecen aquí.</p>';
+  const week = Array.from({ length: 7 }, (_, i) => { const d = new Date(); d.setDate(d.getDate() + i); return d.getDate() + "/" + (d.getMonth() + 1); });
+  const bd = cards.filter((c) => { const m = /^(\d{1,2})\/(\d{1,2})$/.exec(c.birthday); return m && week.includes(+m[1] + "/" + +m[2]); });
+  $("t-bday").innerHTML = bd.length ? bd.map((c) => `<p><b>${esc(c.name)}</b> · ${esc(c.birthday)} ${c.phone ? `<a class="linkbtn" target="_blank" rel="noopener" href="${waLink(c.phone, "¡Feliz cumpleaños, " + c.name.split(" ")[0] + "! 🎂🙌 Un abrazo de Carim")}">Felicitar</a>` : ""}</p>`).join("") : '<p class="hint">Nadie cumple años esta semana.</p>';
+  const away = cards.filter((c) => lastVisit(c) && daysSince(lastVisit(c)) >= INACTIVE_DAYS).sort((a, b) => lastVisit(a).localeCompare(lastVisit(b))).slice(0, 6);
+  $("t-away").innerHTML = away.length ? away.map((c) => `<p><b>${esc(c.name)}</b> · última visita ${esDate(lastVisit(c))} ${c.phone ? `<a class="linkbtn" target="_blank" rel="noopener" href="${waLink(c.phone, "¡Hola " + c.name.split(" ")[0] + "! 🙌 Hace tiempo que no te veo. Esta semana tengo horarios libres, ¿te reservo una cita? Carim")}">Escribirle</a>` : ""}</p>`).join("") : '<p class="hint">Todos tus clientes vinieron hace poco.</p>';
+}
+$("paste-go").addEventListener("click", async () => {
+  const txt = $("paste-in").value;
+  const m = /CA·([a-z0-9]+)·(\d{4}-\d{2}-\d{2})·(\d{2}:\d{2})·€?\s?([\d.,]+)(?:·\+?(\d{8,15}))?(?:·O:([^·\n]+))?(?:·S:([^·\n]+))?(?:·R:([^\n]+))?/i.exec(txt), s = m && svcOf(m[1]);
+  if (!m || !s) { setStatus("paste-status", "No encontré los datos. Pega el mensaje completo de el cliente (termina con «Ref: CA·…»).", true); return; }
+  const nmx = ((/(?:A nombre de|A nome di|Me llamo|Mi chiamo)\s+([^.!\n]+?)(?:\s+(?:y mi WhatsApp|e il mio WhatsApp)|[.!\n]|$)/i.exec(txt) || [])[1] || "Cliente").trim();
+  await startData(); if (!db) { setStatus("paste-status", "No se pudo abrir el guardado.", true); return; }
+  if (appts.some((a) => sameName(a.name, nmx) && a.date === m[2] && a.time === m[3])) { setStatus("paste-status", "Esa cita ya estaba en la agenda."); return; }
+  const pr = parseFloat(m[4].replace(",", "."));
+  try {
+    const ref = await db.collection("appts").add({ name: nmx, serviceId: s.id, service: nmEs(s) + (m[6] ? " (" + m[6].trim() + ")" : ""), date: m[2], time: m[3], phone: m[5] || "", price: pr > 0 ? pr : s.price, done: false, src: (m[7] || "").trim(), ref: (m[8] || "").trim() });
+    if (ref && ref.id) await db.collection("busy").doc(ref.id).set({ date: m[2], time: m[3], min: s.min, kind: "appt" }).catch(() => {});
+    $("paste-in").value = ""; setStatus("paste-status", "Cita creada: " + nmx + " · " + esDate(m[2]) + " " + m[3] + " · " + nmEs(s) + ".");
+  } catch (err) { setStatus("paste-status", saveErr(err), true); }
+});
+
+/* promo del mes */
+function fillPromoForm(v) { if (!$("pm-name") || document.activeElement && document.activeElement.id && document.activeElement.id.startsWith("pm-")) return;
+  $("pm-name").value = v && v.name || ""; $("pm-desc").value = v && v.desc || ""; $("pm-price").value = v && typeof v.price === "number" ? v.price : ""; $("pm-before").value = v && typeof v.before === "number" ? v.before : ""; $("pm-until").value = v && v.until || ""; }
+$("pm-save").addEventListener("click", async () => {
+  const name = $("pm-name").value.trim(), until = $("pm-until").value, price = parseFloat($("pm-price").value), before = parseFloat($("pm-before").value);
+  if (name.length < 3 || !until) { setStatus("pm-status", "Escribe el nombre y la fecha de fin.", true); return; }
+  await startData(); if (!db) return;
+  try { await db.doc("public/promo").set({ name, desc: $("pm-desc").value.trim(), price: isNaN(price) ? null : price, before: isNaN(before) ? null : before, until }); setStatus("pm-status", "Promo publicada hasta el " + esDate(until) + "."); }
+  catch (err) { setStatus("pm-status", saveErr(err), true); }
+});
+$("pm-del").addEventListener("click", async () => { await startData(); if (!db) return; try { await db.doc("public/promo").delete(); setStatus("pm-status", "Promo quitada."); } catch (err) { setStatus("pm-status", saveErr(err), true); } });
+
+/* código QR */
+$("qr-go").addEventListener("click", () => {
+  const draw = () => { $("qr").innerHTML = ""; $("qr").hidden = false; new QRCode($("qr"), { text: PAGE_URL + "#qr", width: 440, height: 440, colorDark: "#5b1453", colorLight: "#ffffff" }); setStatus("qr-status", "Listo. Haz una captura de pantalla para imprimirlo."); };
+  if (window.QRCode) return draw();
+  const sc = document.createElement("script"); sc.src = "https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js";
+  sc.onload = draw; sc.onerror = () => setStatus("qr-status", "No se pudo crear el código. Prueba otra vez.", true); document.head.appendChild(sc);
+});
+
+/* agenda */
+$("a-svc").innerHTML = SERVICES.map((s) => `<option value="${s.id}">${esc(nmEs(s))}</option>`).join("");
+$("a-date").value = todayKey(); $("a-time").value = "10:00"; $("b-date").value = todayKey();
+$("a-svc").addEventListener("change", () => { const s = svcOf($("a-svc").value); $("a-price").value = s && s.price != null ? s.price : ""; });
+$("a-svc").dispatchEvent(new Event("change"));
+$("a-add").addEventListener("click", async () => {
+  const nmx = $("a-name").value.trim(), s = svcOf($("a-svc").value);
+  if (nmx.length < 2 || !$("a-date").value || !$("a-time").value) { setStatus("a-status", "Completa nombre, día y hora.", true); return; }
+  await startData(); if (!db) return;
+  const pr = parseFloat($("a-price").value);
+  try {
+    const ref = await db.collection("appts").add({ name: nmx, serviceId: s.id, service: nmEs(s), date: $("a-date").value, time: $("a-time").value, phone: normPhone($("a-phone").value), price: isNaN(pr) ? null : pr, done: false, ref: "" });
+    if (ref && ref.id) await db.collection("busy").doc(ref.id).set({ date: $("a-date").value, time: $("a-time").value, min: s.min, kind: "appt" }).catch(() => {});
+    $("a-name").value = ""; $("a-phone").value = ""; setStatus("a-status", "Cita guardada.");
+  } catch (err) { setStatus("a-status", saveErr(err), true); }
+});
+/* bloquear horas */
+$("b-add").addEventListener("click", async () => {
+  const d = $("b-date").value, f = $("b-from").value, to = $("b-to").value;
+  if (!d || !f || !to || tmin(to) <= tmin(f)) { setStatus("b-status", "Elige día y un horario válido.", true); return; }
+  await startData(); if (!db) return;
+  try { await db.collection("busy").add({ date: d, time: f, min: tmin(to) - tmin(f), kind: "block" }); setStatus("b-status", "Horas bloqueadas."); } catch (err) { setStatus("b-status", saveErr(err), true); }
+});
+function renderBlocks() {
+  if (!$("blocks")) return; const bl = busy.filter((b) => b.kind === "block").sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
+  $("blocks").innerHTML = bl.map((b) => `<div class="card"><div><b>${esLong(b.date)}</b><div class="s">${b.time}–${hhmm(tmin(b.time) + b.min)}</div></div><button class="btn ghost sm" type="button" data-unblock="${b.id}">Quitar</button></div>`).join("");
+}
+$("blocks").addEventListener("click", async (e) => { const b = e.target.closest("[data-unblock]"); if (!b || !db) return; try { await db.collection("busy").doc(b.dataset.unblock).delete(); } catch (err) { setStatus("b-status", saveErr(err), true); } });
+document.querySelectorAll("[data-ag]").forEach((b) => b.addEventListener("click", () => { agMode = b.dataset.ag; document.querySelectorAll("[data-ag]").forEach((x) => x.classList.toggle("on", x === b)); renderAppts(); }));
+function renderAppts() {
+  if (!db || !apptsLoaded) return; const tk = todayKey();
+  const list = appts.filter((a) => agMode === "next" ? !a.done : a.done)
+    .sort((a, b) => agMode === "next" ? (a.date + a.time).localeCompare(b.date + b.time) : (b.date + b.time).localeCompare(a.date + a.time)).slice(0, 80);
+  if (!list.length) { $("appts").innerHTML = '<div class="empty">' + (agMode === "next" ? "No hay citas próximas." : "Todavía no hay citas hechas.") + "</div>"; return; }
+  let h = "", last = "";
+  list.forEach((a) => { if (a.date !== last) { h += `<p class="dayh">${a.date < tk && !a.done ? "⚠ " : ""}${esLong(a.date)}</p>`; last = a.date; } h += apptItem(a); });
+  $("appts").innerHTML = h;
+}
+
+/* clientes */
+$("goal-n").textContent = GOAL;
+function renderCards() {
+  if (!db) return; const q = $("search").value.trim().toLowerCase();
+  const list = cards.filter((c) => !q || c.name.toLowerCase().includes(q) || c.phone.includes(q.replace(/\D/g, "") || "~")).sort((a, b) => lastVisit(b).localeCompare(lastVisit(a)));
+  $("cards").innerHTML = list.length ? list.map((c) => { const n = c.visits.length % GOAL, gift = c.visits.length && n === 0;
+    return `<div class="card"><div><b>${esc(c.name)}</b><div class="s">${c.visits.length} visita(s) · última ${lastVisit(c) ? esDate(lastVisit(c)) : "—"}${c.birthday ? " · 🎂 " + esc(c.birthday) : ""}</div>
+      <div class="stamps">${Array.from({ length: GOAL }, (_, i) => `<i class="${gift || i < n ? "on" : ""}"></i>`).join("")}${gift ? " 🎁" : ""}</div></div>
+      ${c.phone ? `<a class="btn wa sm" target="_blank" rel="noopener" href="https://wa.me/${c.phone}">WhatsApp</a>` : ""}</div>`; }).join("")
+    : '<div class="empty">' + (q ? "Nadie con ese nombre." : "Todavía no hay clientes. Se agregan solas al marcar una cita como hecha.") + "</div>";
+}
+$("search").addEventListener("input", renderCards);
+$("c-add").addEventListener("click", async () => {
+  const nmx = $("c-name").value.trim(); if (nmx.length < 2) { setStatus("c-status", "Escribe el nombre.", true); return; }
+  await startData(); if (!db) return;
+  try { await db.collection("cards").add({ name: nmx, phone: normPhone($("c-phone").value), birthday: $("c-bday").value.trim(), visits: [], first: "" });
+    $("c-name").value = ""; $("c-phone").value = ""; $("c-bday").value = ""; setStatus("c-status", "Cliente guardada."); }
+  catch (err) { setStatus("c-status", saveErr(err), true); }
+});
+
+/* mi mes */
+const ymOf = (off) => { const d = new Date(); d.setDate(1); d.setMonth(d.getMonth() + off); return d.getFullYear() + "-" + pad(d.getMonth() + 1); };
+const monthRev = (ym) => appts.filter((a) => a.done && a.date.startsWith(ym)).reduce((s, a) => s + (a.price || 0), 0);
+function renderMonth() {
+  renderStats();
+  const ym = ymOf(mOff), [yy, mm] = ym.split("-").map(Number);
+  $("m-title").textContent = new Intl.DateTimeFormat("es-ES", { month: "long", year: "numeric" }).format(new Date(yy, mm - 1, 1));
+  const done = appts.filter((a) => a.done && a.date.startsWith(ym)), rev = monthRev(ym);
+  $("m-rev").textContent = eur(rev); $("m-cnt").textContent = done.length; $("m-avg").textContent = eur(done.length ? rev / done.length : 0);
+  $("m-new").textContent = cards.filter((c) => (c.first || c.visits.slice().sort()[0] || "").startsWith(ym)).length;
+  const g = goals[ym]; if (document.activeElement !== $("m-goal")) $("m-goal").value = g || "";
+  $("m-goalbar").innerHTML = g ? `<div class="bar"><span>${eur(rev)}</span><span>${Math.min(100, Math.round(rev / g * 100))}% de ${eur(g)}</span></div><div class="track"><i style="width:${Math.min(100, rev / g * 100)}%"></i></div>` : '<p class="hint" style="margin-top:8px">Pon un objetivo para ver cuánto te falta.</p>';
+  const by = {}; done.forEach((a) => { by[a.service] = by[a.service] || { n: 0, r: 0 }; by[a.service].n++; by[a.service].r += a.price || 0; });
+  const rows = Object.entries(by).sort((a, b) => b[1].r - a[1].r);
+  $("m-by").innerHTML = rows.length ? '<div class="plist">' + rows.map(([k, v]) => `<div><span>${esc(k)} × ${v.n}</span><b>${eur(v.r)}</b></div>`).join("") + "</div>" : '<p class="hint">Todavía no hay citas hechas este mes.</p>';
+  const rf = {}; appts.filter((a) => a.ref && a.date.startsWith(ym)).forEach((a) => { rf[a.ref] = (rf[a.ref] || 0) + 1; });
+  const rr = Object.entries(rf).sort((a, b) => b[1] - a[1]);
+  $("m-ref").innerHTML = rr.length ? '<div class="plist">' + rr.map(([k, v]) => `<div><span>${esc(k)}</span><b>${v} cliente(s)</b></div>`).join("") + "</div>" + (REFER ? `<p class="hint" style="margin-top:8px">Recuerda el descuento de ${eur(REFER)} para quien recomendó.</p>` : "") : '<p class="hint">Cuando un cliente escriba quién la recomendó, aparece aquí.</p>';
+}
+function bars(rows, unit) {
+  if (!rows.length) return '<p class="hint">Todavía no hay datos.</p>';
+  const max = Math.max(...rows.map((r) => r[1]));
+  return rows.map(([k, v]) => `<div class="sbar"><span>${esc(k)}</span><i style="width:${Math.max(4, v / max * 100)}%"></i><b>${v}${unit || ""}</b></div>`).join("");
+}
+function renderStats() {
+  if (!$("st-src")) return;
+  const all = appts, count = (f) => { const o = {}; all.forEach((a) => { const k = f(a); if (k) o[k] = (o[k] || 0) + 1; }); return Object.entries(o).sort((a, b) => b[1] - a[1]); };
+  $("st-src").innerHTML = bars(count((a) => a.src || (a.ref ? "Recomendación" : "Sin dato")));
+  $("st-svc").innerHTML = bars(count((a) => (a.service || "").replace(/\s*\(.*\)$/, "")).slice(0, 8));
+  const dn = ["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
+  const d = count((a) => dn[dateOf(a.date).getDay()]); $("st-day").innerHTML = bars(dn.slice(1).concat(dn[0]).map((x) => [x, (d.find((y) => y[0] === x) || [0, 0])[1]]).filter((x) => x[1]));
+  $("st-hour").innerHTML = bars(count((a) => a.time ? a.time.slice(0, 2) + ":00" : "").sort((a, b) => a[0].localeCompare(b[0])));
+  const back = cards.filter((c) => c.visits.length > 1).length, one = cards.filter((c) => c.visits.length === 1).length;
+  $("st-cl").innerHTML = bars([["Vienen más de una vez", back], ["Vinieron una vez", one]].filter((x) => x[1])) + (cards.length ? `<p class="hint" style="margin-top:8px">${Math.round(back / Math.max(1, back + one) * 100)}% de tus clientes vuelven.</p>` : "");
+  $("st-links").innerHTML = [["Bio de Instagram","instagram"],["TikTok","tiktok"],["Facebook","facebook"],["Código QR / volante","qr"],["Estado de WhatsApp","whatsapp"]].map(([n, h]) =>
+    `<div class="lnk"><span>${n}</span><button class="btn ghost sm" type="button" data-copy="${PAGE_URL}#${h}">Copiar enlace</button></div>`).join("");
+}
+document.addEventListener("click", async (e) => { const b = e.target.closest("[data-copy]"); if (!b) return; try { await navigator.clipboard.writeText(b.dataset.copy); b.textContent = "Copiado"; } catch (x) { b.textContent = b.dataset.copy; } setTimeout(() => { b.textContent = "Copiar enlace"; }, 2500); });
+$("m-prev").onclick = () => { mOff--; renderMonth(); }; $("m-next").onclick = () => { mOff++; renderMonth(); };
+$("m-goal-save").addEventListener("click", async () => {
+  await startData(); if (!db) return; const v = parseFloat($("m-goal").value), ym = ymOf(mOff), next = Object.assign({}, goals);
+  if (isNaN(v) || v <= 0) delete next[ym]; else next[ym] = v;
+  try { await db.doc("settings/goals").set({ json: JSON.stringify(next) }); setStatus("m-status", "Objetivo guardado."); } catch (err) { setStatus("m-status", saveErr(err), true); }
+});
+
+/* ================== MIS SERVICIOS (editar precios, servicios y fotos) ================== */
+let EDIT_S = JSON.parse(JSON.stringify(BASE_SERVICES)), EDIT_G = JSON.parse(JSON.stringify(BASE_GAL)), catDirty = false, catOpen = null, assetsNs = null;
+const catCats = () => Object.keys(CATS);
+const numOrNull = (v) => { const n = parseFloat(String(v).replace(",", ".")); return isNaN(n) ? null : n; };
+function markDirty() { catDirty = true; $("cat-bar").hidden = false; setStatus("cat-status", ""); }
+function catPrice(x) { const o = x.opts && x.opts.length ? Math.min(...x.opts.map((y) => y.price)) : x.price; return o == null ? "A consultar" : ((x.opts && x.opts.length > 1) || x.from ? "desde " : "") + eur(o); }
+function renderCatalog() {
+  let h = "", last = "";
+  EDIT_S.forEach((x, i) => {
+    if (x.cat !== last) { h += `<p class="dayh">${esc((CATS[x.cat] || {}).es || x.cat)}</p>`; last = x.cat; }
+    h += `<div class="ccard ${x.hidden ? "off" : ""}" data-ci="${i}"><div class="ch"><div><b>${esc(x.es.name)}</b><div class="s">${catPrice(x)} · ${x.min || 60} min${x.hidden ? " · oculto" : ""}${x.fotos && x.fotos.length ? " · " + x.fotos.length + " foto(s)" : ""}</div></div>
+      <div class="cb"><button class="btn ghost sm" type="button" data-cact="hide">${x.hidden ? "Mostrar" : "Ocultar"}</button><button class="btn sm" type="button" data-cact="edit">${catOpen === i ? "Cerrar" : "Editar"}</button></div></div>` +
+      (catOpen === i ? editForm(x, i) : "") + `</div>`;
+  });
+  $("cat-list").innerHTML = h;
+}
+function editForm(x, i) {
+  const opt = (o, k) => `<div class="orowe" data-ok="${k}"><input data-f="opt-name" value="${esc(o.es)}" placeholder="Opción (ej. Pierna)"><input data-f="opt-price" type="number" inputmode="decimal" value="${o.price ?? ""}" placeholder="€"><button type="button" class="x" data-cact="opt-del" aria-label="Quitar">×</button></div>`;
+  const ph = (x.fotos || []).map((gi, k) => { const g = EDIT_G[gi] || {}; return `<div class="phe" data-pk="${k}">${g.video ? `<video src="${g.video}#t=0.5" muted playsinline preload="metadata"></video>` : `<img src="${g.src}" alt="">`}
+      <input data-f="ph-cap" value="${esc(g.es || "")}" placeholder="Qué se ve (ej. Antes)"><div class="phb"><button type="button" data-cact="ph-left" aria-label="Mover antes">‹</button><button type="button" data-cact="ph-del" aria-label="Quitar">×</button><button type="button" data-cact="ph-right" aria-label="Mover después">›</button></div></div>`; }).join("");
+  return `<div class="cform">
+    <label class="l">Nombre</label><input data-f="name" value="${esc(x.es.name)}">
+    <label class="l">Descripción</label><textarea data-f="desc" rows="2">${esc(x.es.desc || "")}</textarea>
+    <div class="row"><div><label class="l">Categoría</label><select data-f="cat">${catCats().map((c) => `<option value="${c}" ${c === x.cat ? "selected" : ""}>${esc(CATS[c].es)}</option>`).join("")}</select></div>
+      <div><label class="l">Duración (min)</label><input data-f="min" type="number" inputmode="numeric" value="${x.min || 60}"></div></div>
+    <div class="row"><div><label class="l">Precio (€)</label><input data-f="price" type="number" inputmode="decimal" value="${x.price ?? ""}" placeholder="Vacío = a consultar"></div>
+      <div><label class="l">Precio antes (€)</label><input data-f="before" type="number" inputmode="decimal" value="${x.before ?? ""}" placeholder="Opcional"></div></div>
+    <label class="chk"><input type="checkbox" data-f="from" ${x.from ? "checked" : ""}> Mostrar «desde» delante del precio</label>
+    <label class="l">Promo válida hasta (opcional)</label><input data-f="until" type="date" value="${x.until || ""}">
+    <label class="l">Opciones o paquetes (el cliente elige)</label>
+    <div class="opts-e">${(x.opts || []).map(opt).join("")}</div>
+    <button class="linkbtn" type="button" data-cact="opt-add">+ Agregar opción</button>
+    <label class="chk"><input type="checkbox" data-f="multi" ${x.multi ? "checked" : ""}> Se pueden elegir varias y se suman (como zonas de exfoliación)</label>
+    <details class="it"><summary>Texto en italiano (opcional)</summary>
+      <input data-f="name-it" value="${esc((x.it && x.it.name !== x.es.name ? x.it.name : "") || "")}" placeholder="Nombre en italiano">
+      <textarea data-f="desc-it" rows="2" placeholder="Descripción en italiano">${esc((x.it && x.it.desc !== x.es.desc ? x.it.desc : "") || "")}</textarea></details>
+    <label class="l">Fotos y videos (en el orden que se ven)</label>
+    <div class="phs">${ph || '<p class="hint">Todavía no tiene fotos.</p>'}</div>
+    <label class="btn line upl">Subir fotos o videos<input type="file" accept="image/*,video/*" multiple data-f="upload" hidden></label>
+    <p class="status" data-st="up"></p>
+    <button class="btn ghost" type="button" data-cact="del" style="color:var(--err)">Eliminar servicio</button>
+  </div>`;
+}
+function readForm(card, x) {
+  const v = (f) => { const el = card.querySelector(`[data-f="${f}"]`); return el ? (el.type === "checkbox" ? el.checked : el.value) : undefined; };
+  const name = v("name").trim() || "Servicio sin nombre", desc = v("desc").trim();
+  x.es = Object.assign({}, x.es, { name, desc });
+  const nit = v("name-it").trim(), dit = v("desc-it").trim();
+  x.it = Object.assign({}, x.it, { name: nit || name, desc: dit || desc });
+  x.cat = v("cat"); x.min = Math.max(5, parseInt(v("min"), 10) || 60); x.price = numOrNull(v("price")); x.before = numOrNull(v("before")) || undefined;
+  x.from = v("from") || undefined; x.until = v("until") || undefined; x.multi = v("multi") || undefined; x.promo = x.cat === "promo" || undefined;
+  if (x.until && x.cat === "promo") x.until = v("until"); else if (x.cat !== "promo") x.until = undefined;
+  const old = x.opts || [];
+  const ops = [...card.querySelectorAll("[data-ok]")].map((r, k) => { const name = r.querySelector('[data-f="opt-name"]').value.trim(), price = numOrNull(r.querySelector('[data-f="opt-price"]').value), o = old[k] || {};
+    return Object.assign({}, o, { es: name, it: o.es === name && o.it ? o.it : name, price }, o.es === name ? {} : { msg: undefined }); });
+  x.opts = ops.length ? ops : undefined;
+  card.querySelectorAll("[data-pk]").forEach((el) => { const gi = x.fotos[+el.dataset.pk], g = EDIT_G[gi]; if (g) { const c = el.querySelector('[data-f="ph-cap"]').value.trim(); g.es = c; g.it = c; } });
+}
+$("cat-list").addEventListener("input", (e) => { const card = e.target.closest("[data-ci]"); if (!card || e.target.dataset.f === "upload") return; readForm(card, EDIT_S[+card.dataset.ci]); markDirty(); });
+$("cat-list").addEventListener("change", (e) => { const card = e.target.closest("[data-ci]"); if (!card) return; if (e.target.dataset.f === "upload") { uploadFiles(card, e.target.files); return; } readForm(card, EDIT_S[+card.dataset.ci]); markDirty(); if (e.target.tagName === "SELECT" || e.target.type === "checkbox") renderCatalog(); });
+$("cat-list").addEventListener("click", (e) => {
+  const b = e.target.closest("[data-cact]"); if (!b) return; const card = b.closest("[data-ci]"), i = +card.dataset.ci, x = EDIT_S[i], act = b.dataset.cact;
+  if (catOpen === i && act !== "edit") readForm(card, x);
+  if (act === "edit") { if (catOpen === i) readForm(card, x); catOpen = catOpen === i ? null : i; renderCatalog(); return; }
+  if (act === "hide") { x.hidden = !x.hidden || undefined; }
+  if (act === "opt-add") { x.opts = (x.opts || []).concat([{ es: "", it: "", price: null }]); renderCatalog(); const r = $("cat-list").querySelectorAll(`[data-ci="${i}"] [data-ok]`); const last = r[r.length - 1]; if (last) last.querySelector("input").focus(); return; }
+  if (act === "opt-del") { const k = +b.closest("[data-ok]").dataset.ok; x.opts = (x.opts || []).filter((_, j) => j !== k); if (!x.opts.length) x.opts = undefined; }
+  if (act === "ph-del") { const k = +b.closest("[data-pk]").dataset.pk; x.fotos = x.fotos.filter((_, j) => j !== k); }
+  if (act === "ph-left" || act === "ph-right") { const k = +b.closest("[data-pk]").dataset.pk, j = act === "ph-left" ? k - 1 : k + 1; if (j >= 0 && j < x.fotos.length) [x.fotos[k], x.fotos[j]] = [x.fotos[j], x.fotos[k]]; }
+  if (act === "del") { if (!b.dataset.sure) { b.dataset.sure = "1"; b.textContent = "¿Seguro? Toca otra vez para eliminar"; return; } EDIT_S.splice(i, 1); catOpen = null; }
+  markDirty(); renderCatalog();
+});
+$("cat-new").addEventListener("click", () => {
+  const id = "s" + Date.now().toString(36);
+  EDIT_S.push({ id, cat: "body", ic: "♛", price: null, min: 60, fotos: [], es: { name: "Servicio nuevo", desc: "" }, it: { name: "Servicio nuevo", desc: "" } });
+  catOpen = EDIT_S.length - 1; markDirty(); renderCatalog();
+  setTimeout(() => { const c = $("cat-list").querySelector(`[data-ci="${catOpen}"]`); if (c) { c.scrollIntoView({ behavior: "smooth" }); const n = c.querySelector('[data-f="name"]'); if (n) { n.focus(); n.select(); } } }, 60);
+});
+/* fotos: se achican antes de subir para que la página cargue rápido */
+function shrink(file) {
+  return new Promise((res) => {
+    if (!file.type.startsWith("image/") || file.type === "image/gif") return res(file);
+    const img = new Image(), url = URL.createObjectURL(file);
+    img.onload = () => { const k = Math.min(1, 1200 / Math.max(img.width, img.height)), c = document.createElement("canvas"); c.width = Math.round(img.width * k); c.height = Math.round(img.height * k);
+      c.getContext("2d").drawImage(img, 0, 0, c.width, c.height); URL.revokeObjectURL(url); c.toBlob((b) => res(b || file), "image/jpeg", 0.82); };
+    img.onerror = () => { URL.revokeObjectURL(url); res(file); }; img.src = url;
+  });
+}
+async function uploadFiles(card, files) {
+  const i = +card.dataset.ci, x = EDIT_S[i], st = card.querySelector('[data-st="up"]');
+  if (!assetsNs) { try { const c = window.claude; assetsNs = c && c.use ? await c.use("assets") : null; } catch (e) { assetsNs = null; } }
+  if (!assetsNs) { st.textContent = "No se pudieron subir las fotos. Toca la corona y vuelve a entrar con tu código."; st.className = "status err"; return; }
+  readForm(card, x); x.fotos = x.fotos || [];
+  const list = [...files]; let n = 0;
+  for (const f of list) {
+    st.textContent = `Subiendo ${++n} de ${list.length}…`; st.className = "status";
+    try { const r = await assetsNs.upload(await shrink(f)); const isV = f.type.startsWith("video/");
+      EDIT_G.push(Object.assign({ c: x.cat, es: "", it: "", svc: x.id }, isV ? { video: r.url } : { src: r.url })); x.fotos.push(EDIT_G.length - 1);
+    } catch (err) { st.textContent = "No se pudo subir " + f.name + ". " + (err && err.message ? err.message : ""); st.className = "status err"; markDirty(); renderCatalog(); return; }
+  }
+  markDirty(); renderCatalog();
+  const c2 = $("cat-list").querySelector(`[data-ci="${i}"] [data-st="up"]`); if (c2) c2.textContent = "Listo. Escribe qué se ve en cada foto y toca «Publicar cambios».";
+}
+function buildPage() {
+  const clean = EDIT_S.map((x) => { const y = JSON.parse(JSON.stringify(x)); if (y.opts) { y.opts = y.opts.filter((o) => o.es && o.price != null); if (!y.opts.length) delete y.opts; } return y; });
+  const json = JSON.stringify({ services: clean, gal: EDIT_G, savedAt: new Date().toISOString() }).replace(/</g, "\\u003c");
+  window.__carimCatalog = json;
+  const body = SRC_BODY.join("\n");
+  return '<!DOCTYPE html>\n<html lang="es">\n<head>\n' + SRC_HEAD.join("\n") + '\n</head>\n<body>\n' + body + '\n<script type="application/json" id="catalog-data">' + json + '</' + 'script>\n' + SRC_MAIN + '\n</body>\n</html>\n';
+}
+$("cat-pub").addEventListener("click", async () => {
+  const open = catOpen != null && $("cat-list").querySelector(`[data-ci="${catOpen}"]`); if (open) readForm(open, EDIT_S[catOpen]);
+  setStatus("cat-status", "Publicando…");
+  let art = null; try { const c = window.claude; art = c && c.use ? await c.use("artifact") : null; } catch (e) {}
+  if (!art) { setStatus("cat-status", "No se pudo publicar. Toca la corona y vuelve a entrar con tu código.", true); return; }
+  try { await art.publish(buildPage()); catDirty = false; $("cat-bar").hidden = true; setStatus("cat-status", "Publicado. La página se recarga con tus cambios."); }
+  catch (err) { const m = String(err && (err.code || err.message) || ""); setStatus("cat-status", /conflict/i.test(m) ? "Alguien publicó otra versión justo ahora. Vuelve a hacer el cambio." : "No se pudo publicar. " + m, true); }
+});
+$("cat-undo").addEventListener("click", () => { EDIT_S = JSON.parse(JSON.stringify(BASE_SERVICES)); EDIT_G = JSON.parse(JSON.stringify(BASE_GAL)); catDirty = false; catOpen = null; $("cat-bar").hidden = true; setStatus("cat-status", "Cambios descartados."); renderCatalog(); });
+window.addEventListener("beforeunload", (e) => { if (catDirty) { e.preventDefault(); e.returnValue = ""; } });
+
+/* ---------- acceso de Carim con código (la corona de arriba) ---------- */
+/* El código abre el panel en esta pantalla. En Cloudflare el código se comprueba en el servidor. */
+const PIN_HASH = "";
+let pinOk = false, pinVal = "", pinFails = 0, pinLockUntil = 0;
+try { pinOk = sessionStorage.getItem("carim-pin") === "1"; } catch (e) {}
+async function sha(txt) { try { const b = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(txt)); return [...new Uint8Array(b)].map((x) => x.toString(16).padStart(2, "0")).join(""); } catch (e) { return ""; } }
+function pinRender() { $("pin-dots").querySelectorAll("i").forEach((d, i) => d.classList.toggle("on", i < pinVal.length)); }
+function pinOpen() {
+  if (pinOk) { showTab("today"); return; }
+  pinVal = ""; pinRender(); setStatus("pin-st", ""); $("pin").hidden = false; $("pin-in").value = "";
+  setTimeout(() => $("pin-in").focus(), 50);
+}
+function pinClose() { $("pin").hidden = true; pinVal = ""; }
+async function pinCheck() {
+  if (Date.now() < pinLockUntil) { setStatus("pin-st", "Demasiados intentos. Espera un momento.", true); pinVal = ""; pinRender(); return; }
+  let ok = false;
+  if (STANDALONE) {
+    try { const r = await window.CARIM_API.api("login", { method: "POST", json: { pin: pinVal } }); window.CARIM_API.setToken(r.token); ok = true; isOwner = true; }
+    catch (e) { if (e.status === 429) { setStatus("pin-st", "Demasiados intentos. Espera unos minutos.", true); pinVal = ""; $("pin-in").value = ""; pinRender(); return; }
+      if (e.status !== 401) { setStatus("pin-st", "No se pudo comprobar el código. " + e.message, true); pinVal = ""; $("pin-in").value = ""; pinRender(); return; } }
+  } else ok = (await sha("carim-manitos:" + pinVal)) === PIN_HASH;
+  if (ok) { pinOk = true; pinFails = 0; try { sessionStorage.setItem("carim-pin", "1"); } catch (e) {} pinClose(); showTab("today");
+    if (!isOwner) setTimeout(() => setStatus("paste-status", "Toca la corona y vuelve a entrar con tu código.", true), 300); return; }
+  pinFails++; if (pinFails >= 5) { pinLockUntil = Date.now() + 60000; pinFails = 0; }
+  setStatus("pin-st", "Código incorrecto. Prueba otra vez.", true); $("pin-dots").classList.add("shake"); setTimeout(() => $("pin-dots").classList.remove("shake"), 400);
+  pinVal = ""; $("pin-in").value = ""; pinRender();
+}
+function pinKey(k) { if (k === "del") pinVal = pinVal.slice(0, -1); else if (pinVal.length < 6) pinVal += k; pinRender(); if (pinVal.length === 6) setTimeout(pinCheck, 120); }
+$("pin-pad").innerHTML = ["1","2","3","4","5","6","7","8","9","","0","del"].map((k) => k ? `<button type="button" data-k="${k}" ${k === "del" ? 'aria-label="Borrar"' : ""}>${k === "del" ? "⌫" : k}</button>` : "<span></span>").join("");
+$("pin-pad").addEventListener("click", (e) => { const b = e.target.closest("[data-k]"); if (b) pinKey(b.dataset.k); });
+$("pin-in").addEventListener("input", () => { pinVal = $("pin-in").value.replace(/\D/g, "").slice(0, 6); $("pin-in").value = pinVal; pinRender(); if (pinVal.length === 6) setTimeout(pinCheck, 120); });
+$("crown").addEventListener("click", pinOpen);
+$("pin-x").addEventListener("click", pinClose);
+$("pin").addEventListener("click", (e) => { if (e.target.id === "pin") pinClose(); });
+
+/* ---------- arranque ---------- */
+applyLang(); showTab("home"); renderMonth();
+(async () => {
+  try { const c = window.claude; const user = c && c.use ? await c.use("user") : null;
+    if (user && typeof user.canEdit === "function" && await user.canEdit()) { isOwner = true; if (STANDALONE) pinOk = true; syncBusy(); }
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>
